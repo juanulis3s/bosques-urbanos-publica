@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:customrenders="clr-namespace:BUGPublica.CustomRenders"
+             xmlns:views="clr-namespace:BUGPublica.Views"
+             xmlns:translate="clr-namespace:BUGPublica.Helpers"
+             xmlns:local="clr-namespace:BUGPublica.ViewModels"
+             x:Class="BUGPublica.MapPage">
+    <ContentPage.Content>
+        <AbsoluteLayout>
+            <StackLayout x:Name="stack"
+                         AbsoluteLayout.LayoutBounds="0, 0, 1, 1"
+                         AbsoluteLayout.LayoutFlags="All"/>
+            <!--BARRA BUSCADORA-->
+            <Frame x:Name="frameSearch" CornerRadius="0" Margin="10"
+                   AbsoluteLayout.LayoutBounds="0.5,0,1,AutoSize"
+                   AbsoluteLayout.LayoutFlags="PositionProportional,WidthProportional">
+                <Frame.Padding>
+                    <OnPlatform x:TypeArguments="Thickness" Android="10, 0" iOS="10"/>
+                </Frame.Padding>
+                <StackLayout Orientation="Horizontal">
+                    <Image Source="{local:ImageResource BUGPublica.Images.icon_search.png}" HorizontalOptions="Start" WidthRequest="30"/>
+                    <customrenders:CustomEntry x:Name="txtSearch" Placeholder="{translate:Translate Search}" HorizontalOptions="FillAndExpand" 
+                                               BackgroundStyle="NONE" TextColor="Black" PlaceholderColor="#B6B6B6"/>
+                </StackLayout>
+            </Frame>
+            <!--BOTON DE FILTROS-->
+            <Button x:Name="btnFilter"
+                    Text="{translate:Translate Filter}"
+                    Style="{DynamicResource buttonStyle}"
+                    AbsoluteLayout.LayoutBounds=".5, .98, .9, 60"
+                    AbsoluteLayout.LayoutFlags="PositionProportional,WidthProportional"
+                    IsEnabled="False"/>
+            <!--VISTA DE FILTROS DE PINES-->
+            <ContentView x:Name="contentView"
+                         AbsoluteLayout.LayoutBounds="0, 0, 1, 1"
+                         AbsoluteLayout.LayoutFlags="All"
+                         BackgroundColor="#C0000000"
+                         BindingContext="{x:Reference filterView}"
+                         IsVisible="{Binding IsVisible}">
+                <AbsoluteLayout>
+                    <views:FiltersView x:Name="filterView"
+                                       AbsoluteLayout.LayoutBounds="0, 1, 1, .7"
+                                       AbsoluteLayout.LayoutFlags="All"
+                                       BackgroundColor="White"
+                                       IsVisible="False"/>
+                </AbsoluteLayout>
+            </ContentView>
+            <!--BOTON DE AUXILIO-->
+            <views:FAB x:Name="fabHelp"
+                       Image="sos.png"
+                       Margin="10"
+                       Radius="30"
+                       Click="FabHelpClick"
+                       AbsoluteLayout.LayoutBounds="1, 0.9, 80, 80"
+                       AbsoluteLayout.LayoutFlags="PositionProportional"/>
+            <!--EL RADIO DEBE CORRESPONDER A LA MITAD DEL ANCHO DEL BOTON-->
+        </AbsoluteLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ViewCell xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:BUGPublica.ViewModels"
+             x:Class="BUGPublica.Views.RuleCell">
+    <ViewCell.View>
+        <StackLayout Orientation="Horizontal" Padding="10" Margin="0, 5" BackgroundColor="#000000">
+            <Label Text="{Binding Name}"
+                       FontSize="22"
+                       VerticalOptions="Center"
+                       HorizontalOptions="StartAndExpand"
+                       TextColor="#FFFFFF"/>
+            <Image Source="{local:ImageResource BUGPublica.Images.arrow_right.png}" 
+                   HeightRequest="25"
+                   HorizontalOptions="End"/>
+        </StackLayout>
+    </ViewCell.View>
+</ViewCell>

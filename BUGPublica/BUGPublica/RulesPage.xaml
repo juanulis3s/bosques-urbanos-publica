@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:views="clr-namespace:BUGPublica.Views"
+             xmlns:translate="clr-namespace:BUGPublica.Helpers"
+             Title="{translate:Translate Regulation}"
+             x:Class="BUGPublica.RulesPage">
+    <ContentPage.Content>
+        <AbsoluteLayout BackgroundColor="{StaticResource HomeBackgroundColor}">
+            <ListView x:Name="listRules" 
+                      SeparatorVisibility="None"
+                      HasUnevenRows="False"
+                      RowHeight="60"
+                      IsVisible="False"
+                      AbsoluteLayout.LayoutBounds="0, 0, 1, 1"
+                      AbsoluteLayout.LayoutFlags="All"
+                      ItemSelected="ItemSelectedRules"
+                      BackgroundColor="#00000000">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <views:RuleCell Name="{Binding Name}"/>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            <ActivityIndicator x:Name="loader"
+                               IsRunning="True"
+                               AbsoluteLayout.LayoutBounds=".5, .5, .1, .1"
+                               AbsoluteLayout.LayoutFlags="All"/>
+        </AbsoluteLayout>
+    </ContentPage.Content>
+</ContentPage>

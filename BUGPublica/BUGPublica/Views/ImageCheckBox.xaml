@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BUGPublica.Views.ImageCheckBox">
+    <StackLayout>
+        <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand" >
+            <Image x:Name="image"/>
+            <Image x:Name="boxImage" WidthRequest="15"/>
+        </StackLayout>
+        <Label x:Name="textLabel" HorizontalOptions="FillAndExpand" HorizontalTextAlignment="Center"/>
+    </StackLayout>
+
+    <ContentView.GestureRecognizers>
+        <TapGestureRecognizer Tapped="OnCheckBoxTapped" />
+    </ContentView.GestureRecognizers>
+</ContentView>

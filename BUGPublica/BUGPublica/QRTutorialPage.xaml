@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:translate="clr-namespace:BUGPublica.Helpers"
+             xmlns:local="clr-namespace:BUGPublica.ViewModels"
+             x:Class="BUGPublica.QRTutorialPage"
+             NavigationPage.HasNavigationBar="False">
+    <ContentPage.Content>
+        <StackLayout Padding="40" BackgroundColor="#000000" Spacing="20">
+            <!--INSTRUCCIONES-->
+            <Grid RowSpacing="15">
+                <Grid.Resources>
+                    <ResourceDictionary>
+                        <Style TargetType="Label" BasedOn="{StaticResource FontBold}">
+                            <Setter Property="TextColor" Value="#FFFFFF"/>
+                            <Setter Property="FontSize" Value="17"/>
+                        </Style>
+                    </ResourceDictionary>
+                </Grid.Resources>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Label Text="1." Grid.Row="0" Grid.Column="0"/>
+                <Label Text="2." Grid.Row="1" Grid.Column="0"/>
+                <Label Text="{translate:Translate QRTutorial1}" Grid.Row="0" Grid.Column="1"/>
+                <Label Text="{translate:Translate QRTutorial2}" Grid.Row="1" Grid.Column="1"/>
+            </Grid>
+            <!--IMAGEN DEL TUTORIAL-->
+            <Image Source="{local:ImageResource BUGPublica.Images.qr_tuto.png}" HorizontalOptions="Center" 
+                   WidthRequest="200" VerticalOptions="CenterAndExpand"/>
+            <!--BOTON ENTENTIDO-->
+            <Button Clicked="BackPage"
+                    Text="{translate:Translate OK}"
+                    Style="{DynamicResource buttonStyle}"
+                    HorizontalOptions="Fill"
+                    VerticalOptions="End"/>
+            <!--SEÑALAMIENTO DE NO VOLVER A MOSTRAR-->
+            <StackLayout Orientation="Vertical" Spacing="1" HorizontalOptions="Center" VerticalOptions="End">
+                <StackLayout.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="OnDontShowAgainTapped"/>
+                </StackLayout.GestureRecognizers>
+                <Label Text="{translate:Translate DontShow}" TextColor="#FFFFFF"/>
+                <BoxView BackgroundColor="#FFFFFF" HeightRequest="1"/>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

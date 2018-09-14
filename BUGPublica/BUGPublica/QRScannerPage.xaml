@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:views="clr-namespace:BUGPublica.Views"
+             xmlns:local="clr-namespace:BUGPublica.ViewModels"
+             x:Class="BUGPublica.QRScannerPage">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Color x:Key="fade">#77000000</Color>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <AbsoluteLayout x:Name="absLayout" VerticalOptions="FillAndExpand" 
+                        HorizontalOptions="FillAndExpand">
+            <!--MASCARAS TRASNPARENTES-->
+            <AbsoluteLayout x:Name="absMasks" AbsoluteLayout.LayoutBounds="0,0,1,1" AbsoluteLayout.LayoutFlags="All">
+                <BoxView BackgroundColor="{StaticResource fade}" AbsoluteLayout.LayoutBounds="0,0,1,0.2" AbsoluteLayout.LayoutFlags="All"/>
+                <BoxView BackgroundColor="{StaticResource fade}" AbsoluteLayout.LayoutBounds="0,1,1,0.2" AbsoluteLayout.LayoutFlags="All"/>
+                <BoxView BackgroundColor="{StaticResource fade}" AbsoluteLayout.LayoutBounds="0,0.5,0.1,0.6" AbsoluteLayout.LayoutFlags="All"/>
+                <BoxView BackgroundColor="{StaticResource fade}" AbsoluteLayout.LayoutBounds="1,0.5,0.1,0.6" AbsoluteLayout.LayoutFlags="All"/>
+            </AbsoluteLayout>
+            <!--MARCO DE QR-->
+            <Image x:Name="imgBorderQR" Source="{local:ImageResource BUGPublica.Images.qr_display.png}"
+                   AbsoluteLayout.LayoutBounds="0.5, 0.5, 0.8, 0.6" AbsoluteLayout.LayoutFlags="All" 
+                   Aspect="Fill" Scale="1.04"/>
+            <!--BOTON DE AUXILIO-->
+            <views:FAB x:Name="fabHelp"
+                       Image="sos.png"
+                       Margin="10"
+                       Radius="30"
+                       Click="FabHelpClick"
+                       AbsoluteLayout.LayoutBounds="1, 1, 80, 80"
+                       AbsoluteLayout.LayoutFlags="PositionProportional"/>
+            <!--EL RADIO DEBE CORRESPONDER A LA MITAD DEL ANCHO DEL BOTON-->
+        </AbsoluteLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:customrenderes="clr-namespace:BUGPublica.CustomRenders"
+             xmlns:translate="clr-namespace:BUGPublica.Helpers"
+             x:Class="BUGPublica.HelpConfirmationPage">
+    <ContentPage.Content>
+        <StackLayout BackgroundColor="#000000">
+            <StackLayout.Resources>
+                <ResourceDictionary>
+                    <Style TargetType="Label">
+                        <Setter Property="TextColor" Value="#FFFFFF"/>
+                        <Setter Property="FontSize" Value="18"/>
+                        <Setter Property="HorizontalOptions" Value="Fill"/>
+                        <Setter Property="HorizontalTextAlignment" Value="Center"/>
+                    </Style>
+                    <Style x:Key="Bold" TargetType="Label" BasedOn="{StaticResource FontBold}">
+                        <Setter Property="TextColor" Value="#FFFFFF"/>
+                        <Setter Property="FontSize" Value="18"/>
+                        <Setter Property="HorizontalOptions" Value="Fill"/>
+                        <Setter Property="HorizontalTextAlignment" Value="Center"/>
+                    </Style>
+                </ResourceDictionary>
+            </StackLayout.Resources>
+            <!--IMAGEN TOP-->
+            <Image Source="sos.png" HorizontalOptions="Center" WidthRequest="85" HeightRequest="85" Margin="0, 20"/>
+            <!--TEXTOS-->
+            <Label Text="{translate:Translate ConfirmEmergency}" Style="{StaticResource Bold}"/>
+            <Label Text="{translate:Translate ConfirmEmergency2}"/>
+            <Label Text="{translate:Translate ConfirmEmergency3}" Style="{StaticResource Bold}" VerticalOptions="CenterAndExpand"/>
+            <StackLayout Orientation="Horizontal" VerticalOptions="End" HorizontalOptions="FillAndExpand" Margin="0, 0, 0, 15">
+                <Button Text="{translate:Translate Cancel}"
+                        Style="{StaticResource buttonStyle}"
+                        Margin="10, 5, 5, 5"
+                        HorizontalOptions="FillAndExpand"
+                        BackgroundColor="Red"
+                        Clicked="CancelClick"/>
+                <Button Text="{translate:Translate Accept}"
+                        Margin="5, 5, 10, 5"
+                        HorizontalOptions="FillAndExpand"
+                        Style="{StaticResource buttonStyle}"
+                        BackgroundColor="{StaticResource MainColor}"
+                        Clicked="AcceptClick"/>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

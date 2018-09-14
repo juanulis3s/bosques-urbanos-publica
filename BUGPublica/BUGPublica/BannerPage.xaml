@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<popup:PopupPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:popup="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup"
+             xmlns:local="clr-namespace:BUGPublica.ViewModels"
+             x:Class="BUGPublica.BannerPage">
+    <popup:PopupPage.Content>
+        <Frame Padding="5" BackgroundColor="Black" CornerRadius="4"  WidthRequest="280" HeightRequest="160"
+               VerticalOptions="Center" HorizontalOptions="Center">
+            <AbsoluteLayout>
+                <Image x:Name="imgBanner" Aspect="AspectFill" AbsoluteLayout.LayoutBounds="0,0,1,1" AbsoluteLayout.LayoutFlags="All"/>
+                <Image  x:Name="imgClose" Source="{local:ImageResource BUGPublica.Images.close.png}" WidthRequest="25" HeightRequest="25"
+                       AbsoluteLayout.LayoutBounds="1, 0.02, AutoSize, AutoSize" AbsoluteLayout.LayoutFlags="PositionProportional"/>
+            </AbsoluteLayout>
+        </Frame>
+    </popup:PopupPage.Content>
+</popup:PopupPage>

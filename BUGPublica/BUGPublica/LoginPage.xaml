@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<popup:PopupPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:popup="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:BUGPublica"
+             xmlns:behaviors="clr-namespace:BUGPublica.Behaviors"
+             xmlns:translate="clr-namespace:BUGPublica.Helpers"
+             xmlns:customrenderes="clr-namespace:BUGPublica.CustomRenders"
+             x:Class="BUGPublica.LoginPage">
+    <Frame Padding="0" CornerRadius="4" BackgroundColor="#000000" VerticalOptions="Center" HorizontalOptions="Center">
+        <StackLayout>
+        <Image x:Name="imgClose" Source="{local:ViewModels.ImageResource BUGPublica.Images.close.png}"
+               WidthRequest="25" HeightRequest="25" HorizontalOptions="End"/>
+        <Image Source="{local:ViewModels.ImageResource BUGPublica.Images.bug_logo.png}"
+               WidthRequest="130" HorizontalOptions="Center" Margin="0, 40"/>
+        <StackLayout Orientation="Horizontal" HorizontalOptions="Fill" VerticalOptions="Center"
+                     Margin="20,0" Spacing="0">
+            <Label Text="+" TextColor="#FFFFFF" HorizontalTextAlignment="Center" VerticalOptions="Center" FontSize="18"/>
+            <Entry x:Name="txtPrefix" Text="52" Keyboard="Numeric" WidthRequest="50" HorizontalTextAlignment="Center">
+                <Entry.Behaviors>
+                    <behaviors:EntryLengthValidatorBehavior MaxLength="4" />
+                </Entry.Behaviors>
+            </Entry>
+            <Entry x:Name="txtPhone" Placeholder="{translate:Translate Phone}" Keyboard="Numeric" 
+                   HorizontalOptions="FillAndExpand" WidthRequest="150"/>
+        </StackLayout>
+        <Button x:Name="btnLogin" Text="{translate:Translate Send}" Style="{DynamicResource buttonStyle}"
+                Margin="20, 5" VerticalOptions="Center" Clicked="LoginClick"/>
+        </StackLayout>
+    </Frame>
+</popup:PopupPage>

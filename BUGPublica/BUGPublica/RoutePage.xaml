@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:views="clr-namespace:BUGPublica.Views"
+             x:Class="BUGPublica.RoutePage">
+    <ContentPage.Content>
+        <AbsoluteLayout BackgroundColor="{StaticResource HomeBackgroundColor}">
+            <!--LISTA DE RUTAS-->
+            <ListView x:Name="listRoutes" SeparatorVisibility="None" HasUnevenRows="False"
+                      RowHeight="120" IsVisible="False" ItemSelected="ItemSelectedRoute"
+                      BackgroundColor="#00000000"
+                      AbsoluteLayout.LayoutBounds="0,0,1,1" AbsoluteLayout.LayoutFlags="All">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <views:RouteCell Image="{Binding Image}" 
+                                   Title="{Binding Title}" 
+                                   Duration="{Binding Duration}"/>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            <!--LOADER-->
+            <ActivityIndicator x:Name="loader" IsRunning="False" 
+                               AbsoluteLayout.LayoutBounds="0.5,0.5,AutoSize,AutoSize"
+                               AbsoluteLayout.LayoutFlags="PositionProportional"/>
+            <!--BOTON DE AUXILIO-->
+            <views:FAB x:Name="fabHelp"
+                       Image="sos.png"
+                       Margin="10"
+                       Radius="30"
+                       Click="FabHelpClick"
+                       AbsoluteLayout.LayoutBounds="1, 1, 80, 80"
+                       AbsoluteLayout.LayoutFlags="PositionProportional"/>
+        </AbsoluteLayout>
+    </ContentPage.Content>
+</ContentPage>

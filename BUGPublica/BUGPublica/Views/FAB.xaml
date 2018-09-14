@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BUGPublica.Views.FAB"
+             x:Name="fab">
+  <ContentView.Content>
+        <Frame Padding="0" CornerRadius="{Binding Radius}" BindingContext="{x:Reference fab}">
+            <Frame.GestureRecognizers>
+                <TapGestureRecognizer Tapped="FABClick"/>
+            </Frame.GestureRecognizers>
+            <Image Source="{Binding Image}" Aspect="AspectFill"/>
+        </Frame>
+  </ContentView.Content>
+</ContentView>

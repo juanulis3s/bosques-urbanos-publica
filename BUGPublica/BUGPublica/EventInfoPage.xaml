@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:customrenders="clr-namespace:BUGPublica.CustomRenders"
+             xmlns:views="clr-namespace:BUGPublica.Views"
+             xmlns:local="clr-namespace:BUGPublica.ViewModels"
+             x:Class="BUGPublica.EventInfoPage">
+    <ContentPage.Content>
+        <ScrollView BackgroundColor="#000000">
+            <StackLayout>
+                <views:FilterImage x:Name="imgEvent" HorizontalOptions="Fill" HeightRequest="170" Filter="{local:ImageResource BUGPublica.Images.gradient.png}"/>
+                <StackLayout Margin="20" Spacing="10">
+                    <Label x:Name="lblDate" HorizontalOptions="StartAndExpand" TextColor="#FFFFFF"/>
+                    <customrenders:CustomHtmlLabel x:Name="lblContent" TextColor="#FFFFFF"/>
+                </StackLayout>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BUGPublica.Views.FilterImage"
+             x:Name="filterImage">
+  <ContentView.Content>
+        <AbsoluteLayout BindingContext="{x:Reference filterImage}">
+            <Image AbsoluteLayout.LayoutBounds="0, 0, 1, 1"
+                   AbsoluteLayout.LayoutFlags="All"
+                   Source="{Binding Image}"
+                   Aspect="AspectFill"/>
+            <Image AbsoluteLayout.LayoutBounds="0, 0, 1, 1"
+                   AbsoluteLayout.LayoutFlags="All"
+                   Source="{Binding Filter}"
+                   Aspect="Fill"/>
+        </AbsoluteLayout>
+  </ContentView.Content>
+</ContentView>

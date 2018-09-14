@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Application xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:BUGPublica.CustomRenders"
+             x:Class="BUGPublica.App">
+	<Application.Resources>
+
+		<!-- Application resource dictionary -->
+        <ResourceDictionary>
+            <Color x:Key="MainColor">#4CAF50</Color>
+            <Color x:Key="MainDarkColor">#388E3C</Color>
+            <Color x:Key="HomeBackgroundColor">#181726</Color>
+            <Color x:Key="GreenColor">#86DC9D</Color>
+            <Color x:Key="GrayColor">#232323</Color>
+            <OnPlatform x:Key="EntryFontColor" x:TypeArguments="Color"
+                        iOS="#000000" Android="#FFFFFF"/>
+
+            <!--FUENTE DE LA APP-->
+            <OnPlatform x:Key="FontApp" x:TypeArguments="x:String"
+                        iOS="Montserrat-Light"
+                        Android="Montserrat_Light.ttf#Montserrat_Light"/>                        
+            <OnPlatform x:Key="FontBoldApp" x:TypeArguments="x:String"
+                        iOS="Montserrat-Bold"
+                        Android="Montserrat_Bold.ttf#Montserrat_Bold"/>
+            <Style TargetType="Label">
+                <Setter Property="FontFamily" Value="{StaticResource FontApp}"/>
+            </Style>
+            <Style TargetType="local:CustomHtmlLabel">
+                <Setter Property="FontFamily" Value="{StaticResource FontApp}"/>
+            </Style>
+            <Style x:Key="FontBold" TargetType="Label">
+                <Setter Property="FontFamily" Value="{StaticResource FontBoldApp}"/>
+            </Style>
+            <Style TargetType="Entry">
+                <Setter Property="FontFamily" Value="{StaticResource FontApp}"/>
+                <Setter Property="TextColor" Value="{StaticResource EntryFontColor}"/>
+                <Setter Property="PlaceholderColor" Value="#505050"/>
+            </Style>
+            <Style TargetType="local:CustomEntry">
+                <Setter Property="FontFamily" Value="{StaticResource FontApp}"/>
+                <Setter Property="TextColor" Value="{StaticResource EntryFontColor}"/>
+                <Setter Property="PlaceholderColor" Value="#505050"/>
+            </Style>
+            <Style TargetType="Editor">
+                <Setter Property="FontFamily" Value="{StaticResource FontApp}"/>
+                <Setter Property="TextColor" Value="{StaticResource EntryFontColor}"/>
+            </Style>
+            <Style TargetType="Picker">
+                <Setter Property="TextColor" Value="{StaticResource EntryFontColor}"/>
+            </Style>
+        </ResourceDictionary>
+
+	</Application.Resources>
+</Application>

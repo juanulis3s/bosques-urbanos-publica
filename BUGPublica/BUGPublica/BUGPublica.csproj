@@ -1,0 +1,207 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Images\agua_azul.png" />
+    <None Remove="Images\alcalde.png" />
+    <None Remove="Images\arboledas_sur.png" />
+    <None Remove="Images\arrow_right.png" />
+    <None Remove="Images\avila_camacho.png" />
+    <None Remove="Images\bug_logo.png" />
+    <None Remove="Images\bug_logo_blanco.png" />
+    <None Remove="Images\close.png" />
+    <None Remove="Images\colomos.png" />
+    <None Remove="Images\cover.png" />
+    <None Remove="Images\el_dean.png" />
+    <None Remove="Images\footer_bg.png" />
+    <None Remove="Images\gonzalez_gallo.png" />
+    <None Remove="Images\gradient.png" />
+    <None Remove="Images\gradient_blue.png" />
+    <None Remove="Images\icon_back.png" />
+    <None Remove="Images\icon_check.png" />
+    <None Remove="Images\icon_checked.png" />
+    <None Remove="Images\icon_eventos.png" />
+    <None Remove="Images\icon_noticias.png" />
+    <None Remove="Images\icon_search.png" />
+    <None Remove="Images\logo.png" />
+    <None Remove="Images\miradorhuentitan.png" />
+    <None Remove="Images\morelos.png" />
+    <None Remove="Images\natural_huentitan.png" />
+    <None Remove="Images\puerta_barranca.png" />
+    <None Remove="Images\qr_display.png" />
+    <None Remove="Images\qr_tuto.png" />
+    <None Remove="Images\splash_1.png" />
+    <None Remove="Images\splash_2.png" />
+    <None Remove="Images\splash_3.png" />
+    <None Remove="Images\splash_4.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Images\agua_azul.png" />
+    <EmbeddedResource Include="Images\alcalde.png" />
+    <EmbeddedResource Include="Images\arboledas_sur.png" />
+    <EmbeddedResource Include="Images\arrow_right.png" />
+    <EmbeddedResource Include="Images\avila_camacho.png" />
+    <EmbeddedResource Include="Images\close.png" />
+    <EmbeddedResource Include="Images\colomos.png" />
+    <EmbeddedResource Include="Images\cover.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Images\bug_logo.png" />
+    <EmbeddedResource Include="Images\bug_logo_blanco.png" />
+    <EmbeddedResource Include="Images\el_dean.png" />
+    <EmbeddedResource Include="Images\footer_bg.png" />
+    <EmbeddedResource Include="Images\gonzalez_gallo.png" />
+    <EmbeddedResource Include="Images\gradient.png" />
+    <EmbeddedResource Include="Images\gradient_blue.png" />
+    <EmbeddedResource Include="Images\icon_back.png" />
+    <EmbeddedResource Include="Images\icon_check.png" />
+    <EmbeddedResource Include="Images\icon_checked.png" />
+    <EmbeddedResource Include="Images\icon_eventos.png" />
+    <EmbeddedResource Include="Images\icon_noticias.png" />
+    <EmbeddedResource Include="Images\icon_search.png" />
+    <EmbeddedResource Include="Images\logo.png" />
+    <EmbeddedResource Include="Images\miradorhuentitan.png" />
+    <EmbeddedResource Include="Images\morelos.png" />
+    <EmbeddedResource Include="Images\natural_huentitan.png" />
+    <EmbeddedResource Include="Images\puerta_barranca.png" />
+    <EmbeddedResource Include="Images\qr_display.png" />
+    <EmbeddedResource Include="Images\qr_tuto.png" />
+    <EmbeddedResource Include="Images\splash_1.png" />
+    <EmbeddedResource Include="Images\splash_2.png" />
+    <EmbeddedResource Include="Images\splash_3.png" />
+    <EmbeddedResource Include="Images\splash_4.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="CarouselView.FormsPlugin" Version="5.2.0" />
+    <PackageReference Include="Newtonsoft.Json" Version="11.0.1" />
+    <PackageReference Include="Plugin.Multilingual" Version="1.0.2" />
+    <PackageReference Include="Rg.Plugins.Popup" Version="1.1.4.158-pre" />
+    <PackageReference Include="Xam.Plugin.Geolocator" Version="5.0.0.187-beta" />
+    <PackageReference Include="Xamarin.FFImageLoading" Version="2.3.4" />
+    <PackageReference Include="Xamarin.FFImageLoading.Forms" Version="2.3.4" />
+    <PackageReference Include="Xamarin.FFImageLoading.Transformations" Version="2.3.4" />
+    <PackageReference Include="Xamarin.Forms" Version="2.5.0.280555" />
+    <PackageReference Include="Xamarin.Forms.Maps" Version="2.5.0.280555" />
+    <PackageReference Include="ZXing.Net.Mobile.Forms" Version="2.4.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Condition=" '$(EnableDefaultCompileItems)' == 'true' " Update="App.xaml.cs">
+      <DependentUpon>*.xaml</DependentUpon>
+    </Compile>
+    <Compile Condition=" '$(EnableDefaultCompileItems)' == 'true' " Update="MainPage.xaml.cs">
+      <DependentUpon>*.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Resources\AppResources.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>AppResources.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="BannerPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="BugInfoPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="BugTabbedPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="EventInfoPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="EventsPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="HelpConfirmationPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="HomePage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="LocationContentPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="LoginPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="MailPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="MapPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="NewInfoPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="NewsPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="QRScannerPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="QRTutorialPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Resources\AppResources.es.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Resources\AppResources.fr.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Resources\AppResources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>AppResources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="RoutePage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="RuleInfoPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="RulesPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="TermsPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\BugCell.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\CheckBox.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\EventCell.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\FAB.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\FilterImage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\FiltersView.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\ImageCheckBox.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\NewCell.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\RouteCell.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\RuleCell.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ViewCell xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
+             xmlns:transform="clr-namespace:FFImageLoading.Transformations;assembly=FFImageLoading.Transformations"
+             x:Class="BUGPublica.Views.EventCell">
+    <ViewCell.View>
+        <AbsoluteLayout Margin="0, 5" Padding="0, 0, 5, 0" BackgroundColor="#000000">
+            <AbsoluteLayout.Resources>
+                <ResourceDictionary>
+                    <Style TargetType="Label">
+                        <Setter Property="FontSize" Value="14"/>
+                        <Setter Property="TextColor" Value="#FFFFFF"/>
+                    </Style>
+                </ResourceDictionary>
+            </AbsoluteLayout.Resources>
+            <Image Source="{Binding Image}"
+                       Aspect="AspectFill"
+                       AbsoluteLayout.LayoutBounds="0, 0, .3, 1"
+                       AbsoluteLayout.LayoutFlags="All"/>
+            <Label Text="{Binding Title}"
+                       FontAttributes="Bold"
+                       AbsoluteLayout.LayoutBounds="1, .2, .65, .5"
+                       AbsoluteLayout.LayoutFlags="All"/>
+
+            <ffimageloading:CachedImage Source="ic_event.png"
+                       AbsoluteLayout.LayoutBounds=".35, .9, .2, .2"
+                       AbsoluteLayout.LayoutFlags="All">
+                <ffimageloading:CachedImage.Transformations>
+                    <transform:TintTransformation EnableSolidColor="True" HexColor="#767676"/>
+                </ffimageloading:CachedImage.Transformations>
+            </ffimageloading:CachedImage>
+            <Label Text="{Binding Schedule}"
+                       HorizontalTextAlignment="Center"
+                       AbsoluteLayout.LayoutBounds=".75, .9, .5, .2"
+                       AbsoluteLayout.LayoutFlags="All"/>
+        </AbsoluteLayout>
+    </ViewCell.View>
+</ViewCell>

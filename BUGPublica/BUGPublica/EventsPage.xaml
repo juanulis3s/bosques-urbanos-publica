@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:views="clr-namespace:BUGPublica.Views"
+             xmlns:local="clr-namespace:BUGPublica.ViewModels"
+             x:Class="BUGPublica.EventsPage">
+    <ContentPage.Content>
+        <StackLayout BackgroundColor="{StaticResource HomeBackgroundColor}">
+            <ListView x:Name="listEvents" 
+                      SeparatorVisibility="None"
+                      HasUnevenRows="False"
+                      RowHeight="120"
+                      IsVisible="False"
+                      ItemSelected="ItemSelectedEvents"
+                      BackgroundColor="#00000000">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <views:EventCell Image="{Binding Image}" 
+                                         Title="{Binding Title}" 
+                                         Schedule="{Binding Schedule}"/>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            <ActivityIndicator x:Name="loader"
+                               IsRunning="True"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

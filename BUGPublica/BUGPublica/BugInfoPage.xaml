@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:BUGPublica.ViewModels"
+             xmlns:translate="clr-namespace:BUGPublica.Helpers"
+             xmlns:customrenderers="clr-namespace:BUGPublica.CustomRenders"
+             xmlns:views="clr-namespace:BUGPublica.Views"
+             x:Class="BUGPublica.BugInfoPage">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Thickness x:Key="margin">15,0</Thickness>
+            <Style TargetType="Label">
+                <Setter Property="TextColor" Value="#FFFFFF"/>
+            </Style>
+            <Style x:Key="Bold" TargetType="Label" BasedOn="{StaticResource FontBold}">
+                <Setter Property="TextColor" Value="#FFFFFF"/>
+            </Style>
+            <Style TargetType="customrenderers:CustomHtmlLabel">
+                <Setter Property="TextColor" Value="#FFFFFF"/>
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <AbsoluteLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" BackgroundColor="#000000">
+        <ScrollView AbsoluteLayout.LayoutBounds="0,0,1,1" AbsoluteLayout.LayoutFlags="All">
+            <StackLayout Spacing="30">
+                <!--CONTENEDOR IMAGEN Y NOMBRE DEL BOSQUE-->
+                <AbsoluteLayout HeightRequest="200">
+                    <views:FilterImage x:Name="imgBug" 
+                                       Filter="{local:ImageResource BUGPublica.Images.gradient.png}"
+                                       AbsoluteLayout.LayoutBounds="0, 0, 1, 1"
+                                       AbsoluteLayout.LayoutFlags="All"/>
+                    <Label x:Name="lblNameBug"
+                           TextColor="#FFFFFF"
+                           FontSize="18"
+                           LineBreakMode="NoWrap"
+                           AbsoluteLayout.LayoutBounds="0.2, 0.9, AutoSize, AutoSize"
+                           AbsoluteLayout.LayoutFlags="PositionProportional"/>
+                </AbsoluteLayout>
+                <!--INFORMACION DEL BOSQUE-->
+                <customrenderers:CustomHtmlLabel x:Name="lblBugInfo" Margin="{StaticResource margin}"/>
+                <!--UBICACIÓN, TELEFONO, ETC.-->
+                <StackLayout Orientation="Horizontal" Margin="{StaticResource margin}" Spacing="10">
+                    <!--BARRA DE COLOR-->
+                    <BoxView BackgroundColor="{StaticResource GreenColor}" WidthRequest="5"/>
+                    <!--DATOS RESTANTES-->
+                    <StackLayout Spacing="0">
+                        <StackLayout.Resources>
+                            <ResourceDictionary>
+                                <Thickness x:Key="marginTop">0, 20, 0, 0</Thickness>
+                                <Style TargetType="Label">
+                                    <Setter Property="FontSize" Value="12"/>
+                                    <Setter Property="TextColor" Value="#FFFFFF"/>
+                                </Style>
+                            </ResourceDictionary>
+                        </StackLayout.Resources>
+                        <!--DIRECCION-->
+                        <Label Text="{translate:Translate Address}" Style="{StaticResource Bold}"/>
+                        <customrenderers:CustomHtmlLabel x:Name="lblAddress"/>
+                        <!--TELEFONO-->
+                        <Label Text="{translate:Translate Phone}" Style="{StaticResource Bold}" Margin="{StaticResource marginTop}"/>
+                        <StackLayout Orientation="Horizontal">
+                            <Label x:Name="lblPhoneType" Text="{translate:Translate Office}"/>
+                            <customrenderers:CustomHtmlLabel x:Name="lblPhoneValue"/>
+                        </StackLayout>
+                        <!--HORARIO-->
+                        <Label Text="{translate:Translate Schedule}" Style="{StaticResource Bold}" Margin="{StaticResource marginTop}"/>
+                        <customrenderers:CustomHtmlLabel x:Name="lblSchedule" />
+                    </StackLayout>
+                </StackLayout>
+                <!--CONTENEDOR DEL REGLAMENTO DEL LUGAR NOTA:EL MARGEN DERECHO ES MAS EL TAMAÑO DEL FAB-->
+                <StackLayout Orientation="Horizontal" Margin="15, 0, 80, 0">
+                    <StackLayout.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnRegulationTapped"/>
+                    </StackLayout.GestureRecognizers>
+                    <Label Text="{translate:Translate Regulation}" FontSize="17" HorizontalOptions="StartAndExpand" VerticalOptions="Center"/>
+                    <Image Source="{local:ImageResource BUGPublica.Images.arrow_right.png}" HeightRequest="25"/>
+                </StackLayout>
+                <!--CONTENEDOR DEL BUZON DEL LUGAR NOTA:EL MARGEN DERECHO ES MAS EL TAMAÑO DEL FAB-->
+                <StackLayout Orientation="Horizontal" Margin="15, 0, 80, 10">
+                    <StackLayout.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnSuggestionTapped"/>
+                    </StackLayout.GestureRecognizers>
+                    <Label Text="{translate:Translate SuggestionMail}" FontSize="17" HorizontalOptions="StartAndExpand" VerticalOptions="Center"/>
+                    <Image Source="{local:ImageResource BUGPublica.Images.arrow_right.png}" HeightRequest="25"/>
+                </StackLayout>
+            </StackLayout>
+        </ScrollView>
+
+        <!--BOTON DE AUXILIO-->
+        <views:FAB x:Name="fabHelp"
+                   Image="sos.png"
+                   Margin="10"
+                   Radius="30"
+                   Click="FabHelpClick"
+                   AbsoluteLayout.LayoutBounds="1, 1, 80, 80"
+                   AbsoluteLayout.LayoutFlags="PositionProportional"/>
+        <!--EL RADIO DEBE CORRESPONDER A LA MITAD DEL ANCHO DEL BOTON-->
+    </AbsoluteLayout>
+</ContentPage>

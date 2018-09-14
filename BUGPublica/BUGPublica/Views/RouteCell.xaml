@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ViewCell xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:translate="clr-namespace:BUGPublica.Helpers"
+             x:Class="BUGPublica.Views.RouteCell">
+  <ViewCell.View>
+        <AbsoluteLayout Margin="0, 5" Padding="0, 0, 5, 0" BackgroundColor="#000000">
+            <Image Source="{Binding Image}"
+                       Aspect="AspectFill"
+                       AbsoluteLayout.LayoutBounds="0, 0, .3, 1"
+                       AbsoluteLayout.LayoutFlags="All"/>
+            <Label Text="{Binding Title}" TextColor="#FFFFFF" FontSize="16"
+                       AbsoluteLayout.LayoutBounds="1, .2, .65, .5"
+                       AbsoluteLayout.LayoutFlags="All"/>
+            <StackLayout Orientation="Horizontal" AbsoluteLayout.LayoutBounds="1, .9, .65, .5" 
+                         AbsoluteLayout.LayoutFlags="All" Spacing="2">
+                <Label Text="{translate:Translate Duration}" TextColor="#FFFFFF" FontSize="14" VerticalOptions="Center"/>
+                <Label Text="{Binding Duration}" TextColor="{StaticResource GreenColor}" FontSize="14" VerticalOptions="Center"/>
+            </StackLayout>
+        </AbsoluteLayout>
+    </ViewCell.View>
+</ViewCell>

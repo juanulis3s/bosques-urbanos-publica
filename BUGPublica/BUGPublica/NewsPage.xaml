@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:views="clr-namespace:BUGPublica.Views"
+             xmlns:local="clr-namespace:BUGPublica.ViewModels"
+             x:Class="BUGPublica.NewsPage">
+    <ContentPage.Content>
+        <StackLayout BackgroundColor="{StaticResource HomeBackgroundColor}">
+            <ListView x:Name="listNews" 
+                      SeparatorVisibility="None"
+                      HasUnevenRows="False"
+                      RowHeight="120" 
+                      IsVisible="False"
+                      ItemSelected="ItemSelectedNews"
+                      BackgroundColor="#00000000">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <views:NewCell Image="{Binding Image}" 
+                                   Title="{Binding Title}" 
+                                   Publication_Date="{Binding Publication_Date}"
+                                   Category="{Binding Category}"/>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            <ActivityIndicator x:Name="loader"
+                               IsRunning="False"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

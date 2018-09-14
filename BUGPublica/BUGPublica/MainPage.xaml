@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BUGPublica.MainPage"
+             xmlns:local="clr-namespace:BUGPublica.ViewModels"
+             xmlns:translate="clr-namespace:BUGPublica.Helpers"
+             NavigationPage.HasNavigationBar="False">
+
+    <ContentPage.Padding>
+        <OnPlatform x:TypeArguments="Thickness"
+                    iOS="0, 20, 0, 0"/>
+    </ContentPage.Padding>
+
+    <StackLayout Orientation="Vertical">
+        <Label Text="{translate:Translate SplashLabel}"
+               TextColor="#FFFFFF"
+               FontSize="36"
+               HorizontalOptions="Start"
+               Margin="15, 40"/>
+        <Image Source="{local:ImageResource BUGPublica.Images.logo.png}"
+               Margin="0,30,0,0"
+               HorizontalOptions="Center"
+               WidthRequest="233"
+               HeightRequest="143"/>
+    </StackLayout>
+</ContentPage>

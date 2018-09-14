@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:views="clr-namespace:BUGPublica.Views"
+             xmlns:customrenderes="clr-namespace:BUGPublica.CustomRenders"
+             xmlns:local="clr-namespace:BUGPublica.ViewModels"
+             xmlns:controls="clr-namespace:CarouselView.FormsPlugin.Abstractions;assembly=CarouselView.FormsPlugin.Abstractions"
+             x:Class="BUGPublica.LocationContentPage">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout BackgroundColor="#000000">
+                <controls:CarouselViewControl x:Name="carouselImages" HorizontalOptions="Fill" HeightRequest="200" 
+                                              Orientation="Horizontal" ShowIndicators="True">
+                    <controls:CarouselViewControl.ItemTemplate>
+                        <DataTemplate>
+                            <views:FilterImage Image="{Binding Image}" Filter="{local:ImageResource BUGPublica.Images.gradient.png}"/>
+                        </DataTemplate>
+                    </controls:CarouselViewControl.ItemTemplate>
+                </controls:CarouselViewControl>
+                <customrenderes:CustomHtmlLabel x:Name="lblContent" Margin="20" TextColor="#FFFFFF"/>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

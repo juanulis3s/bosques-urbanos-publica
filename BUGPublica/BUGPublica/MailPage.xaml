@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:customrenderer="clr-namespace:BUGPublica.CustomRenders"
+             xmlns:translate="clr-namespace:BUGPublica.Helpers"
+             xmlns:models="clr-namespace:BUGPublica.Models"
+             x:Class="BUGPublica.MailPage"
+             Title="{translate:Translate SuggestionMail}"
+             NavigationPage.BackButtonTitle="">
+    <ContentPage.Content>
+        <StackLayout Padding="10, 30" BackgroundColor="#000000">
+            <StackLayout.Resources>
+                <ResourceDictionary>
+                    <Style TargetType="Label">
+                        <Setter Property="TextColor" Value="#FFFFFF"/>
+                    </Style>
+                </ResourceDictionary>
+            </StackLayout.Resources>
+            <Label Text="{translate:Translate TittleSuggestion}" FontSize="16" FontAttributes="Bold" HorizontalOptions="CenterAndExpand"/>
+            <Label Text="{translate:Translate SubtittleSuggestion}" HorizontalOptions="CenterAndExpand" HorizontalTextAlignment="Center"/>
+            <Picker x:Name="pickerBug" Title="Seleccione un bosque" HorizontalOptions="FillAndExpand"
+                    ItemsSource="{Binding Bugs}" ItemDisplayBinding="{Binding Shortname}"/>
+            <Entry x:Name="txtName" Placeholder="{translate:Translate Name}" HorizontalOptions="FillAndExpand"/>
+            <Entry x:Name="txtEmail" Placeholder="{translate:Translate Email}" HorizontalOptions="FillAndExpand" Keyboard="Email"/>
+            <Editor x:Name="txtContent" Text="{translate:Translate Comment}" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"/>
+            <Button x:Name="btnSend" VerticalOptions="End" Text="{translate:Translate Send}" Style="{DynamicResource buttonStyle}" 
+                    Clicked="OnSendButtonPressed"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

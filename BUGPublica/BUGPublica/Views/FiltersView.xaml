@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:BUGPublica.Views"
+             xmlns:customrenders="clr-namespace:BUGPublica.CustomRenders"
+             xmlns:translate="clr-namespace:BUGPublica.Helpers"
+             x:Class="BUGPublica.Views.FiltersView"
+             Padding="10">
+  <ContentView.Content>
+      <StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Label Text="{translate:Translate Filter}" 
+                       HorizontalOptions="CenterAndExpand"
+                       FontSize="18"/>
+                <local:CheckBox x:Name="checkboxAll"
+                                Text="{translate:Translate All}"
+                                FontSize="16"
+                                HorizontalOptions="End"
+                                IsChecked="True"/>
+            </StackLayout>
+            <ScrollView>
+                <Grid x:Name="grid">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                </Grid>
+            </ScrollView>
+            <Button x:Name="btnAccept"
+                    Text="{translate:Translate Accept}"
+                    Style="{DynamicResource buttonStyle}"/>
+        </StackLayout>
+  </ContentView.Content>
+</ContentView>

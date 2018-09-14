@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BUGPublica.HomePage"
+             xmlns:views="clr-namespace:BUGPublica.Views"
+             xmlns:local="clr-namespace:BUGPublica.ViewModels"
+             xmlns:translate="clr-namespace:BUGPublica.Helpers"
+             xmlns:models="clr-namespace:BUGPublica.Models"
+             NavigationPage.HasNavigationBar="False">
+    <!--RECURSOS-->
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Thickness x:Key="margin">5, 0</Thickness>
+            <Style x:Key="label" TargetType="Label">
+                <Setter Property="TextColor" Value="#FFFFFF"/>
+                <Setter Property="FontSize" Value="17"/>
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+             
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout Orientation="Vertical" 
+                         BackgroundColor="{StaticResource HomeBackgroundColor}"
+                         Spacing="0">
+                <!--IMAGEN TOP SUPERIOR Y LOGO-->
+                <AbsoluteLayout HeightRequest="200">
+                    <views:FilterImage Image="{local:ImageResource BUGPublica.Images.cover.png}" 
+                                   Filter="{local:ImageResource BUGPublica.Images.gradient_blue.png}"
+                                   AbsoluteLayout.LayoutBounds="0, 0, 1, 1"
+                                   AbsoluteLayout.LayoutFlags="All"/>
+                    <Image Source="{local:ImageResource BUGPublica.Images.logo.png}"
+                           AbsoluteLayout.LayoutBounds="0.45, 0.25, 0.45, 0.55"
+                           AbsoluteLayout.LayoutFlags="All"/>
+                </AbsoluteLayout>
+                <!--OPCIONES DE MENU-->
+                <StackLayout Orientation="Vertical" Margin="0, 5, 0, 0">
+                    <!--BOTONES DE NOTICIAS Y EVENTOS-->
+                    <Grid Margin="{StaticResource margin}">
+                        <Grid.Resources>
+                            <ResourceDictionary>
+                                <Style TargetType="Frame">
+                                    <Setter Property="CornerRadius" Value="4"/>
+                                    <Setter Property="BackgroundColor" Value="{StaticResource GreenColor}"/>
+                                    <Setter Property="HorizontalOptions" Value="FillAndExpand"/>
+                                    <Setter Property="Padding" Value="10"/>
+                                </Style>
+                            </ResourceDictionary>
+                        </Grid.Resources>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <Frame Grid.Row="0" Grid.Column="0">
+                            <Frame.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="OnNewsTapped"/>
+                            </Frame.GestureRecognizers>
+                            <StackLayout Orientation="Vertical">
+                                <Image HorizontalOptions="Start"
+                                   WidthRequest="50"
+                                   Source="{local:ImageResource BUGPublica.Images.icon_noticias.png}"/>
+                                <Label HorizontalOptions="Start"
+                                   Text="{translate:Translate News}"
+                                   FontSize="18"
+                                   TextColor="#000000"/>
+                            </StackLayout>
+                        </Frame>
+                        <Frame Grid.Row="0" Grid.Column="1">
+                            <Frame.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="OnEventsTapped"/>
+                            </Frame.GestureRecognizers>
+                            <StackLayout Orientation="Vertical">
+                                <Image HorizontalOptions="Start"
+                                   WidthRequest="50"
+                                   Source="{local:ImageResource BUGPublica.Images.icon_eventos.png}"/>
+                                <Label HorizontalOptions="Start"
+                                   Text="{translate:Translate Events}"
+                                   FontSize="18"
+                                   TextColor="#000000"/>
+                            </StackLayout>
+                        </Frame>
+                    </Grid>
+                    <!--LABEL DESCUBRE BOSQUE-->
+                    <Label Margin="{StaticResource margin}"
+                       Text="{translate:Translate LookBug}"
+                       Style="{StaticResource label}"
+                       FontSize="18"/>
+                    <!--GRID DE PARQUES-->
+                    <AbsoluteLayout>
+                        <!--BACKGROUND BOTTOM-->
+                        <Image Source="{local:ImageResource BUGPublica.Images.footer_bg.png}"
+                           Aspect="AspectFill"
+                           AbsoluteLayout.LayoutBounds="0, 1, 1, 0.2"
+                           AbsoluteLayout.LayoutFlags="All"/>
+                        <!--PARQUES-->
+                        <Grid Margin="{StaticResource margin}" Padding="0, 0, 0, 60">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="130"/>
+                                <RowDefinition Height="130"/>
+                                <RowDefinition Height="130"/>
+                                <RowDefinition Height="130"/>
+                                <RowDefinition Height="130"/>
+                                <!--<RowDefinition Height="130"/>-->
+                            </Grid.RowDefinitions>
+                            <views:BugCell Image="{local:ImageResource BUGPublica.Images.colomos.png}" 
+                                   Bug="{x:Static models:BUG.BUG_COLOMOS}"        
+                                   Grid.Row="0" Grid.Column="0"/>
+                            <views:BugCell Image="{local:ImageResource BUGPublica.Images.alcalde.png}" 
+                                   Bug="{x:Static models:BUG.BUG_ALCALDE}"
+                                   Grid.Row="0" Grid.Column="1"/>
+                            <views:BugCell Image="{local:ImageResource BUGPublica.Images.avila_camacho.png}" 
+                                   Bug="{x:Static models:BUG.BUG_AVILA_CAMACHO}"
+                                   Grid.Row="1" Grid.Column="0"/>
+                            <views:BugCell Image="{local:ImageResource BUGPublica.Images.el_dean.png}" 
+                                   Bug="{x:Static models:BUG.BUG_DEAN}"
+                                   Grid.Row="1" Grid.Column="1"/>
+                            <views:BugCell Image="{local:ImageResource BUGPublica.Images.agua_azul.png}" 
+                                   Bug="{x:Static models:BUG.BUG_AGUA_AZUL}"
+                                   Grid.Row="2" Grid.Column="0"/>
+                            <views:BugCell Image="{local:ImageResource BUGPublica.Images.gonzalez_gallo.png}" 
+                                   Bug="{x:Static models:BUG.BUG_GONZALEZ_GALLO}"
+                                   Grid.Row="2" Grid.Column="1"/>
+                            <views:BugCell Image="{local:ImageResource BUGPublica.Images.natural_huentitan.png}" 
+                                   Bug="{x:Static models:BUG.BUG_NATURAL_HUENTITAN}"
+                                   Grid.Row="3" Grid.Column="0"/>
+                            <views:BugCell Image="{local:ImageResource BUGPublica.Images.puerta_barranca.png}" 
+                                   Bug="{x:Static models:BUG.BUG_PUERTA_BARRANCA}"
+                                   Grid.Row="3" Grid.Column="1"/>
+                            <views:BugCell Image="{local:ImageResource BUGPublica.Images.arboledas_sur.png}" 
+                                   Bug="{x:Static models:BUG.BUG_ARBOLEDAS_SUR}"
+                                   Grid.Row="4" Grid.Column="0"/>
+                            <views:BugCell Image="{local:ImageResource BUGPublica.Images.miradorhuentitan.png}" 
+                                   Bug="{x:Static models:BUG.BUG_MIRADOR_HUENTITAN}"
+                                   Grid.Row="4" Grid.Column="1" IsVisible="False"/>
+                            <views:BugCell Image="{local:ImageResource BUGPublica.Images.morelos.png}" 
+                                   Bug="{x:Static models:BUG.BUG_MORELOS}"
+                                   Grid.Row="4" Grid.Column="1"/>
+                        </Grid>
+                    </AbsoluteLayout>
+                </StackLayout>
+                <!--OPCIONES DE APP-->
+                <StackLayout Orientation="Vertical" BackgroundColor="{StaticResource GrayColor}">
+                    <StackLayout.Resources>
+                        <ResourceDictionary>
+                            <Style TargetType="StackLayout">
+                                <Setter Property="Padding" Value="10, 0, 10, 15"/>
+                            </Style>
+                            <Style TargetType="Image">
+                                <Setter Property="HorizontalOptions" Value="End"/>
+                                <Setter Property="HeightRequest" Value="15"/>
+                            </Style>
+                        </ResourceDictionary>
+                    </StackLayout.Resources>
+                    <StackLayout Orientation="Horizontal">
+                        <StackLayout.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="OnTermsTapped"/>
+                        </StackLayout.GestureRecognizers>
+                        <Label Text="{translate:Translate TermCondition}" HorizontalOptions="StartAndExpand" Style="{StaticResource label}"/>
+                        <Image Source="{local:ImageResource BUGPublica.Images.arrow_right.png}"/>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <StackLayout.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="OnSuggestionMailboxTapped"/>
+                        </StackLayout.GestureRecognizers>
+                        <Label Text="{translate:Translate SuggestionMail}" HorizontalOptions="StartAndExpand" Style="{StaticResource label}"/>
+                        <Image Source="{local:ImageResource BUGPublica.Images.arrow_right.png}"/>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <StackLayout.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="OnProfileTapped"/>
+                        </StackLayout.GestureRecognizers>
+                        <Label Text="{translate:Translate Profile}" HorizontalOptions="StartAndExpand" Style="{StaticResource label}"/>
+                        <Image Source="{local:ImageResource BUGPublica.Images.arrow_right.png}"/>
+                    </StackLayout>
+                </StackLayout>
+            </StackLayout>
+        </ScrollView>
+        
+    </ContentPage.Content>
+</ContentPage>

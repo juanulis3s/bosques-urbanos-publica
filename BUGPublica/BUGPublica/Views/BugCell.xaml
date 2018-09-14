@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:views="clr-namespace:BUGPublica.Views"
+             xmlns:local="clr-namespace:BUGPublica.ViewModels"
+             x:Class="BUGPublica.Views.BugCell"
+             x:Name="bugCell">
+    <ContentView.Content>
+        <Frame Padding="0" CornerRadius="4" BindingContext="{x:Reference bugCell}">
+            <Frame.GestureRecognizers>
+                <TapGestureRecognizer Tapped="OnTapped"/>
+            </Frame.GestureRecognizers>
+            <AbsoluteLayout>
+                <views:FilterImage Image="{Binding Image}" 
+                                   Filter="{local:ImageResource BUGPublica.Images.gradient.png}"
+                                   AbsoluteLayout.LayoutBounds="0, 0, 1, 1"
+                                   AbsoluteLayout.LayoutFlags="All"/>
+                <Label Text="{Binding Text}"
+                       TextColor="#FFFFFF"
+                       FontSize="15"
+                       LineBreakMode="WordWrap"
+                       AbsoluteLayout.LayoutBounds="0.2, 0.9, 0.95, AutoSize"
+                       AbsoluteLayout.LayoutFlags="PositionProportional,WidthProportional"/>
+            </AbsoluteLayout>
+        </Frame>
+    </ContentView.Content>
+</ContentView>
