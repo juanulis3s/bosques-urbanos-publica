@@ -36,6 +36,7 @@ namespace BUGPublica
             //SE CREA EL MAPA
             _map = BugMap.GetCustomMap(BugTabbedPage.Bug.Id);
             _map.MoveToRegion(MapSpan.FromCenterAndRadius(_map.Position, Distance.FromMeters(1000)));
+            _map.IsShowingUser = true;
 
             //SE AGREGA EL EVENTO DE OBTENER LOS MARCADORES CUANDO SE HAYA CARGADO EL MAPA
             //_map.MapReady += (sender, e) =>
