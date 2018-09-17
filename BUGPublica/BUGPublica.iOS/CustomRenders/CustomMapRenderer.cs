@@ -65,7 +65,7 @@ namespace BUGPublica.iOS.CustomRenders
                 //EVENTOS QUE SE DISPARAN CUANDO SE SELECCIONA Y QUITA SELECCION SOBRE UN MARCADOR
                 _map.DidSelectAnnotationView += OnDidSelectAnnotationView;
                 _map.DidDeselectAnnotationView += OnDidDeselectAnnotationView;
-
+                _map.ShowsUserLocation = true;
                 // SE INDICA QUE SE HA CARGADO EL MAPA
                 _customMap.MapLoaded();
             }

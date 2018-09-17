@@ -18,6 +18,7 @@ using System;
 using System.Collections;
 using System.ComponentModel;
 using AView = Android.Views.View;
+using Android.Support.V4.Content;
 
 [assembly: ExportRenderer(typeof(CustomMap), typeof(CustomMapRenderer))]
 namespace BUGPublica.Droid.CustomRenders
@@ -75,9 +76,13 @@ namespace BUGPublica.Droid.CustomRenders
                 new LatLng(_customMap.LimitNorthEast.Latitude, _customMap.LimitNorthEast.Longitude));
             map.SetLatLngBoundsForCameraTarget(bounds);
 
+            //SE ACTIVA LA VISIBILIDAD DE LA LOCALIZACION
+            enableUserLocation(map);
+
             //SE OCULTA LOS BOTONES DE ZOOM Y TOOLBAR
-            map.UiSettings.ZoomControlsEnabled = false;
             map.UiSettings.MapToolbarEnabled = false;
+            map.UiSettings.MyLocationButtonEnabled = false;
+            map.UiSettings.ZoomControlsEnabled = false;
 
             //SE CONFIGURA EL ZOOM DEL MAPA
             map.SetMaxZoomPreference(_customMap.MaxZoom);
@@ -92,7 +97,7 @@ namespace BUGPublica.Droid.CustomRenders
 
             //SE NOTIFICA QUE SE HA CARGADO EL MAPA
             _customMap.MapLoaded();
-        } 
+        }
 
         protected override MarkerOptions CreateMarker(Pin pin)
         {
@@ -130,6 +135,37 @@ namespace BUGPublica.Droid.CustomRenders
 
             return marker;
         } 
+
+        /// <summary>
+        /// ACTIVA LA LOCALIZACION DEL USUARIO EN EL MAPA SI TIENE EL PERMISO
+        /// </summary>
+        /// <param name="map"></param>
+        private async void enableUserLocation(GoogleMap map)
+        {
+            if (ContextCompat.CheckSelfPermission(Context, Android.Manifest.Permission.AccessFineLocation)
+                == Android.Content.PM.Permission.Granted)
+            {
+                map.MyLocationEnabled = true;
+            }
+            else
+            {
+                try
+                {
+                    // SE PREGUNTA POR EL PERMISO DE LOCALIZACION
+                    var results = await Plugin.Permissions.CrossPermissions.Current.RequestPermissionsAsync(Plugin.Permissions.Abstractions.Permission.Location);
+                    if (results.ContainsKey(Plugin.Permissions.Abstractions.Permission.Location))
+                    {
+                        if (results[Plugin.Permissions.Abstractions.Permission.Location] == Plugin.Permissions.Abstractions.PermissionStatus.Granted)
+                            map.MyLocationEnabled = true;
+                    }    
+                }
+                catch(Exception e)
+                {
+                    System.Diagnostics.Debug.WriteLine(e.StackTrace);
+                }
+            }
+                
+        }
 
         /// <summary>
         /// EVENTO CUANDO LA LISTA DE PINES HA SIDO MODIFICADA
