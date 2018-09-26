@@ -302,4 +302,10 @@ de Guadalajara</value>
   <data name="Warning" xml:space="preserve">
     <value>Alerte</value>
   </data>
+  <data name="GetLocationError" xml:space="preserve">
+    <value>Son emplacement n'a pas pu être obtenu. Réessayer</value>
+  </data>
+  <data name="Wrong" xml:space="preserve">
+    <value>Quelque chose a mal tourné</value>      
+  </data>
 </root>

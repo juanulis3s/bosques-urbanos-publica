@@ -16,21 +16,21 @@ namespace BUGPublica.Resources {
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "4.0.0.0")]
     [System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class AppResources {
+    internal class AppResources_fr {
         
         private static System.Resources.ResourceManager resourceMan;
         
         private static System.Globalization.CultureInfo resourceCulture;
         
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
-        internal AppResources() {
+        internal AppResources_fr() {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         internal static System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.Equals(null, resourceMan)) {
-                    System.Resources.ResourceManager temp = new System.Resources.ResourceManager("BUGPublica.Resources.AppResources", typeof(AppResources).Assembly);
+                    System.Resources.ResourceManager temp = new System.Resources.ResourceManager("BUGPublica.Resources.AppResources.fr", typeof(AppResources_fr).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -89,9 +89,27 @@ namespace BUGPublica.Resources {
             }
         }
         
+        internal static string ConfirmEmergency2 {
+            get {
+                return ResourceManager.GetString("ConfirmEmergency2", resourceCulture);
+            }
+        }
+        
+        internal static string ConfirmEmergency3 {
+            get {
+                return ResourceManager.GetString("ConfirmEmergency3", resourceCulture);
+            }
+        }
+        
         internal static string DontShow {
             get {
                 return ResourceManager.GetString("DontShow", resourceCulture);
+            }
+        }
+        
+        internal static string Duration {
+            get {
+                return ResourceManager.GetString("Duration", resourceCulture);
             }
         }
         
@@ -209,6 +227,12 @@ namespace BUGPublica.Resources {
             }
         }
         
+        internal static string MustRegister {
+            get {
+                return ResourceManager.GetString("MustRegister", resourceCulture);
+            }
+        }
+        
         internal static string Name {
             get {
                 return ResourceManager.GetString("Name", resourceCulture);
@@ -287,6 +311,24 @@ namespace BUGPublica.Resources {
             }
         }
         
+        internal static string RouteDialogEndRoute {
+            get {
+                return ResourceManager.GetString("RouteDialogEndRoute", resourceCulture);
+            }
+        }
+        
+        internal static string RouteDialogMessage {
+            get {
+                return ResourceManager.GetString("RouteDialogMessage", resourceCulture);
+            }
+        }
+        
+        internal static string RouteDialogTitle {
+            get {
+                return ResourceManager.GetString("RouteDialogTitle", resourceCulture);
+            }
+        }
+        
         internal static string Routes {
             get {
                 return ResourceManager.GetString("Routes", resourceCulture);
@@ -305,9 +347,27 @@ namespace BUGPublica.Resources {
             }
         }
         
+        internal static string Search {
+            get {
+                return ResourceManager.GetString("Search", resourceCulture);
+            }
+        }
+        
         internal static string Send {
             get {
                 return ResourceManager.GetString("Send", resourceCulture);
+            }
+        }
+        
+        internal static string SomethingWrong {
+            get {
+                return ResourceManager.GetString("SomethingWrong", resourceCulture);
+            }
+        }
+        
+        internal static string SplashLabel {
+            get {
+                return ResourceManager.GetString("SplashLabel", resourceCulture);
             }
         }
         
@@ -350,66 +410,6 @@ namespace BUGPublica.Resources {
         internal static string Warning {
             get {
                 return ResourceManager.GetString("Warning", resourceCulture);
-            }
-        }
-        
-        internal static string Duration {
-            get {
-                return ResourceManager.GetString("Duration", resourceCulture);
-            }
-        }
-        
-        internal static string RouteDialogMessage {
-            get {
-                return ResourceManager.GetString("RouteDialogMessage", resourceCulture);
-            }
-        }
-        
-        internal static string RouteDialogTitle {
-            get {
-                return ResourceManager.GetString("RouteDialogTitle", resourceCulture);
-            }
-        }
-        
-        internal static string RouteDialogEndRoute {
-            get {
-                return ResourceManager.GetString("RouteDialogEndRoute", resourceCulture);
-            }
-        }
-        
-        internal static string ConfirmEmergency3 {
-            get {
-                return ResourceManager.GetString("ConfirmEmergency3", resourceCulture);
-            }
-        }
-        
-        internal static string ConfirmEmergency2 {
-            get {
-                return ResourceManager.GetString("ConfirmEmergency2", resourceCulture);
-            }
-        }
-        
-        internal static string SomethingWrong {
-            get {
-                return ResourceManager.GetString("SomethingWrong", resourceCulture);
-            }
-        }
-        
-        internal static string SplashLabel {
-            get {
-                return ResourceManager.GetString("SplashLabel", resourceCulture);
-            }
-        }
-        
-        internal static string MustRegister {
-            get {
-                return ResourceManager.GetString("MustRegister", resourceCulture);
-            }
-        }
-        
-        internal static string Search {
-            get {
-                return ResourceManager.GetString("Search", resourceCulture);
             }
         }
         

@@ -302,4 +302,10 @@ Guadalajara</value>
   <data name="Search" xml:space="preserve">
     <value>Search</value>
   </data>
+  <data name="GetLocationError" xml:space="preserve">
+    <value>Its location could not be obtained. Try again</value>
+  </data>
+  <data name="Wrong" xml:space="preserve">
+    <value>Something went wrong</value>      
+  </data>
 </root>

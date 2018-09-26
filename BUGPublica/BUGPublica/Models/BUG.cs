@@ -22,14 +22,14 @@ namespace BUGPublica.Models
         //NOMBRES BOSQUES DE LA RED BUG
         private const string NAME_BUG_MORELOS = "Parque Morelos";
         private const string NAME_BUG_AGUA_AZUL = "Parque Agua Azul";
-        private const string NAME_BUG_COLOMOS = "Bosques Los Colomos";
+        private const string NAME_BUG_COLOMOS = "Bosque Los Colomos";
         private const string NAME_BUG_MIRADOR_INDEPENDENCIA = "Parque Mirador Independencia";
         private const string NAME_BUG_PUERTA_BARRANCA = "Parque Puerta de la Barranca";
         private const string NAME_BUG_NATURAL_HUENTITAN = "Parque Natural Huentitán";
         private const string NAME_BUG_AVILA_CAMACHO = "Parque Ávila Camacho";
         private const string NAME_BUG_ALCALDE = "Parque Alcalde";
         private const string NAME_BUG_GONZALEZ_GALLO = "Parque González Gallo";
-        private const string NAME_BUG_DEAN = "Parque Dean";
+        private const string NAME_BUG_DEAN = "Parque El Dean";
         private const string NAME_BUG_ARBOLEDAS_SUR = "Parque Arboledas Sur";
 
         //NOMBRES CORTOS BOSQUES DE LA RED BUG

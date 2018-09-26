@@ -303,4 +303,10 @@ Guadalajara</value>
   <data name="Search" xml:space="preserve">
     <value>Buscar</value>
   </data>
+  <data name="GetLocationError" xml:space="preserve">
+    <value>No se pudo obtener su localización. Intente de nuevo</value>
+  </data>
+  <data name="Wrong" xml:space="preserve">
+    <value>Algo salió mal</value>      
+  </data>
 </root>

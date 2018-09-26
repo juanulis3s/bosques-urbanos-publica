@@ -37,6 +37,8 @@
     <None Remove="Images\splash_2.png" />
     <None Remove="Images\splash_3.png" />
     <None Remove="Images\splash_4.png" />
+    <None Remove="Images\IMG-20180925-WA0002.jpg" />
+    <None Remove="Images\morelos.png" />
   </ItemGroup>
 
   <ItemGroup>
@@ -48,6 +50,7 @@
     <EmbeddedResource Include="Images\close.png" />
     <EmbeddedResource Include="Images\colomos.png" />
     <EmbeddedResource Include="Images\cover.png" />
+    <EmbeddedResource Include="Images\morelos.png" />
   </ItemGroup>
 
   <ItemGroup>
@@ -66,7 +69,6 @@
     <EmbeddedResource Include="Images\icon_search.png" />
     <EmbeddedResource Include="Images\logo.png" />
     <EmbeddedResource Include="Images\miradorhuentitan.png" />
-    <EmbeddedResource Include="Images\morelos.png" />
     <EmbeddedResource Include="Images\natural_huentitan.png" />
     <EmbeddedResource Include="Images\puerta_barranca.png" />
     <EmbeddedResource Include="Images\qr_display.png" />
@@ -102,6 +104,12 @@
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
       <DependentUpon>AppResources.resx</DependentUpon>
+    </Compile>
+    <Compile Update="Resources\AppResources.fr.Designer.cs">
+      <DependentUpon>AppResources.fr.resx</DependentUpon>
+    </Compile>
+    <Compile Update="Resources\AppResources.es.Designer.cs">
+      <DependentUpon>AppResources.es.resx</DependentUpon>
     </Compile>
   </ItemGroup>
 
@@ -153,9 +161,11 @@
     </EmbeddedResource>
     <EmbeddedResource Update="Resources\AppResources.es.resx">
       <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>AppResources.es.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Update="Resources\AppResources.fr.resx">
       <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>AppResources.fr.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Update="Resources\AppResources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

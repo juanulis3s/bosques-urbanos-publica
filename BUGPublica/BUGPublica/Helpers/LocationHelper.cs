@@ -47,7 +47,7 @@ namespace BUGPublica.Helpers
                     System.Diagnostics.Debug.WriteLine(e.Message);
                     System.Diagnostics.Debug.WriteLine(e.StackTrace);
                     //TODO Cambiar mensaje de error
-                    DisplayAlert(Resources.AppResources.Error, Resources.AppResources.Error, page);
+                    DisplayAlert(Resources.AppResources.Wrong, Resources.AppResources.GetLocationError, page);
                     return new Position();
                 }
 
@@ -55,7 +55,7 @@ namespace BUGPublica.Helpers
                 if (position == null)
                 {
                     //TODO Cambiar mensaje de error
-                    DisplayAlert(Resources.AppResources.Error, Resources.AppResources.Error, page);
+                    DisplayAlert(Resources.AppResources.Wrong, Resources.AppResources.GetLocationError, page);
                     return new Position();
                 }
 
