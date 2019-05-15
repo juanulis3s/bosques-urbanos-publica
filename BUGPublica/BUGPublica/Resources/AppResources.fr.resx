@@ -136,7 +136,7 @@
     <value>Commentaire</value>
   </data>
   <data name="ConfirmEmergency" xml:space="preserve">
-    <value>CONFIRMER L'URGENCE</value>
+    <value>CONFIRMER L'ASSISTANCE</value>
   </data>
   <data name="ConfirmEmergency2" xml:space="preserve">
     <value>VOUS ÊTES SUR LE POINT DE DEMANDER UNE ASSITANCE</value>
@@ -175,10 +175,10 @@
     <value>Le système de localisation de votre dispositif doit être activé</value>
   </data>
   <data name="HelpError" xml:space="preserve">
-    <value>Problème lors de la demande d'aide</value>
+    <value>Problème lors de la demande d'assistance</value>
   </data>
   <data name="HelpSuccess" xml:space="preserve">
-    <value>Urgence transmise; les secours sont en chemin.</value>
+    <value>L'assistance est sur le chemin de votre emplacement</value>
   </data>
   <data name="Info" xml:space="preserve">
     <value>INFO</value>

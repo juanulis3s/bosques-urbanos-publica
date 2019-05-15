@@ -136,7 +136,7 @@
     <value>Comentario</value>
   </data>
   <data name="ConfirmEmergency" xml:space="preserve">
-    <value>CONFIRMAR EMERGENCIA</value>
+    <value>CONFIRMAR ASISTENCIA</value>
   </data>
   <data name="DontShow" xml:space="preserve">
     <value>NO VOLVER A MOSTRAR</value>
@@ -167,10 +167,10 @@
     <value>Debe estar activado la ubicación del dispositivo</value>
   </data>
   <data name="HelpError" xml:space="preserve">
-    <value>Hubo un problema al realizar la peticón de ayuda</value>
+    <value>Hubo un problema al realizar la peticón de asistencia</value>
   </data>
   <data name="HelpSuccess" xml:space="preserve">
-    <value>Emergencia Reportada. La ayuda está en camino a tu ubicación.</value>
+    <value>La asistencia está en camino a tu ubicación.</value>
   </data>
   <data name="Info" xml:space="preserve">
     <value>INFO</value>

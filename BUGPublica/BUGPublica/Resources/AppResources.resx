@@ -136,7 +136,7 @@
     <value>Annotation</value>
   </data>
   <data name="ConfirmEmergency" xml:space="preserve">
-    <value>CONFIRM EMERGENCY</value>
+    <value>CONFIRM ASSISTANCE</value>
   </data>
   <data name="DontShow" xml:space="preserve">
     <value>DON'T SHOW AGAIN</value>
@@ -166,10 +166,10 @@
     <value>Device location must be enabled</value>
   </data>
   <data name="HelpError" xml:space="preserve">
-    <value>There was a problem when performing the request for help</value>
+    <value>There was a problem when performing the request for assistance</value>
   </data>
   <data name="HelpSuccess" xml:space="preserve">
-    <value>Reported Emergency. Help is on the way to your location.</value>
+    <value>Assistance is on the way to your location.</value>
   </data>
   <data name="Info" xml:space="preserve">
     <value>INFO</value>

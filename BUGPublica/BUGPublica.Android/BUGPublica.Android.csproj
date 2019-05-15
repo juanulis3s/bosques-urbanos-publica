@@ -15,7 +15,6 @@
     <AndroidManifest>Properties\AndroidManifest.xml</AndroidManifest>
     <MonoAndroidResourcePrefix>Resources</MonoAndroidResourcePrefix>
     <MonoAndroidAssetsPrefix>Assets</MonoAndroidAssetsPrefix>
-    <AndroidUseLatestPlatformSdk>false</AndroidUseLatestPlatformSdk>
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
     <AndroidKeyStore>false</AndroidKeyStore>
@@ -23,6 +22,7 @@
     <AndroidSigningStorePass>bug-774411</AndroidSigningStorePass>
     <AndroidSigningKeyAlias>bugpublickey</AndroidSigningKeyAlias>
     <AndroidSigningKeyPass>bug-996633</AndroidSigningKeyPass>
+    <AndroidLinkSkip></AndroidLinkSkip>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -32,12 +32,9 @@
     <DefineConstants>DEBUG;</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <AndroidLinkMode>SdkOnly</AndroidLinkMode>
-    <AotAssemblies>false</AotAssemblies>
-    <EnableLLVM>false</EnableLLVM>
-    <BundleAssemblies>false</BundleAssemblies>
-    <AndroidLinkSkip />
     <AndroidSupportedAbis />
+    <AndroidKeyStore>True</AndroidKeyStore>
+    <AndroidSigningKeyStore>/Users/carlosluevano/Downloads/AndroidKeystores/bugpublica/bugpublica.jks</AndroidSigningKeyStore>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -48,9 +45,8 @@
     <WarningLevel>4</WarningLevel>
     <AndroidManagedSymbols>true</AndroidManagedSymbols>
     <AndroidUseSharedRuntime>false</AndroidUseSharedRuntime>
-    <AotAssemblies>false</AotAssemblies>
-    <EnableLLVM>false</EnableLLVM>
-    <BundleAssemblies>false</BundleAssemblies>
+    <AndroidKeyStore>True</AndroidKeyStore>
+    <AndroidSigningKeyStore>/Users/carlosluevano/Downloads/AndroidKeystores/bugpublica/bugpublica.jks</AndroidSigningKeyStore>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Mono.Android" />
@@ -201,7 +197,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\BUGPublica\BUGPublica.csproj">
-      <Project>{37B951C2-4C7C-4CAE-8B46-4E7A83A54B8D}</Project>
+      <Project>{E8E0F4DF-6D0F-4E3E-95E8-0F352EC4F775}</Project>
       <Name>BUGPublica</Name>
     </ProjectReference>
   </ItemGroup>
