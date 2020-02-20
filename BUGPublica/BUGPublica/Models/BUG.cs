@@ -18,6 +18,9 @@ namespace BUGPublica.Models
         public const int ID_BUG_GONZALEZ_GALLO = 6;
         public const int ID_BUG_DEAN = 2;
         public const int ID_BUG_ARBOLEDAS_SUR = 9;
+        public const int ID_BUG_SOLIDARIDAD = 0;
+        public const int ID_BUG_METROPOLITANO = 0;
+        public const int ID_BUG_MONTENEGRO = 0;
 
         //NOMBRES BOSQUES DE LA RED BUG
         private const string NAME_BUG_MORELOS = "Parque Morelos";
@@ -31,6 +34,9 @@ namespace BUGPublica.Models
         private const string NAME_BUG_GONZALEZ_GALLO = "Parque González Gallo";
         private const string NAME_BUG_DEAN = "Parque El Dean";
         private const string NAME_BUG_ARBOLEDAS_SUR = "Parque Arboledas Sur";
+        private const string NAME_BUG_SOLIDARIDAD = "Parque de la Solidaridad";
+        private const string NAME_BUG_METROPOLITANO = "Parque Metropolitano";
+        private const string NAME_BUG_MONTENEGRO = "Parque Roberto Montenegro";
 
         //NOMBRES CORTOS BOSQUES DE LA RED BUG
         private const string SHORTNAME_BUG_MORELOS = "PARQUE MORELOS";
@@ -44,6 +50,9 @@ namespace BUGPublica.Models
         private const string SHORTNAME_BUG_GONZALEZ_GALLO = "PARQUE GONZÁLEZ GALLO";
         private const string SHORTNAME_BUG_DEAN = "PARQUE LIBERACIÓN (EL DEAN)";
         private const string SHORTNAME_BUG_ARBOLEDAS_SUR = "ARBOLEDAS DEL SUR";
+        private const string SHORTNAME_BUG_SOLIDARIDAD = "PARQUE DE LA SOLIDARIDAD";
+        private const string SHORTNAME_BUG_METROPOLITANO = "PARQUE METROPOLITANO";
+        private const string SHORTNAME_BUG_MONTENEGRO = "PARQUE MONTENEGRO";
 
         public string Name { get; set; }
         public string Shortname { get; set; }
@@ -104,6 +113,21 @@ namespace BUGPublica.Models
             get { return new BUG { Name = NAME_BUG_ARBOLEDAS_SUR, Shortname = SHORTNAME_BUG_ARBOLEDAS_SUR, Id = ID_BUG_ARBOLEDAS_SUR }; }
         }
 
+        public static BUG BUG_SOLIDARIDAD
+        {
+            get { return new BUG { Name = NAME_BUG_SOLIDARIDAD, Shortname = SHORTNAME_BUG_SOLIDARIDAD, Id = ID_BUG_SOLIDARIDAD }; }
+        }
+
+        public static BUG BUG_METROPOLITANO
+        {
+            get { return new BUG { Name = NAME_BUG_METROPOLITANO, Shortname = SHORTNAME_BUG_METROPOLITANO, Id = ID_BUG_METROPOLITANO }; }
+        }
+
+        public static BUG BUG_MONTENEGRO
+        {
+            get { return new BUG { Name = NAME_BUG_MONTENEGRO, Shortname = SHORTNAME_BUG_MONTENEGRO, Id = ID_BUG_MONTENEGRO }; }
+        }
+
         public static List<BUG> ALL
         {
             get
@@ -120,6 +144,9 @@ namespace BUGPublica.Models
                 bugs.Add(BUG_ARBOLEDAS_SUR);
                 bugs.Add(BUG_MIRADOR_HUENTITAN);
                 bugs.Add(BUG_MORELOS);
+                bugs.Add(BUG_SOLIDARIDAD);
+                bugs.Add(BUG_METROPOLITANO);
+                bugs.Add(BUG_MONTENEGRO);
                 return bugs;
             }
         }

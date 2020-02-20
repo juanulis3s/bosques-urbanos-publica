@@ -27,6 +27,9 @@ namespace BUGPublica.Helpers
                 case BUG.ID_BUG_GONZALEZ_GALLO: return GetGonzalezGalloBounds();
                 case BUG.ID_BUG_DEAN: return GetDeanBounds();
                 case BUG.ID_BUG_ARBOLEDAS_SUR: return GetArboledasSurBounds();
+                case BUG.ID_BUG_SOLIDARIDAD: return GetSolidaridadBounds();
+                case BUG.ID_BUG_METROPOLITANO: return GetMetropolitanoBounds();
+                case BUG.ID_BUG_MONTENEGRO: return GetMontenegroBounds();
                 default: throw new Exception("Tipo de Bug inválido");
             }
         }
@@ -214,6 +217,83 @@ namespace BUGPublica.Helpers
             bounds.Add(new Position(20.723697, -103.292328));
             bounds.Add(new Position(20.723954, -103.292584));
             bounds.Add(new Position(20.724666, -103.292113));
+            return bounds;
+        }
+
+        private static List<Position> GetSolidaridadBounds()
+        {
+            List<Position> bounds = new List<Position>();
+            bounds.Add(new Position(20.679480, -103.267618));
+            bounds.Add(new Position(20.678147, -103.265837));
+            bounds.Add(new Position(20.675236, -103.264450));
+            bounds.Add(new Position(20.671764, -103.263756));
+            bounds.Add(new Position(20.669915, -103.263938));
+            bounds.Add(new Position(20.668216, -103.263593));
+            bounds.Add(new Position(20.667045, -103.265268));
+            bounds.Add(new Position(20.664335, -103.267397));
+            bounds.Add(new Position(20.659897, -103.268039));
+            bounds.Add(new Position(20.658732, -103.267661));
+            bounds.Add(new Position(20.655059, -103.267419));
+            bounds.Add(new Position(20.653049, -103.269047));
+            bounds.Add(new Position(20.649165, -103.269932));
+            bounds.Add(new Position(20.648106, -103.271412));
+            bounds.Add(new Position(20.646600, -103.272437));
+            bounds.Add(new Position(20.647454, -103.272387));
+            bounds.Add(new Position(20.649023, -103.272511));
+            bounds.Add(new Position(20.651447, -103.271449));
+            bounds.Add(new Position(20.653217, -103.271142));
+            bounds.Add(new Position(20.654499, -103.271292));
+            bounds.Add(new Position(20.657027, -103.270102));
+            bounds.Add(new Position(20.659143, -103.269804));
+            bounds.Add(new Position(20.661319, -103.270391));
+            bounds.Add(new Position(20.663578, -103.270387));
+            bounds.Add(new Position(20.665686, -103.270548));
+            bounds.Add(new Position(20.667473, -103.270054));
+            bounds.Add(new Position(20.672250, -103.270049));
+            bounds.Add(new Position(20.674758, -103.269080));
+            bounds.Add(new Position(20.678263, -103.268358));
+            bounds.Add(new Position(20.679480, -103.267618));
+            return bounds;
+        }
+
+        private static List<Position> GetMetropolitanoBounds()
+        {
+            List<Position> bounds = new List<Position>();
+            bounds.Add(new Position(20.68076, -103.44159));
+            bounds.Add(new Position(20.68042, -103.43825));
+            bounds.Add(new Position(20.67804, -103.43827));
+            bounds.Add(new Position(20.67738, -103.43752));
+            bounds.Add(new Position(20.67718, -103.43624));
+            bounds.Add(new Position(20.67783, -103.43402));
+            bounds.Add(new Position(20.67497, -103.43461));
+            bounds.Add(new Position(20.67510, -103.43568));
+            bounds.Add(new Position(20.67499, -103.43642));
+            bounds.Add(new Position(20.67449, -103.43702));
+            bounds.Add(new Position(20.67388, -103.43740));
+            bounds.Add(new Position(20.67339, -103.43756));
+            bounds.Add(new Position(20.67284, -103.43762));
+            bounds.Add(new Position(20.67220, -103.43752));
+            bounds.Add(new Position(20.67170, -103.43734));
+            bounds.Add(new Position(20.67101, -103.43659));
+            bounds.Add(new Position(20.67078, -103.43659));
+            bounds.Add(new Position(20.67097, -103.43738));
+            bounds.Add(new Position(20.66382, -103.43880));
+            bounds.Add(new Position(20.66382, -103.44459));
+            bounds.Add(new Position(20.68076, -103.44159));
+            return bounds;
+        }
+
+        private static List<Position> GetMontenegroBounds()
+        {
+            List<Position> bounds = new List<Position>();
+            bounds.Add(new Position(20.57553, -103.31500));
+            bounds.Add(new Position(20.57512, -103.31492));
+            bounds.Add(new Position(20.57510, -103.31427));
+            bounds.Add(new Position(20.57267, -103.31313));
+            bounds.Add(new Position(20.57221, -103.31328));
+            bounds.Add(new Position(20.57286, -103.31821));
+            bounds.Add(new Position(20.57587, -103.31776));
+            bounds.Add(new Position(20.57553, -103.31500));
             return bounds;
         }
     }
