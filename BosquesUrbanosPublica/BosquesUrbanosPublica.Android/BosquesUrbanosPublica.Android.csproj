@@ -15,7 +15,6 @@
     <AndroidManifest>Properties\AndroidManifest.xml</AndroidManifest>
     <MonoAndroidResourcePrefix>Resources</MonoAndroidResourcePrefix>
     <MonoAndroidAssetsPrefix>Assets</MonoAndroidAssetsPrefix>
-    <AndroidUseLatestPlatformSdk>true</AndroidUseLatestPlatformSdk>
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
   </PropertyGroup>
@@ -82,7 +81,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\BosquesUrbanosPublica\BosquesUrbanosPublica.csproj">
-      <Project>{B7226BFB-B469-4464-A6D9-6A7FE09D51E6}</Project>
+      <Project>{E4934A1B-DE83-458B-A703-72416BDEFF86}</Project>
       <Name>BosquesUrbanosPublica</Name>
     </ProjectReference>
   </ItemGroup>

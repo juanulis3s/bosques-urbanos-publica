@@ -33,7 +33,7 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <AndroidSupportedAbis />
-    <AndroidKeyStore>True</AndroidKeyStore>
+    <AndroidKeyStore></AndroidKeyStore>
     <AndroidSigningKeyStore>/Users/carlosluevano/Downloads/AndroidKeystores/bugpublica/bugpublica.jks</AndroidSigningKeyStore>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
