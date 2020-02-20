@@ -33,6 +33,9 @@ namespace BUGPublica.Helpers
                 case BUG.ID_BUG_GONZALEZ_GALLO: return GetBugGallo();
                 case BUG.ID_BUG_DEAN: return GetBugDean();
                 case BUG.ID_BUG_ARBOLEDAS_SUR: return GetBugArboledas();
+                case BUG.ID_BUG_SOLIDARIDAD: return GetBugSolidaridad();
+                case BUG.ID_BUG_METROPOLITANO: return GetBugMetropolitano();
+                case BUG.ID_BUG_MONTENEGRO: return GetBugMontenegro();
                 default: throw new Exception("Tipo de Bug inválido");
             }
         }
@@ -188,6 +191,48 @@ namespace BUGPublica.Helpers
                 LimitSouthWest = new Position(20.617426, -103.388555),
                 MaxZoom = 21f,
                 MinZoom = 17.5f
+            };
+        }
+
+        private static CustomMap GetBugSolidaridad()
+        {
+            return new CustomMap()
+            {
+                MapType = MapType.Street,
+                VerticalOptions = LayoutOptions.FillAndExpand,
+                Position = new Position(20.665829, -103.268546),
+                LimitNorthEast = new Position(20.679051, -103.261724),
+                LimitSouthWest = new Position(20.646472, -103.275181),
+                MaxZoom = 20f,
+                MinZoom = 17.5f
+            };
+        }
+
+        private static CustomMap GetBugMetropolitano()
+        {
+            return new CustomMap()
+            {
+                MapType = MapType.Street,
+                VerticalOptions = LayoutOptions.FillAndExpand,
+                Position = new Position(20.673196, -103.439496),
+                LimitNorthEast = new Position(20.680376, -103.430794),
+                LimitSouthWest = new Position(20.662448, -103.446804),
+                MaxZoom = 20f,
+                MinZoom = 15f
+            };
+        }
+
+        private static CustomMap GetBugMontenegro()
+        {
+            return new CustomMap()
+            {
+                MapType = MapType.Street,
+                VerticalOptions = LayoutOptions.FillAndExpand,
+                Position = new Position(20.573971, -103.315697),
+                LimitNorthEast = new Position(20.575856, -103.312357),
+                LimitSouthWest = new Position(20.571930, -103.319144),
+                MaxZoom = 19f,
+                MinZoom = 16f
             };
         }
     }
