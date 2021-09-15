@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using Xamarin.Essentials;
 using Xamarin.Forms.Maps;
-using Plugin.Geolocator;
 using System.Threading.Tasks;
 
 namespace BUGPublica.Helpers
@@ -28,55 +28,49 @@ namespace BUGPublica.Helpers
                 return new Position();
             }
 
-            //VERIFICA SI EL SENSOR ESTA PRENDIDO
-            if (await CrossGeolocator.Current.GetIsGeolocationEnabledAsync())
+            Location position = null;
+            try
             {
-                Plugin.Geolocator.Abstractions.Position position = null;
-                try
-                {
-                    // SE ESTABLECE LA EXACTITUD DE LA MEDICION
-                    CrossGeolocator.Current.DesiredAccuracy = 10; // 10 METROS
-
-                    // SE OBTIENE LA LOCALIZACIÓN
-                    position = await CrossGeolocator.Current.GetPositionAsync(
-                        TimeSpan.FromSeconds(20), null, true);
-                    //System.Diagnostics.Debug.WriteLine(position.Latitude + "," + position.Longitude);
-                }
-                catch(Exception e)
-                {
-                    System.Diagnostics.Debug.WriteLine(e.Message);
-                    System.Diagnostics.Debug.WriteLine(e.StackTrace);
-                    //TODO Cambiar mensaje de error
-                    DisplayAlert(Resources.AppResources.Wrong, Resources.AppResources.GetLocationError, page);
-                    return new Position();
-                }
-
-                //SE REVISA QUE EXISTA LA LOCALIZACIÓN
-                if (position == null)
-                {
-                    //TODO Cambiar mensaje de error
-                    DisplayAlert(Resources.AppResources.Wrong, Resources.AppResources.GetLocationError, page);
-                    return new Position();
-                }
-
-                //SE TRANSFORMA LA POSICION
-                Position pos = new Position(position.Latitude, position.Longitude);
-
-                //SE REVISA SI LA POSICION ESTA DENTRO DE LOS LIMITES DEL BOSQUE
-                Interfaces.IGeofence geofence = Xamarin.Forms.DependencyService.Get<Interfaces.IGeofence>();
-                if (geofence.BugContainsLocation(bug, pos))
-                {
-                    return pos;
-                }
-                else
-                {
-                    DisplayAlert(Resources.AppResources.Warning, Resources.AppResources.NotInsideBug, page);
-                }
+                // SE OBTIENE LA LOCALIZACIÓN
+                var request = new GeolocationRequest(GeolocationAccuracy.Best, TimeSpan.FromSeconds(20));
+                position = await Geolocation.GetLocationAsync(request);
+                //System.Diagnostics.Debug.WriteLine(position.Latitude + "," + position.Longitude);
             }
-            else
+            catch(FeatureNotEnabledException e)
             {
                 DisplayAlert(Resources.AppResources.Warning, Resources.AppResources.GPSMessageDisable, page);
             }
+            catch (Exception e)
+            {
+                System.Diagnostics.Debug.WriteLine(e.Message);
+                System.Diagnostics.Debug.WriteLine(e.StackTrace);
+                //TODO Cambiar mensaje de error
+                DisplayAlert(Resources.AppResources.Wrong, Resources.AppResources.GetLocationError, page);
+                return new Position();
+            }
+
+            //SE REVISA QUE EXISTA LA LOCALIZACIÓN
+            if (position == null)
+            {
+                //TODO Cambiar mensaje de error
+                DisplayAlert(Resources.AppResources.Wrong, Resources.AppResources.GetLocationError, page);
+                return new Position();
+            }
+
+            //SE TRANSFORMA LA POSICION
+            Position pos = new Position(position.Latitude, position.Longitude);
+
+            //SE REVISA SI LA POSICION ESTA DENTRO DE LOS LIMITES DEL BOSQUE
+            Interfaces.IGeofence geofence = Xamarin.Forms.DependencyService.Get<Interfaces.IGeofence>();
+            if (geofence.BugContainsLocation(bug, pos))
+            {
+                return pos;
+            }
+            else
+            {
+                DisplayAlert(Resources.AppResources.Warning, Resources.AppResources.NotInsideBug, page);
+            }
+            
             return new Position();
         }
 

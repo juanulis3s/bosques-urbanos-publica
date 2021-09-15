@@ -13,7 +13,7 @@ namespace BUGPublica
             CreateCustomStyles();
 
             //ESTABLECE LA CULTURA
-            BUGPublica.Resources.AppResources.Culture = Plugin.Multilingual.CrossMultilingual.Current.DeviceCultureInfo;
+            BUGPublica.Resources.AppResources.Culture = System.Threading.Thread.CurrentThread.CurrentUICulture;
 
             //SE ESTABÑECE EÑ NAVIGATION PAGE Y SE CAMBIA EL COLOR PARA QUE SEA IGUAL QUE EL SPLASH
             MainPage = new CustomNavigationPage(new HomePage());

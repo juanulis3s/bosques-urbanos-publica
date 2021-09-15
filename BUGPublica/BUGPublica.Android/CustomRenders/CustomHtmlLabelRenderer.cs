@@ -35,16 +35,19 @@ namespace BUGPublica.Droid.CustomRenders
         {
             base.OnElementPropertyChanged(sender, e);
 
-            var view = Element as CustomHtmlLabel;
-            if (view == null || view.Text == null) return;
-            FromHtmlOptions options = FromHtmlOptions.ModeLegacy;
-            if (Android.OS.Build.VERSION.SdkInt >= Android.OS.BuildVersionCodes.N)
+            if (e.PropertyName == CustomHtmlLabel.TextProperty.PropertyName)
             {
-                Control.SetText(Html.FromHtml(view.Text.ToString(), options), TextView.BufferType.Spannable);
-            }
-            else
-            {
-                Control.SetText(Html.FromHtml(view.Text.ToString()), TextView.BufferType.Spannable);
+                var view = Element as CustomHtmlLabel;
+                if (view == null || view.Text == null) return;
+                FromHtmlOptions options = FromHtmlOptions.ModeLegacy;
+                if (Android.OS.Build.VERSION.SdkInt >= Android.OS.BuildVersionCodes.N)
+                {
+                    Control.SetText(Html.FromHtml(view.Text.ToString(), options), TextView.BufferType.Spannable);
+                }
+                else
+                {
+                    Control.SetText(Html.FromHtml(view.Text.ToString()), TextView.BufferType.Spannable);
+                } 
             }
         }
     }

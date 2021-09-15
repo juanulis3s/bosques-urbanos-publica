@@ -18,9 +18,9 @@ namespace BUGPublica.Models
         public const int ID_BUG_GONZALEZ_GALLO = 6;
         public const int ID_BUG_DEAN = 2;
         public const int ID_BUG_ARBOLEDAS_SUR = 9;
-        public const int ID_BUG_SOLIDARIDAD = 0;
-        public const int ID_BUG_METROPOLITANO = 0;
-        public const int ID_BUG_MONTENEGRO = 0;
+        public const int ID_BUG_SOLIDARIDAD = 100;
+        public const int ID_BUG_METROPOLITANO = 1000;
+        public const int ID_BUG_MONTENEGRO = 100000;
 
         //NOMBRES BOSQUES DE LA RED BUG
         private const string NAME_BUG_MORELOS = "Parque Morelos";

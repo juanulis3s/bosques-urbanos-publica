@@ -11,7 +11,6 @@ using BUGPublica.Helpers;
 using System.Net.Http;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
-using Plugin.Multilingual;
 
 namespace BUGPublica
 {
@@ -197,7 +196,7 @@ namespace BUGPublica
             HttpResponseMessage response;
             try
             {
-                string lang = CrossMultilingual.Current.DeviceCultureInfo.TwoLetterISOLanguageName;
+                string lang = System.Threading.Thread.CurrentThread.CurrentUICulture.TwoLetterISOLanguageName;
                 response = await client.GetAsync(AppConfig.Url.GetPinsUri(BugTabbedPage.Bug.Id, lang: lang));
             }
             catch(HttpRequestException e)

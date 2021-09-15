@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:customrenders="clr-namespace:BUGPublica.CustomRenders"
              xmlns:views="clr-namespace:BUGPublica.Views"
-             xmlns:translate="clr-namespace:BUGPublica.Helpers"
+             xmlns:resources="clr-namespace:BUGPublica.Resources"
              xmlns:local="clr-namespace:BUGPublica.ViewModels"
              x:Class="BUGPublica.MapPage">
     <ContentPage.Content>
@@ -20,13 +20,13 @@
                 </Frame.Padding>
                 <StackLayout Orientation="Horizontal">
                     <Image Source="{local:ImageResource BUGPublica.Images.icon_search.png}" HorizontalOptions="Start" WidthRequest="30"/>
-                    <customrenders:CustomEntry x:Name="txtSearch" Placeholder="{translate:Translate Search}" HorizontalOptions="FillAndExpand" 
+                    <customrenders:CustomEntry x:Name="txtSearch" Placeholder="{Static resources:AppResources.Search}" HorizontalOptions="FillAndExpand" 
                                                BackgroundStyle="NONE" TextColor="Black" PlaceholderColor="#B6B6B6"/>
                 </StackLayout>
             </Frame>
             <!--BOTON DE FILTROS-->
             <Button x:Name="btnFilter"
-                    Text="{translate:Translate Filter}"
+                    Text="{Static resources:AppResources.Filter}"
                     Style="{DynamicResource buttonStyle}"
                     AbsoluteLayout.LayoutBounds=".5, .98, .9, 60"
                     AbsoluteLayout.LayoutFlags="PositionProportional,WidthProportional"

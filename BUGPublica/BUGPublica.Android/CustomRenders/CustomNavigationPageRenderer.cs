@@ -16,8 +16,6 @@ using BUGPublica.CustomRenders;
 using BUGPublica.Droid.CustomRenders;
 using Xamarin.Forms.Platform.Android;
 using System.ComponentModel;
-using Android.Support.V4.Widget;
-using Android.Support.Design.Widget;
 using Android.Content.Res;
 using Android.Graphics;
 using System.Threading.Tasks;
@@ -33,14 +31,14 @@ namespace BUGPublica.Droid.CustomRenders
 
         public CustomNavigationPageRenderer(Context context) : base(context) { }
 
-        private Android.Support.V7.Widget.Toolbar toolbar;
+        private AndroidX.AppCompat.Widget.Toolbar toolbar;
 
         protected override Task<bool> OnPushAsync(Page view, bool animated)
         {
             var result = base.OnPushAsync(view, animated);
 
-            Activity activity = Plugin.CurrentActivity.CrossCurrentActivity.Current.Activity;
-            Android.Support.V7.Widget.Toolbar toolbar = activity.FindViewById<Android.Support.V7.Widget.Toolbar>(
+            Activity activity = Xamarin.Essentials.Platform.CurrentActivity;
+            AndroidX.AppCompat.Widget.Toolbar toolbar = activity.FindViewById<AndroidX.AppCompat.Widget.Toolbar>(
                 Resource.Id.toolbar);
 
             if(toolbar != null)
@@ -60,8 +58,8 @@ namespace BUGPublica.Droid.CustomRenders
 
             Device.StartTimer(TimeSpan.FromMilliseconds(TransitionDuration), () =>
             {
-                Activity activity = Plugin.CurrentActivity.CrossCurrentActivity.Current.Activity;
-                Android.Support.V7.Widget.Toolbar toolbar = activity.FindViewById<Android.Support.V7.Widget.Toolbar>(
+                Activity activity = Xamarin.Essentials.Platform.CurrentActivity;
+                AndroidX.AppCompat.Widget.Toolbar toolbar = activity.FindViewById<AndroidX.AppCompat.Widget.Toolbar>(
                     Resource.Id.toolbar);
 
                 if (toolbar != null)
@@ -81,9 +79,9 @@ namespace BUGPublica.Droid.CustomRenders
         public override void OnViewAdded(Android.Views.View child)
         {
             base.OnViewAdded(child);
-            if(child.GetType() == typeof(Android.Support.V7.Widget.Toolbar) || child.GetType() == typeof(Toolbar))
+            if(child.GetType() == typeof(AndroidX.AppCompat.Widget.Toolbar) || child.GetType() == typeof(Toolbar))
             {
-                toolbar = (Android.Support.V7.Widget.Toolbar)child;
+                toolbar = (AndroidX.AppCompat.Widget.Toolbar)child;
                 toolbar.ChildViewAdded += Toolbar_ChildViewAdded;
             }
         }
@@ -91,7 +89,7 @@ namespace BUGPublica.Droid.CustomRenders
         private void Toolbar_ChildViewAdded(object sender, ChildViewAddedEventArgs e)
         {
             var view = e.Child;
-            if(view.GetType() == typeof(Android.Support.V7.Widget.AppCompatTextView) || view.GetType() == typeof(TextView))
+            if(view.GetType() == typeof(AndroidX.AppCompat.Widget.AppCompatTextView) || view.GetType() == typeof(TextView))
             {
                 TextView textView = (TextView)view;
                 Typeface fontFace = Typeface.CreateFromAsset(Context.Assets, "Montserrat_Light.ttf");

@@ -29,7 +29,7 @@ namespace BUGPublica
             HttpResponseMessage response;
             try
             {
-                string lang = Plugin.Multilingual.CrossMultilingual.Current.DeviceCultureInfo.TwoLetterISOLanguageName;
+                string lang = System.Threading.Thread.CurrentThread.CurrentUICulture.TwoLetterISOLanguageName;
                 response = await client.GetAsync(AppConfig.Url.GetTermsUri(lang));
             }
             catch (HttpRequestException e)
@@ -54,7 +54,7 @@ namespace BUGPublica
                 Device.BeginInvokeOnMainThread(() =>
                 {
                     scroll.Content = new CustomRenders.CustomHtmlLabel
-                    { Text = terms, TextColor = Color.White};
+                    { Text = terms, TextColor = Color.White };
                 });
             }
         }

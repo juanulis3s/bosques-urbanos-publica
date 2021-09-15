@@ -54,10 +54,10 @@ namespace BUGPublica.Views
         /// <summary>
         /// ABRE LA PAGINA DEL BOSQUE
         /// </summary>
-        public async void OnTapped()
+        public void OnTapped(object sender, EventArgs e)
         {
             if (Bug != null)
-                await Navigation.PushAsync(new BugTabbedPage(Bug));
+                Navigation.PushAsync(new BugTabbedPage(Bug));
         }
 
 

@@ -8,7 +8,7 @@ using BUGPublica.CustomRenders;
 using BUGPublica.Droid.CustomRenders;
 using Xamarin.Forms.Platform.Android;
 using System.ComponentModel;
-using Android.Support.Design.Widget;
+using AndroidX.AppCompat.Widget;
 using Android.Content.Res;
 using Android.Graphics;
 
@@ -25,7 +25,7 @@ namespace BUGPublica.Droid.CustomRenders
         {
             base.OnElementChanged(e);
 
-            TabLayout tabLayout = (TabLayout)ViewGroup.GetChildAt(1);
+            var tabLayout = (Google.Android.Material.Tabs.TabLayout)ViewGroup.GetChildAt(1);
 
             //ELIMINA LA BARRA INDICADORA DE TAB SELECCIONADO
             tabLayout.SetSelectedTabIndicatorHeight(0);
@@ -49,7 +49,7 @@ namespace BUGPublica.Droid.CustomRenders
                 for (int j = 0; j < viewGroupChild.ChildCount; j++)
                 {
                     Android.Views.View view = viewGroupChild.GetChildAt(j);
-                    if (view.GetType() == typeof(Android.Support.V7.Widget.AppCompatTextView) || view.GetType() == typeof(TextView))
+                    if (view.GetType() == typeof(AppCompatTextView) || view.GetType() == typeof(TextView))
                     {
                         TextView textView = (TextView) view;
                         //textView.TextSize = 14f;
@@ -69,7 +69,7 @@ namespace BUGPublica.Droid.CustomRenders
 
             if (e.PropertyName == "Renderer")
             {
-                TabLayout tabLayout = (TabLayout)ViewGroup.GetChildAt(1);
+                var tabLayout = (Google.Android.Material.Tabs.TabLayout)ViewGroup.GetChildAt(1);
                 _setup = true;
 
                 //CAMBIA EL COLOR DE LOS ESTADOS DE SELECCIONADO Y DESELECCIONADO DE LOS ICONOS

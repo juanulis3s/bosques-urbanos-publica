@@ -4,7 +4,7 @@
              x:Class="BUGPublica.HomePage"
              xmlns:views="clr-namespace:BUGPublica.Views"
              xmlns:local="clr-namespace:BUGPublica.ViewModels"
-             xmlns:translate="clr-namespace:BUGPublica.Helpers"
+             xmlns:resources="clr-namespace:BUGPublica.Resources"
              xmlns:models="clr-namespace:BUGPublica.Models"
              NavigationPage.HasNavigationBar="False">
     <!--RECURSOS-->
@@ -60,7 +60,7 @@
                                    WidthRequest="50"
                                    Source="{local:ImageResource BUGPublica.Images.icon_noticias.png}"/>
                                 <Label HorizontalOptions="Start"
-                                   Text="{translate:Translate News}"
+                                   Text="{Static resources:AppResources.News}"
                                    FontSize="18"
                                    TextColor="#000000"/>
                             </StackLayout>
@@ -74,7 +74,7 @@
                                    WidthRequest="50"
                                    Source="{local:ImageResource BUGPublica.Images.icon_eventos.png}"/>
                                 <Label HorizontalOptions="Start"
-                                   Text="{translate:Translate Events}"
+                                   Text="{Static resources:AppResources.Events}"
                                    FontSize="18"
                                    TextColor="#000000"/>
                             </StackLayout>
@@ -82,7 +82,7 @@
                     </Grid>
                     <!--LABEL DESCUBRE BOSQUE-->
                     <Label Margin="{StaticResource margin}"
-                       Text="{translate:Translate LookBug}"
+                       Text="{Static resources:AppResources.LookBug}"
                        Style="{StaticResource label}"
                        FontSize="18"/>
                     <!--GRID DE PARQUES-->
@@ -159,21 +159,21 @@
                         <StackLayout.GestureRecognizers>
                             <TapGestureRecognizer Tapped="OnTermsTapped"/>
                         </StackLayout.GestureRecognizers>
-                        <Label Text="{translate:Translate TermCondition}" HorizontalOptions="StartAndExpand" Style="{StaticResource label}"/>
+                        <Label Text="{Static resources:AppResources.TermCondition}" HorizontalOptions="StartAndExpand" Style="{StaticResource label}"/>
                         <Image Source="{local:ImageResource BUGPublica.Images.arrow_right.png}"/>
                     </StackLayout>
                     <StackLayout Orientation="Horizontal">
                         <StackLayout.GestureRecognizers>
                             <TapGestureRecognizer Tapped="OnSuggestionMailboxTapped"/>
                         </StackLayout.GestureRecognizers>
-                        <Label Text="{translate:Translate SuggestionMail}" HorizontalOptions="StartAndExpand" Style="{StaticResource label}"/>
+                        <Label Text="{Static resources:AppResources.SuggestionMail}" HorizontalOptions="StartAndExpand" Style="{StaticResource label}"/>
                         <Image Source="{local:ImageResource BUGPublica.Images.arrow_right.png}"/>
                     </StackLayout>
                     <StackLayout Orientation="Horizontal">
                         <StackLayout.GestureRecognizers>
                             <TapGestureRecognizer Tapped="OnProfileTapped"/>
                         </StackLayout.GestureRecognizers>
-                        <Label Text="{translate:Translate Profile}" HorizontalOptions="StartAndExpand" Style="{StaticResource label}"/>
+                        <Label Text="{Static resources:AppResources.Profile}" HorizontalOptions="StartAndExpand" Style="{StaticResource label}"/>
                         <Image Source="{local:ImageResource BUGPublica.Images.arrow_right.png}"/>
                     </StackLayout>
                 </StackLayout>

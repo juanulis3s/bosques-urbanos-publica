@@ -2,14 +2,14 @@
 <renderer:CustomTabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
             xmlns:local="clr-namespace:BUGPublica"
-            xmlns:translate="clr-namespace:BUGPublica.Helpers"
+            xmlns:resources="clr-namespace:BUGPublica.Resources"
             xmlns:renderer="clr-namespace:BUGPublica.CustomRenders"
             NavigationPage.HasNavigationBar="True"
             x:Class="BUGPublica.BugTabbedPage"
             BarBackgroundColor="#000000">
   <!--Pages can be added as references or inline-->
-    <local:BugInfoPage Icon="ic_info.png" Title="{translate:Translate Info}"/>
-    <local:MapPage Icon="ic_map_normal.png" Title="{translate:Translate Map}"/>
-    <local:RoutePage Icon="ic_route.png" Title="{translate:Translate Routes}"/>
-    <local:QRScannerPage Icon="ic_qr.png" Title="{translate:Translate ScannerQR}"/>
+    <local:BugInfoPage Icon="ic_info.png" Title="{Static resources:AppResources.Info}"/>
+    <local:MapPage Icon="ic_map_normal.png" Title="{Static resources:AppResources.Map}"/>
+    <local:RoutePage Icon="ic_route.png" Title="{Static resources:AppResources.Routes}"/>
+    <local:QRScannerPage Icon="ic_qr.png" Title="{Static resources:AppResources.ScannerQR}"/>
 </renderer:CustomTabbedPage>

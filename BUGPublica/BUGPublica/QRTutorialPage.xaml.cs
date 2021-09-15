@@ -20,19 +20,19 @@ namespace BUGPublica
         /// <summary>
         /// REGRESA A LA PAGINA ANTERIOR
         /// </summary>
-        public async void BackPage()
+        public void BackPage(object sender, EventArgs e)
         {
-            await Navigation.PopAsync();
+            Navigation.PopAsync();
         }
 
-        public void OnDontShowAgainTapped()
+        public void OnDontShowAgainTapped(object sender, EventArgs e)
         {
             //GUARDA LA SELECCION DE NO VOLVER A MOSTRAR EL TUTORIAL DE QR
             if (!Application.Current.Properties.ContainsKey(AppConfig.QR_TUTORIAL_KEY))
                 Application.Current.Properties.Add(AppConfig.QR_TUTORIAL_KEY, true);
 
             //SE REGRESA A LA PAGINA ANTERIOR
-            BackPage();
+            BackPage(this, EventArgs.Empty);
         }
     }
 }

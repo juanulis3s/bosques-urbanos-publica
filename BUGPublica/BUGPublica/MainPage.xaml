@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="BUGPublica.MainPage"
              xmlns:local="clr-namespace:BUGPublica.ViewModels"
-             xmlns:translate="clr-namespace:BUGPublica.Helpers"
+             xmlns:resources="clr-namespace:BUGPublica.Resources"
              NavigationPage.HasNavigationBar="False">
 
     <ContentPage.Padding>
@@ -12,7 +12,7 @@
     </ContentPage.Padding>
 
     <StackLayout Orientation="Vertical">
-        <Label Text="{translate:Translate SplashLabel}"
+        <Label Text="{Static resources:AppResources.SplashLabel}"
                TextColor="#FFFFFF"
                FontSize="36"
                HorizontalOptions="Start"

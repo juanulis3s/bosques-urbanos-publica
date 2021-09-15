@@ -3,17 +3,17 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:BUGPublica.Views"
              xmlns:customrenders="clr-namespace:BUGPublica.CustomRenders"
-             xmlns:translate="clr-namespace:BUGPublica.Helpers"
+             xmlns:resources="clr-namespace:BUGPublica.Resources"
              x:Class="BUGPublica.Views.FiltersView"
              Padding="10">
   <ContentView.Content>
       <StackLayout>
             <StackLayout Orientation="Horizontal">
-                <Label Text="{translate:Translate Filter}" 
+                <Label Text="{Static resources:AppResources.Filter}" 
                        HorizontalOptions="CenterAndExpand"
                        FontSize="18"/>
                 <local:CheckBox x:Name="checkboxAll"
-                                Text="{translate:Translate All}"
+                                Text="{Static resources:AppResources.All}"
                                 FontSize="16"
                                 HorizontalOptions="End"
                                 IsChecked="True"/>
@@ -29,7 +29,7 @@
                 </Grid>
             </ScrollView>
             <Button x:Name="btnAccept"
-                    Text="{translate:Translate Accept}"
+                    Text="{Static resources:AppResources.Accept}"
                     Style="{DynamicResource buttonStyle}"/>
         </StackLayout>
   </ContentView.Content>

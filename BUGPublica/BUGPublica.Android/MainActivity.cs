@@ -21,8 +21,8 @@ namespace BUGPublica.Droid
 
             base.OnCreate(bundle);
             
-            Rg.Plugins.Popup.Popup.Init(this, bundle);
-
+            Rg.Plugins.Popup.Popup.Init(this);
+            Xamarin.Essentials.Platform.Init(this, bundle);
             global::Xamarin.Forms.Forms.Init(this, bundle);
 
             // REVISA EL PERMISO DE CAMARA
@@ -31,18 +31,18 @@ namespace BUGPublica.Droid
 
             //LIBREARIAS
             Xamarin.FormsMaps.Init(this, bundle);
-            FFImageLoading.Forms.Droid.CachedImageRenderer.Init(false);
+            FFImageLoading.Forms.Platform.CachedImageRenderer.Init(true);
             ZXing.Net.Mobile.Forms.Android.Platform.Init();
-            CarouselView.FormsPlugin.Android.CarouselViewRenderer.Init();
+            CarouselView.FormsPlugin.Droid.CarouselViewRenderer.Init();
 
             LoadApplication(new App());
         }
 
         public override void OnRequestPermissionsResult(int requestCode, string[] permissions, [GeneratedEnum] Permission[] grantResults)
         {
-            base.OnRequestPermissionsResult(requestCode, permissions, grantResults);
-            ZXing.Net.Mobile.Android.PermissionsHandler.OnRequestPermissionsResult(requestCode, permissions, grantResults);
-            Plugin.Permissions.PermissionsImplementation.Current.OnRequestPermissionsResult(requestCode, permissions, grantResults);    
+            Xamarin.Essentials.Platform.OnRequestPermissionsResult(requestCode, permissions, grantResults);
+            Plugin.Permissions.PermissionsImplementation.Current.OnRequestPermissionsResult(requestCode, permissions, grantResults);
+            base.OnRequestPermissionsResult(requestCode, permissions, grantResults);  
         }
     }
 }

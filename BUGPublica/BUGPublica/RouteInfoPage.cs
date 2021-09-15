@@ -200,7 +200,7 @@ namespace BUGPublica
                 if (CrossGeolocator.Current.IsListening)
                     return;
 
-                if (!await CrossGeolocator.Current.GetIsGeolocationEnabledAsync())
+                if (!CrossGeolocator.Current.IsGeolocationEnabled)
                     return; //TODO MENSAJE DE ERROR POR NO TENER ACTIVDADO EL GPS
 
                 bool started = await CrossGeolocator.Current.StartListeningAsync(TimeSpan.FromSeconds(10), 0);

@@ -4,7 +4,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:BUGPublica"
              xmlns:behaviors="clr-namespace:BUGPublica.Behaviors"
-             xmlns:translate="clr-namespace:BUGPublica.Helpers"
+             xmlns:resources="clr-namespace:BUGPublica.Resources"
              xmlns:customrenderes="clr-namespace:BUGPublica.CustomRenders"
              x:Class="BUGPublica.LoginPage">
     <Frame Padding="0" CornerRadius="4" BackgroundColor="#000000" VerticalOptions="Center" HorizontalOptions="Center">
@@ -21,10 +21,10 @@
                     <behaviors:EntryLengthValidatorBehavior MaxLength="4" />
                 </Entry.Behaviors>
             </Entry>
-            <Entry x:Name="txtPhone" Placeholder="{translate:Translate Phone}" Keyboard="Numeric" 
+            <Entry x:Name="txtPhone" Placeholder="{Static resources:AppResources.Phone}" Keyboard="Numeric" 
                    HorizontalOptions="FillAndExpand" WidthRequest="150"/>
         </StackLayout>
-        <Button x:Name="btnLogin" Text="{translate:Translate Send}" Style="{DynamicResource buttonStyle}"
+        <Button x:Name="btnLogin" Text="{Static resources:AppResources.Send}" Style="{DynamicResource buttonStyle}"
                 Margin="20, 5" VerticalOptions="Center" Clicked="LoginClick"/>
         </StackLayout>
     </Frame>

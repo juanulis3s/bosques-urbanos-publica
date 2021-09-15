@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:translate="clr-namespace:BUGPublica.Helpers"
+             xmlns:resources="clr-namespace:BUGPublica.Resources"
              xmlns:local="clr-namespace:BUGPublica.ViewModels"
              x:Class="BUGPublica.QRTutorialPage"
              NavigationPage.HasNavigationBar="False">
@@ -22,14 +22,14 @@
             <!--INSTRUCCIONES-->
             <Label Text="1." Grid.Row="0" Grid.Column="0" TextColor="#FFFFFF" FontSize="17" Style="{StaticResource FontBold}"/>
             <Label Text="2." Grid.Row="1" Grid.Column="0"  TextColor="#FFFFFF" FontSize="17" Style="{StaticResource FontBold}"/>
-            <Label Text="{translate:Translate QRTutorial1}" Grid.Row="0" Grid.Column="1"  TextColor="#FFFFFF" FontSize="17" Style="{StaticResource FontBold}"/>
-            <Label Text="{translate:Translate QRTutorial2}" Grid.Row="1" Grid.Column="1"  TextColor="#FFFFFF" FontSize="17" Style="{StaticResource FontBold}"/>
+            <Label Text="{Static resources:AppResources.QRTutorial1}" Grid.Row="0" Grid.Column="1"  TextColor="#FFFFFF" FontSize="17" Style="{StaticResource FontBold}"/>
+            <Label Text="{Static resources:AppResources.QRTutorial2}" Grid.Row="1" Grid.Column="1"  TextColor="#FFFFFF" FontSize="17" Style="{StaticResource FontBold}"/>
              <!--IMAGEN DEL TUTORIAL-->
             <Image Source="{local:ImageResource BUGPublica.Images.qr_tuto.png}" HorizontalOptions="Center" 
                    Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2"/>
             <!--BOTON ENTENTIDO-->
             <Button Clicked="BackPage"
-                    Text="{translate:Translate OK}"
+                    Text="{Static resources:AppResources.OK}"
                     Style="{DynamicResource buttonStyle}"
                     HorizontalOptions="Fill"
                     Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2"/>
@@ -38,7 +38,7 @@
                 <StackLayout.GestureRecognizers>
                     <TapGestureRecognizer Tapped="OnDontShowAgainTapped"/>
                 </StackLayout.GestureRecognizers>
-                <Label Text="{translate:Translate DontShow}" TextColor="#FFFFFF"/>
+                <Label Text="{Static resources:AppResources.DontShow}" TextColor="#FFFFFF"/>
                 <BoxView BackgroundColor="#FFFFFF" HeightRequest="1"/>
             </StackLayout>
         </Grid>

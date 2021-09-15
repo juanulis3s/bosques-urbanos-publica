@@ -2,7 +2,7 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:customrenderes="clr-namespace:BUGPublica.CustomRenders"
-             xmlns:translate="clr-namespace:BUGPublica.Helpers"
+             xmlns:resources="clr-namespace:BUGPublica.Resources"
              x:Class="BUGPublica.HelpConfirmationPage">
     <ContentPage.Content>
         <StackLayout BackgroundColor="#000000">
@@ -25,17 +25,17 @@
             <!--IMAGEN TOP-->
             <Image Source="sos.png" HorizontalOptions="Center" WidthRequest="85" HeightRequest="85" Margin="0, 20"/>
             <!--TEXTOS-->
-            <Label Text="{translate:Translate ConfirmEmergency}" Style="{StaticResource Bold}"/>
-            <Label Text="{translate:Translate ConfirmEmergency2}"/>
-            <Label Text="{translate:Translate ConfirmEmergency3}" Style="{StaticResource Bold}" VerticalOptions="CenterAndExpand"/>
+            <Label Text="{Static resources:AppResources.ConfirmEmergency}" Style="{StaticResource Bold}"/>
+            <Label Text="{Static resources:AppResources.ConfirmEmergency2}"/>
+            <Label Text="{Static resources:AppResources.ConfirmEmergency3}" Style="{StaticResource Bold}" VerticalOptions="CenterAndExpand"/>
             <StackLayout Orientation="Horizontal" VerticalOptions="End" HorizontalOptions="FillAndExpand" Margin="0, 0, 0, 15">
-                <Button Text="{translate:Translate Cancel}"
+                <Button Text="{Static resources:AppResources.Cancel}"
                         Style="{StaticResource buttonStyle}"
                         Margin="10, 5, 5, 5"
                         HorizontalOptions="FillAndExpand"
                         BackgroundColor="Red"
                         Clicked="CancelClick"/>
-                <Button Text="{translate:Translate Accept}"
+                <Button Text="{Static resources:AppResources.Accept}"
                         Margin="5, 5, 10, 5"
                         HorizontalOptions="FillAndExpand"
                         Style="{StaticResource buttonStyle}"

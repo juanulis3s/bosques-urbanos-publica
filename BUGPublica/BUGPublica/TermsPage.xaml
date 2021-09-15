@@ -1,13 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:translate="clr-namespace:BUGPublica.Helpers"
+             xmlns:resources="clr-namespace:BUGPublica.Resources"
              xmlns:local="clr-namespace:BUGPublica.ViewModels"
              x:Class="BUGPublica.TermsPage"
-             Title="{translate:Translate TermCondition}">
+             Title="{Static resources:AppResources.TermCondition}">
     <ContentPage.Content>
         <!--CONTENIDO TERMINOS-->
-        <ScrollView x:Name="scroll" Padding="20" BackgroundColor="#000000">
+        <ScrollView x:Name="scroll" Padding="20" BackgroundColor="#ff0000">
             <ActivityIndicator IsRunning="True" HorizontalOptions="Center" VerticalOptions="Center"/>
         </ScrollView>
     </ContentPage.Content>

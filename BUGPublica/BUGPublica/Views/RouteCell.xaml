@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <ViewCell xmlns="http://xamarin.com/schemas/2014/forms" 
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:translate="clr-namespace:BUGPublica.Helpers"
+             xmlns:resources="clr-namespace:BUGPublica.Resources"
              x:Class="BUGPublica.Views.RouteCell">
   <ViewCell.View>
         <AbsoluteLayout Margin="0, 5" Padding="0, 0, 5, 0" BackgroundColor="#000000">
@@ -14,7 +14,7 @@
                        AbsoluteLayout.LayoutFlags="All"/>
             <StackLayout Orientation="Horizontal" AbsoluteLayout.LayoutBounds="1, .9, .65, .5" 
                          AbsoluteLayout.LayoutFlags="All" Spacing="2">
-                <Label Text="{translate:Translate Duration}" TextColor="#FFFFFF" FontSize="14" VerticalOptions="Center"/>
+                <Label Text="{Static resources:AppResources.Duration}" TextColor="#FFFFFF" FontSize="14" VerticalOptions="Center"/>
                 <Label Text="{Binding Duration}" TextColor="{StaticResource GreenColor}" FontSize="14" VerticalOptions="Center"/>
             </StackLayout>
         </AbsoluteLayout>

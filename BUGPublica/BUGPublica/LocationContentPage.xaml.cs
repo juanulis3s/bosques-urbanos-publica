@@ -43,7 +43,7 @@ namespace BUGPublica
             HttpResponseMessage response;
             try
             {
-                string lang = Plugin.Multilingual.CrossMultilingual.Current.DeviceCultureInfo.TwoLetterISOLanguageName;
+                string lang = System.Threading.Thread.CurrentThread.CurrentUICulture.TwoLetterISOLanguageName;
                 response = await client.GetAsync(AppConfig.Url.GetPinContentUri(detailId, bug, lang));
             }
             catch (HttpRequestException e)
