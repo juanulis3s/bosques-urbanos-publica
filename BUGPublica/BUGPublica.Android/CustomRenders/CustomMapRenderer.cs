@@ -18,7 +18,7 @@ using System;
 using System.Collections;
 using System.ComponentModel;
 using AView = Android.Views.View;
-using Android.Support.V4.Content;
+using AndroidX.Core.Content;
 
 [assembly: ExportRenderer(typeof(CustomMap), typeof(CustomMapRenderer))]
 namespace BUGPublica.Droid.CustomRenders

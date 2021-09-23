@@ -36,6 +36,7 @@ namespace BUGPublica.Helpers
                 case BUG.ID_BUG_SOLIDARIDAD: return GetBugSolidaridad();
                 case BUG.ID_BUG_METROPOLITANO: return GetBugMetropolitano();
                 case BUG.ID_BUG_MONTENEGRO: return GetBugMontenegro();
+                case BUG.ID_BUG_TLAQUEPAQUE: return GetBugTlaquepaque();
                 default: throw new Exception("Tipo de Bug inválido");
             }
         }
@@ -204,7 +205,7 @@ namespace BUGPublica.Helpers
                 LimitNorthEast = new Position(20.679051, -103.261724),
                 LimitSouthWest = new Position(20.646472, -103.275181),
                 MaxZoom = 20f,
-                MinZoom = 17.5f
+                MinZoom = 15f
             };
         }
 
@@ -231,6 +232,20 @@ namespace BUGPublica.Helpers
                 Position = new Position(20.573971, -103.315697),
                 LimitNorthEast = new Position(20.575856, -103.312357),
                 LimitSouthWest = new Position(20.571930, -103.319144),
+                MaxZoom = 19f,
+                MinZoom = 16f
+            };
+        }
+
+        private static CustomMap GetBugTlaquepaque()
+        {
+            return new CustomMap()
+            {
+                MapType = MapType.Street,
+                VerticalOptions = LayoutOptions.FillAndExpand,
+                Position = new Position(20.622527, -103.317461),
+                LimitNorthEast = new Position(20.624507, -103.313991),
+                LimitSouthWest = new Position(20.620590, -103.322928),
                 MaxZoom = 19f,
                 MinZoom = 16f
             };

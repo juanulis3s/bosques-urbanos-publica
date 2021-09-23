@@ -104,7 +104,7 @@
                                 <RowDefinition Height="130"/>
                                 <RowDefinition Height="130"/>
                                 <RowDefinition Height="130"/>
-                                <!--<RowDefinition Height="130"/>-->
+                                <RowDefinition Height="130"/>
                             </Grid.RowDefinitions>
                             <views:BugCell Image="{local:ImageResource BUGPublica.Images.colomos.png}" 
                                    Bug="{x:Static models:BUG.BUG_COLOMOS}"        
@@ -127,18 +127,30 @@
                             <views:BugCell Image="{local:ImageResource BUGPublica.Images.natural_huentitan.png}" 
                                    Bug="{x:Static models:BUG.BUG_NATURAL_HUENTITAN}"
                                    Grid.Row="3" Grid.Column="0"/>
-                            <views:BugCell Image="{local:ImageResource BUGPublica.Images.puerta_barranca.png}" 
+                            <!--<views:BugCell Image="{local:ImageResource BUGPublica.Images.puerta_barranca.png}" 
                                    Bug="{x:Static models:BUG.BUG_PUERTA_BARRANCA}"
-                                   Grid.Row="3" Grid.Column="1"/>
-                            <views:BugCell Image="{local:ImageResource BUGPublica.Images.arboledas_sur.png}" 
+                                   Grid.Row="3" Grid.Column="1"/>-->
+                            <!--<views:BugCell Image="{local:ImageResource BUGPublica.Images.arboledas_sur.png}" 
                                    Bug="{x:Static models:BUG.BUG_ARBOLEDAS_SUR}"
-                                   Grid.Row="4" Grid.Column="0"/>
-                            <views:BugCell Image="{local:ImageResource BUGPublica.Images.miradorhuentitan.png}" 
+                                   Grid.Row="4" Grid.Column="0"/>-->
+                            <!--<views:BugCell Image="{local:ImageResource BUGPublica.Images.miradorhuentitan.png}" 
                                    Bug="{x:Static models:BUG.BUG_MIRADOR_HUENTITAN}"
-                                   Grid.Row="4" Grid.Column="1" IsVisible="False"/>
+                                   Grid.Row="4" Grid.Column="1" IsVisible="False"/>-->
                             <views:BugCell Image="{local:ImageResource BUGPublica.Images.morelos.png}" 
                                    Bug="{x:Static models:BUG.BUG_MORELOS}"
+                                   Grid.Row="3" Grid.Column="1"/>
+                            <views:BugCell Image="{local:ImageResource BUGPublica.Images.solidaridad.png}" 
+                                   Bug="{x:Static models:BUG.BUG_SOLIDARIDAD}"
+                                   Grid.Row="4" Grid.Column="0"/>
+                            <views:BugCell Image="{local:ImageResource BUGPublica.Images.metropolitano.png}" 
+                                   Bug="{x:Static models:BUG.BUG_METROPOLITANO}"
                                    Grid.Row="4" Grid.Column="1"/>
+                            <views:BugCell Image="{local:ImageResource BUGPublica.Images.montenegro.png}" 
+                                   Bug="{x:Static models:BUG.BUG_MONTENEGRO}"
+                                   Grid.Row="5" Grid.Column="0"/>
+                            <!--<views:BugCell Image="{local:ImageResource BUGPublica.Images.tlaquepaque.png}" 
+                                   Bug="{x:Static models:BUG.BUG_TLAQUEPAQUE}"
+                                   Grid.Row="5" Grid.Column="1"/>-->
                         </Grid>
                     </AbsoluteLayout>
                 </StackLayout>

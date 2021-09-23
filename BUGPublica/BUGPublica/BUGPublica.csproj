@@ -27,18 +27,22 @@
     <None Remove="Images\icon_noticias.png" />
     <None Remove="Images\icon_search.png" />
     <None Remove="Images\logo.png" />
+    <None Remove="Images\metropolitano.png" />
     <None Remove="Images\miradorhuentitan.png" />
+    <None Remove="Images\montenegro.png" />
     <None Remove="Images\morelos.png" />
     <None Remove="Images\natural_huentitan.png" />
     <None Remove="Images\puerta_barranca.png" />
     <None Remove="Images\qr_display.png" />
     <None Remove="Images\qr_tuto.png" />
+    <None Remove="Images\solidaridad.png" />
     <None Remove="Images\splash_1.png" />
     <None Remove="Images\splash_2.png" />
     <None Remove="Images\splash_3.png" />
     <None Remove="Images\splash_4.png" />
     <None Remove="Images\IMG-20180925-WA0002.jpg" />
     <None Remove="Images\morelos.png" />
+    <None Remove="Images\tlaquepaque.png" />
   </ItemGroup>
 
   <ItemGroup>
@@ -50,6 +54,8 @@
     <EmbeddedResource Include="Images\close.png" />
     <EmbeddedResource Include="Images\colomos.png" />
     <EmbeddedResource Include="Images\cover.png" />
+    <EmbeddedResource Include="Images\metropolitano.png" />
+    <EmbeddedResource Include="Images\montenegro.png" />
     <EmbeddedResource Include="Images\morelos.png" />
   </ItemGroup>
 
@@ -73,10 +79,12 @@
     <EmbeddedResource Include="Images\puerta_barranca.png" />
     <EmbeddedResource Include="Images\qr_display.png" />
     <EmbeddedResource Include="Images\qr_tuto.png" />
+    <EmbeddedResource Include="Images\solidaridad.png" />
     <EmbeddedResource Include="Images\splash_1.png" />
     <EmbeddedResource Include="Images\splash_2.png" />
     <EmbeddedResource Include="Images\splash_3.png" />
     <EmbeddedResource Include="Images\splash_4.png" />
+    <EmbeddedResource Include="Images\tlaquepaque.png" />
   </ItemGroup>
 
   <ItemGroup>

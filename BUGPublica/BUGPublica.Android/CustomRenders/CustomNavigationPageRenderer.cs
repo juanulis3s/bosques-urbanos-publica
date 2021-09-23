@@ -19,7 +19,7 @@ using System.ComponentModel;
 using Android.Content.Res;
 using Android.Graphics;
 using System.Threading.Tasks;
-using Android.Support.V4.Content;
+using AndroidX.Core.Content;
 
 [assembly: ExportRenderer(typeof(CustomNavigationPage), typeof(CustomNavigationPageRenderer))]
 namespace BUGPublica.Droid.CustomRenders

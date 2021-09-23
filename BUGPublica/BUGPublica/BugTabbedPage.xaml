@@ -6,7 +6,10 @@
             xmlns:renderer="clr-namespace:BUGPublica.CustomRenders"
             NavigationPage.HasNavigationBar="True"
             x:Class="BUGPublica.BugTabbedPage"
-            BarBackgroundColor="#000000">
+            BarBackgroundColor="#000000"
+            SelectedTabColor="#40DD9B"
+            UnselectedTabColor="#535353"
+            BarTextColor="#FFFFFF">
   <!--Pages can be added as references or inline-->
     <local:BugInfoPage Icon="ic_info.png" Title="{Static resources:AppResources.Info}"/>
     <local:MapPage Icon="ic_map_normal.png" Title="{Static resources:AppResources.Map}"/>

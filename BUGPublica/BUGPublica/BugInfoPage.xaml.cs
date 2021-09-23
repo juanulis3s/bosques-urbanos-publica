@@ -57,6 +57,10 @@ namespace BUGPublica
                 case BUG.ID_BUG_NATURAL_HUENTITAN: image = "BUGPublica.Images.natural_huentitan.png"; break;
                 case BUG.ID_BUG_MIRADOR_INDEPENDENCIA: image = "BUGPublica.Images.miradorhuentitan.png"; break;
                 case BUG.ID_BUG_PUERTA_BARRANCA: image = "BUGPublica.Images.puerta_barranca.png"; break;
+                case BUG.ID_BUG_SOLIDARIDAD: image = "BUGPublica.Images.solidaridad.png"; break;
+                case BUG.ID_BUG_METROPOLITANO: image = "BUGPublica.Images.metropolitano.png"; break;
+                case BUG.ID_BUG_MONTENEGRO: image = "BUGPublica.Images.montenegro.png"; break;
+                case BUG.ID_BUG_TLAQUEPAQUE: image = "BUGPublica.Images.tlaquepaque.png"; break;
                 default: image = null; break;
             }
             if(image != null)
@@ -86,15 +90,15 @@ namespace BUGPublica
             //SE VERIFICA QUE HAYA ESTADO CORRECTO
             if (response.IsSuccessStatusCode)
             {
-                //SE OBTIENE EL CONTENIDO
-                var content = await response.Content.ReadAsStringAsync();
-
-                JObject jObject = JObject.Parse(content);
-                JObject jInfo = (JObject)jObject.GetValue("info");
-
-                //SE OBTIENE LA INFORMACION
                 try
                 {
+                    //SE OBTIENE EL CONTENIDO
+                    var content = await response.Content.ReadAsStringAsync();
+
+                    JObject jObject = JObject.Parse(content);
+                    JObject jInfo = (JObject)jObject.GetValue("info");
+
+                    //SE OBTIENE LA INFORMACION
                     BugInfo info = JsonConvert.DeserializeObject<BugInfo>(jInfo.ToString());
 
                     //SE MUESTRA LA INFORMACION DEL BOSQUE

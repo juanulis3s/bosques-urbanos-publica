@@ -18,9 +18,10 @@ namespace BUGPublica.Models
         public const int ID_BUG_GONZALEZ_GALLO = 6;
         public const int ID_BUG_DEAN = 2;
         public const int ID_BUG_ARBOLEDAS_SUR = 9;
-        public const int ID_BUG_SOLIDARIDAD = 100;
-        public const int ID_BUG_METROPOLITANO = 1000;
-        public const int ID_BUG_MONTENEGRO = 100000;
+        public const int ID_BUG_SOLIDARIDAD = 12;
+        public const int ID_BUG_METROPOLITANO = 13;
+        public const int ID_BUG_MONTENEGRO = 14;
+        public const int ID_BUG_TLAQUEPAQUE = 1000000;
 
         //NOMBRES BOSQUES DE LA RED BUG
         private const string NAME_BUG_MORELOS = "Parque Morelos";
@@ -37,6 +38,7 @@ namespace BUGPublica.Models
         private const string NAME_BUG_SOLIDARIDAD = "Parque de la Solidaridad";
         private const string NAME_BUG_METROPOLITANO = "Parque Metropolitano";
         private const string NAME_BUG_MONTENEGRO = "Parque Roberto Montenegro";
+        private const string NAME_BUG_TLAQUEPAQUE = "Bosque Urbano Tlaquepaque";
 
         //NOMBRES CORTOS BOSQUES DE LA RED BUG
         private const string SHORTNAME_BUG_MORELOS = "PARQUE MORELOS";
@@ -53,6 +55,7 @@ namespace BUGPublica.Models
         private const string SHORTNAME_BUG_SOLIDARIDAD = "PARQUE DE LA SOLIDARIDAD";
         private const string SHORTNAME_BUG_METROPOLITANO = "PARQUE METROPOLITANO";
         private const string SHORTNAME_BUG_MONTENEGRO = "PARQUE MONTENEGRO";
+        private const string SHORTNAME_BUG_TLAQUEPAQUE = "BOSQUE URBANO TLAQUEPAQUE";
 
         public string Name { get; set; }
         public string Shortname { get; set; }
@@ -128,6 +131,11 @@ namespace BUGPublica.Models
             get { return new BUG { Name = NAME_BUG_MONTENEGRO, Shortname = SHORTNAME_BUG_MONTENEGRO, Id = ID_BUG_MONTENEGRO }; }
         }
 
+        public static BUG BUG_TLAQUEPAQUE
+        {
+            get { return new BUG { Name = NAME_BUG_TLAQUEPAQUE, Shortname = SHORTNAME_BUG_TLAQUEPAQUE, Id = ID_BUG_TLAQUEPAQUE }; }
+        }
+
         public static List<BUG> ALL
         {
             get
@@ -140,9 +148,6 @@ namespace BUGPublica.Models
                 bugs.Add(BUG_AGUA_AZUL);
                 bugs.Add(BUG_GONZALEZ_GALLO);
                 bugs.Add(BUG_NATURAL_HUENTITAN);
-                bugs.Add(BUG_PUERTA_BARRANCA);
-                bugs.Add(BUG_ARBOLEDAS_SUR);
-                bugs.Add(BUG_MIRADOR_HUENTITAN);
                 bugs.Add(BUG_MORELOS);
                 bugs.Add(BUG_SOLIDARIDAD);
                 bugs.Add(BUG_METROPOLITANO);

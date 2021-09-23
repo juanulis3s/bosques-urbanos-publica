@@ -97,8 +97,9 @@ namespace BUGPublica
                     {
                         Device.BeginInvokeOnMainThread(() =>
                         {
+                            int index = new Random().Next(0, banner.Count);
                             Rg.Plugins.Popup.Services.PopupNavigation.Instance.PushAsync(
-                                new BannerPage(banner[0]));
+                                new BannerPage(banner[index]));
                         });
                     }
                     
