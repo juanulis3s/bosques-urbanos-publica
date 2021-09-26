@@ -6,6 +6,7 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using Android.OS;
+using BUGPublica.Styles;
 
 namespace BUGPublica.Droid
 {
@@ -20,7 +21,13 @@ namespace BUGPublica.Droid
             ToolbarResource = Resource.Layout.Toolbar;
 
             base.OnCreate(bundle);
-            
+
+            var x = (int)(Resources.DisplayMetrics.WidthPixels / Resources.DisplayMetrics.Density);
+            var y = (int)(Resources.DisplayMetrics.HeightPixels / Resources.DisplayMetrics.Density);
+            Layouts.DisplayYSizePX = x > y ? x : y;
+            Layouts.DisplayXSizePX = x < y ? x : y;
+            Layouts.DisplayScale = Resources.DisplayMetrics.Density;
+
             Rg.Plugins.Popup.Popup.Init(this);
             Xamarin.Essentials.Platform.Init(this, bundle);
             global::Xamarin.Forms.Forms.Init(this, bundle);

@@ -6,6 +6,9 @@
              xmlns:local="clr-namespace:BUGPublica.ViewModels"
              xmlns:resources="clr-namespace:BUGPublica.Resources"
              xmlns:models="clr-namespace:BUGPublica.Models"
+             xmlns:extensions="clr-namespace:BUGPublica.Extensions"
+             xmlns:styles="clr-namespace:BUGPublica.Styles"
+             xmlns:ffimage="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
              NavigationPage.HasNavigationBar="False">
     <!--RECURSOS-->
     <ContentPage.Resources>
@@ -24,15 +27,21 @@
                          BackgroundColor="{StaticResource HomeBackgroundColor}"
                          Spacing="0">
                 <!--IMAGEN TOP SUPERIOR Y LOGO-->
-                <AbsoluteLayout HeightRequest="200">
+                <Grid HeightRequest="200">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
                     <views:FilterImage Image="{local:ImageResource BUGPublica.Images.cover.png}" 
-                                   Filter="{local:ImageResource BUGPublica.Images.gradient_blue.png}"
-                                   AbsoluteLayout.LayoutBounds="0, 0, 1, 1"
-                                   AbsoluteLayout.LayoutFlags="All"/>
-                    <Image Source="{local:ImageResource BUGPublica.Images.logo.png}"
-                           AbsoluteLayout.LayoutBounds="0.45, 0.25, 0.45, 0.55"
-                           AbsoluteLayout.LayoutFlags="All"/>
-                </AbsoluteLayout>
+                                       Filter="{local:ImageResource BUGPublica.Images.gradient_blue.png}"
+                                       HorizontalOptions="Fill"
+                                       VerticalOptions="Fill"/>
+                    <ffimage:CachedImage Source="{local:ImageResource BUGPublica.Images.logo-blanco.png}"
+                                         HorizontalOptions="Center"
+                                         VerticalOptions="Start"
+                                         WidthRequest="{extensions:ScreenMarckup FullValue={Static styles:Layouts.DisplayXSizePX}, RequiredPercentage=45}"
+                                         HeightRequest="{extensions:ScreenMarckup FullValue={Static styles:Layouts.DisplayXSizePX}, RequiredPercentage=38}"
+                                         Aspect="AspectFit"/>
+                </Grid>
                 <!--OPCIONES DE MENU-->
                 <StackLayout Orientation="Vertical" Margin="0, 5, 0, 0">
                     <!--BOTONES DE NOTICIAS Y EVENTOS-->

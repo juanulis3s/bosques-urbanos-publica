@@ -16,9 +16,9 @@
 
   <ImageView 
     android:id="@+id/imgLogo"
-    android:layout_width="233dp"
-    android:layout_height="143dp"
-    android:src="@drawable/logo"
+    android:layout_width="226dp"
+    android:layout_height="194dp"
+    android:src="@drawable/logo_blanco"
     android:layout_gravity="center"
     android:layout_marginTop="90dp"/>
 </LinearLayout>

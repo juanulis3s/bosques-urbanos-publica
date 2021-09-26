@@ -26,6 +26,7 @@
     <None Remove="Images\icon_eventos.png" />
     <None Remove="Images\icon_noticias.png" />
     <None Remove="Images\icon_search.png" />
+    <None Remove="Images\logo-blanco.png" />
     <None Remove="Images\logo.png" />
     <None Remove="Images\metropolitano.png" />
     <None Remove="Images\miradorhuentitan.png" />
@@ -54,6 +55,7 @@
     <EmbeddedResource Include="Images\close.png" />
     <EmbeddedResource Include="Images\colomos.png" />
     <EmbeddedResource Include="Images\cover.png" />
+    <EmbeddedResource Include="Images\logo-blanco.png" />
     <EmbeddedResource Include="Images\metropolitano.png" />
     <EmbeddedResource Include="Images\montenegro.png" />
     <EmbeddedResource Include="Images\morelos.png" />

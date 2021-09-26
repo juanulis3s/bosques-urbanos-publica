@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-
+using BUGPublica.Styles;
 using Foundation;
 using UIKit;
 
@@ -22,6 +22,12 @@ namespace BUGPublica.iOS
         //
         public override bool FinishedLaunching(UIApplication app, NSDictionary options)
         {
+            var x = (int)UIScreen.MainScreen.Bounds.Width;
+            var y = (int)UIScreen.MainScreen.Bounds.Height;
+            Layouts.DisplayYSizePX = x > y ? x : y;
+            Layouts.DisplayXSizePX = x < y ? x : y;
+            Layouts.DisplayScale = (float)UIScreen.MainScreen.Scale;
+
             Rg.Plugins.Popup.Popup.Init();
 
             global::Xamarin.Forms.Forms.Init();
