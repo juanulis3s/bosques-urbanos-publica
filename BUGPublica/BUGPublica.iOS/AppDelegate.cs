@@ -39,12 +39,12 @@ namespace BUGPublica.iOS
             CarouselView.FormsPlugin.iOS.CarouselViewRenderer.Init();
 
             // CAMBIA EL COLOR DEL STATUS BAR
-            UIView statusbar = UIApplication.SharedApplication.ValueForKey(new NSString("statusBar")) as UIView;
+            /*UIView statusbar = UIApplication.SharedApplication.ValueForKey(new NSString("statusBar")) as UIView;
             if(statusbar != null)
             {
                 statusbar.BackgroundColor = UIColor.Black;
                 statusbar.TintColor = UIColor.White;
-            }
+            }*/
 
             LoadApplication(new App());
 

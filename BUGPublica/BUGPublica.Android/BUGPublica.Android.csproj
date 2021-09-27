@@ -33,7 +33,6 @@
     <DefineConstants>DEBUG;</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <AndroidSupportedAbis />
     <AndroidKeyStore>
     </AndroidKeyStore>
     <AndroidSigningKeyStore>/Users/carlosluevano/Downloads/AndroidKeystores/bugpublica/bugpublica.jks</AndroidSigningKeyStore>
