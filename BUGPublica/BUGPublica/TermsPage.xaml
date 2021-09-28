@@ -7,7 +7,7 @@
              Title="{Static resources:AppResources.TermCondition}">
     <ContentPage.Content>
         <!--CONTENIDO TERMINOS-->
-        <ScrollView x:Name="scroll" Padding="20">
+        <ScrollView x:Name="scroll" Padding="20" BackgroundColor="#000000" >
             <ActivityIndicator IsRunning="True" HorizontalOptions="Center" VerticalOptions="Center"/>
         </ScrollView>
     </ContentPage.Content>

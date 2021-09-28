@@ -24,7 +24,7 @@
 	<key>CFBundleIdentifier</key>
 	<string>com.bosquesgdlapp.publica</string>
 	<key>CFBundleVersion</key>
-	<string>1.12</string>
+	<string>2</string>
 	<key>CFBundleName</key>
 	<string>BUG</string>
 	<key>NSLocationAlwaysUsageDescription</key>
@@ -56,7 +56,7 @@
 	<key>NSCameraUsageDescription</key>
 	<string>Camera is required to scan QR codes </string>
 	<key>CFBundleShortVersionString</key>
-	<string>1.0.12</string>
+	<string>1.1.0</string>
 	<key>NSAppTransportSecurity</key>
 	<dict>
 		<key>NSExceptionDomains</key>
