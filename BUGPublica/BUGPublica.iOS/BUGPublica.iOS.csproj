@@ -494,4 +494,13 @@
     <ITunesArtwork Include="iTunesArtwork%402x" />
     <ITunesArtwork Include="iTunesArtwork" />
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Logo-blanco%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Logo-blanco%403x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Logo-blanco.png" />
+  </ItemGroup>
 </Project>
