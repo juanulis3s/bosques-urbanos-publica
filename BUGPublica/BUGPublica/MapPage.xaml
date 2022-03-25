@@ -5,7 +5,9 @@
              xmlns:views="clr-namespace:BUGPublica.Views"
              xmlns:resources="clr-namespace:BUGPublica.Resources"
              xmlns:local="clr-namespace:BUGPublica.ViewModels"
-             x:Class="BUGPublica.MapPage">
+             xmlns:styles="clr-namespace:BUGPublica.Styles"
+             x:Class="BUGPublica.MapPage"
+             BackgroundColor="{Static styles:Colors.PrimaryLightBackground}">
     <ContentPage.Content>
         <AbsoluteLayout>
             <StackLayout x:Name="stack"
@@ -21,7 +23,7 @@
                 <StackLayout Orientation="Horizontal">
                     <Image Source="{local:ImageResource BUGPublica.Images.icon_search.png}" HorizontalOptions="Start" WidthRequest="30"/>
                     <customrenders:CustomEntry x:Name="txtSearch" Placeholder="{Static resources:AppResources.Search}" HorizontalOptions="FillAndExpand" 
-                                               BackgroundStyle="NONE" TextColor="Black" PlaceholderColor="#B6B6B6"/>
+                                               BackgroundStyle="NONE" TextColor="{Static styles:Colors.TextDarkPrimary}" PlaceholderColor="#B6B6B6"/>
                 </StackLayout>
             </Frame>
             <!--BOTON DE FILTROS-->

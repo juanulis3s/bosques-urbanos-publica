@@ -46,7 +46,7 @@ namespace BUGPublica.Droid.CustomRenders
                 if(toolbar.NavigationIcon != null)
                 {
                     toolbar.NavigationIcon = ContextCompat.GetDrawable(
-                        Context, Resource.Drawable.ic_back);
+                        Context, Resource.Drawable.ic_back_black);
                 }
             }
             return result;
@@ -67,7 +67,7 @@ namespace BUGPublica.Droid.CustomRenders
                     if (toolbar.NavigationIcon != null)
                     {
                         toolbar.NavigationIcon = ContextCompat.GetDrawable(
-                            Context, Resource.Drawable.ic_back);
+                            Context, Resource.Drawable.ic_back_black);
                     }
                 }
                 return false;

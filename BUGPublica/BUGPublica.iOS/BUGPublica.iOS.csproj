@@ -456,4 +456,13 @@
   <ItemGroup>
     <BundleResource Include="Resources\Logo-blanco.png" />
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\ic_back_black.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\ic_back_black%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\ic_back_black%403x.png" />
+  </ItemGroup>
 </Project>

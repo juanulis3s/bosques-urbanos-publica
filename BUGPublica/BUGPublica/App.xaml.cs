@@ -50,7 +50,7 @@ namespace BUGPublica
                     new Setter {Property=Button.BorderColorProperty, Value=darkColor},
                     new Setter {Property=Button.BorderWidthProperty, Value=0},
                     new Setter {Property=Button.CornerRadiusProperty, Value=30},
-                    new Setter {Property=Button.TextColorProperty, Value=Color.White},
+                    new Setter {Property=Button.TextColorProperty, Value=Styles.Colors.TextDarkPrimary},
                     new Setter {Property=Button.HeightRequestProperty, Value=60},
                     new Setter {Property=Button.FontFamilyProperty, Value=font}
                 },

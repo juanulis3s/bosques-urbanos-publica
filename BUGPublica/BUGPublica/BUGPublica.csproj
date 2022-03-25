@@ -9,6 +9,7 @@
     <None Remove="Images\alcalde.png" />
     <None Remove="Images\arboledas_sur.png" />
     <None Remove="Images\arrow_right.png" />
+    <None Remove="Images\arrow_right_black.png" />
     <None Remove="Images\avila_camacho.png" />
     <None Remove="Images\bug_logo.png" />
     <None Remove="Images\bug_logo_blanco.png" />
@@ -20,6 +21,7 @@
     <None Remove="Images\gonzalez_gallo.png" />
     <None Remove="Images\gradient.png" />
     <None Remove="Images\gradient_blue.png" />
+    <None Remove="Images\gradient_white.png" />
     <None Remove="Images\icon_back.png" />
     <None Remove="Images\icon_check.png" />
     <None Remove="Images\icon_checked.png" />
@@ -28,6 +30,7 @@
     <None Remove="Images\icon_search.png" />
     <None Remove="Images\logo-blanco.png" />
     <None Remove="Images\logo.png" />
+    <None Remove="Images\logo_verde.png" />
     <None Remove="Images\metropolitano.png" />
     <None Remove="Images\miradorhuentitan.png" />
     <None Remove="Images\montenegro.png" />
@@ -51,11 +54,14 @@
     <EmbeddedResource Include="Images\alcalde.png" />
     <EmbeddedResource Include="Images\arboledas_sur.png" />
     <EmbeddedResource Include="Images\arrow_right.png" />
+    <EmbeddedResource Include="Images\arrow_right_black.png" />
     <EmbeddedResource Include="Images\avila_camacho.png" />
     <EmbeddedResource Include="Images\close.png" />
     <EmbeddedResource Include="Images\colomos.png" />
     <EmbeddedResource Include="Images\cover.png" />
+    <EmbeddedResource Include="Images\gradient_white.png" />
     <EmbeddedResource Include="Images\logo-blanco.png" />
+    <EmbeddedResource Include="Images\logo_verde.png" />
     <EmbeddedResource Include="Images\metropolitano.png" />
     <EmbeddedResource Include="Images\montenegro.png" />
     <EmbeddedResource Include="Images\morelos.png" />

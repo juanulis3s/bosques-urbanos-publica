@@ -5,10 +5,12 @@
              xmlns:customrenderes="clr-namespace:BUGPublica.CustomRenders"
              xmlns:local="clr-namespace:BUGPublica.ViewModels"
              xmlns:controls="clr-namespace:CarouselView.FormsPlugin.Abstractions;assembly=CarouselView.FormsPlugin.Abstractions"
-             x:Class="BUGPublica.LocationContentPage">
+             xmlns:styles="clr-namespace:BUGPublica.Styles"
+             x:Class="BUGPublica.LocationContentPage"
+             BackgroundColor="{Static styles:Colors.PrimaryLightBackground}">
     <ContentPage.Content>
         <ScrollView>
-            <StackLayout BackgroundColor="#000000">
+            <StackLayout>
                 <controls:CarouselViewControl x:Name="carouselImages" HorizontalOptions="Fill" HeightRequest="200" 
                                               Orientation="Horizontal" ShowIndicators="True">
                     <controls:CarouselViewControl.ItemTemplate>
@@ -17,7 +19,7 @@
                         </DataTemplate>
                     </controls:CarouselViewControl.ItemTemplate>
                 </controls:CarouselViewControl>
-                <customrenderes:CustomHtmlLabel x:Name="lblContent" Margin="20" TextColor="#FFFFFF"/>
+                <customrenderes:CustomHtmlLabel x:Name="lblContent" Margin="20" TextColor="{Static styles:Colors.TextDarkPrimary}"/>
             </StackLayout>
         </ScrollView>
     </ContentPage.Content>

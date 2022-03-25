@@ -5,24 +5,26 @@
              xmlns:local="clr-namespace:BUGPublica"
              xmlns:behaviors="clr-namespace:BUGPublica.Behaviors"
              xmlns:resources="clr-namespace:BUGPublica.Resources"
-             xmlns:customrenderes="clr-namespace:BUGPublica.CustomRenders"
+             xmlns:styles="clr-namespace:BUGPublica.Styles"
              x:Class="BUGPublica.LoginPage">
-    <Frame Padding="0" CornerRadius="4" BackgroundColor="#000000" VerticalOptions="Center" HorizontalOptions="Center">
+    <Frame Padding="0" CornerRadius="4" BackgroundColor="{Static styles:Colors.SecondaryLightBackground}" VerticalOptions="Center" HorizontalOptions="Center">
         <StackLayout>
         <Image x:Name="imgClose" Source="{local:ViewModels.ImageResource BUGPublica.Images.close.png}"
                WidthRequest="25" HeightRequest="25" HorizontalOptions="End"/>
-        <Image Source="{local:ViewModels.ImageResource BUGPublica.Images.bug_logo.png}"
-               WidthRequest="130" HorizontalOptions="Center" Margin="0, 40"/>
+        <Image Source="{local:ViewModels.ImageResource BUGPublica.Images.logo_verde.png}"
+               WidthRequest="160" Aspect="AspectFit" HorizontalOptions="Center" Margin="20, 30" />
         <StackLayout Orientation="Horizontal" HorizontalOptions="Fill" VerticalOptions="Center"
                      Margin="20,0" Spacing="0">
-            <Label Text="+" TextColor="#FFFFFF" HorizontalTextAlignment="Center" VerticalOptions="Center" FontSize="18"/>
-            <Entry x:Name="txtPrefix" Text="52" Keyboard="Numeric" WidthRequest="50" HorizontalTextAlignment="Center">
+            <Label Text="+" TextColor="{Static styles:Colors.TextDarkPrimary}" HorizontalTextAlignment="Center" VerticalOptions="Center" FontSize="18"/>
+            <Entry x:Name="txtPrefix" Text="52" Keyboard="Numeric" WidthRequest="50" HorizontalTextAlignment="Center"
+                   TextColor="{Static styles:Colors.TextDarkPrimary}">
                 <Entry.Behaviors>
                     <behaviors:EntryLengthValidatorBehavior MaxLength="4" />
                 </Entry.Behaviors>
             </Entry>
             <Entry x:Name="txtPhone" Placeholder="{Static resources:AppResources.Phone}" Keyboard="Numeric" 
-                   HorizontalOptions="FillAndExpand" WidthRequest="150"/>
+                   HorizontalOptions="FillAndExpand" WidthRequest="150"
+                   TextColor="{Static styles:Colors.TextDarkPrimary}"/>
         </StackLayout>
         <Button x:Name="btnLogin" Text="{Static resources:AppResources.Send}" Style="{DynamicResource buttonStyle}"
                 Margin="20, 5" VerticalOptions="Center" Clicked="LoginClick"/>

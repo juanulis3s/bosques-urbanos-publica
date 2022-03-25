@@ -4,14 +4,16 @@
              xmlns:customrenders="clr-namespace:BUGPublica.CustomRenders"
              xmlns:views="clr-namespace:BUGPublica.Views"
              xmlns:local="clr-namespace:BUGPublica.ViewModels"
-             x:Class="BUGPublica.EventInfoPage">
+             xmlns:styles="clr-namespace:BUGPublica.Styles"
+             x:Class="BUGPublica.EventInfoPage"
+             BackgroundColor="{Static styles:Colors.PrimaryLightBackground}">
     <ContentPage.Content>
-        <ScrollView BackgroundColor="#000000">
+        <ScrollView>
             <StackLayout>
                 <views:FilterImage x:Name="imgEvent" HorizontalOptions="Fill" HeightRequest="170" Filter="{local:ImageResource BUGPublica.Images.gradient.png}"/>
                 <StackLayout Margin="20" Spacing="10">
-                    <Label x:Name="lblDate" HorizontalOptions="StartAndExpand" TextColor="#FFFFFF"/>
-                    <customrenders:CustomHtmlLabel x:Name="lblContent" TextColor="#FFFFFF"/>
+                    <Label x:Name="lblDate" HorizontalOptions="StartAndExpand" TextColor="{Static styles:Colors.TextDarkPrimary}"/>
+                    <customrenders:CustomHtmlLabel x:Name="lblContent" TextColor="{Static styles:Colors.TextDarkPrimary}"/>
                 </StackLayout>
             </StackLayout>
         </ScrollView>

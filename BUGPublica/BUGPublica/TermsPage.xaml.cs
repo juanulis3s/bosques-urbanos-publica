@@ -54,7 +54,7 @@ namespace BUGPublica
                 Device.BeginInvokeOnMainThread(() =>
                 {
                     scroll.Content = new CustomRenders.CustomHtmlLabel
-                    { Text = terms, TextColor = Color.White };
+                    { Text = terms, TextColor = Styles.Colors.TextDarkPrimary };
                 });
             }
         }

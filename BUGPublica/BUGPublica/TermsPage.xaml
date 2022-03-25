@@ -2,12 +2,14 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:resources="clr-namespace:BUGPublica.Resources"
+             xmlns:styles="clr-namespace:BUGPublica.Styles"
              xmlns:local="clr-namespace:BUGPublica.ViewModels"
              x:Class="BUGPublica.TermsPage"
-             Title="{Static resources:AppResources.TermCondition}">
+             Title="{Static resources:AppResources.TermCondition}"
+             BackgroundColor="{Static styles:Colors.PrimaryLightBackground}">
     <ContentPage.Content>
         <!--CONTENIDO TERMINOS-->
-        <ScrollView x:Name="scroll" Padding="20" BackgroundColor="#000000" >
+        <ScrollView x:Name="scroll" Padding="20" >
             <ActivityIndicator IsRunning="True" HorizontalOptions="Center" VerticalOptions="Center"/>
         </ScrollView>
     </ContentPage.Content>

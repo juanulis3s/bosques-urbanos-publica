@@ -3,19 +3,21 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:customrenderes="clr-namespace:BUGPublica.CustomRenders"
              xmlns:resources="clr-namespace:BUGPublica.Resources"
-             x:Class="BUGPublica.HelpConfirmationPage">
+             xmlns:styles="clr-namespace:BUGPublica.Styles"
+             x:Class="BUGPublica.HelpConfirmationPage"
+             BackgroundColor="{Static styles:Colors.PrimaryLightBackground}">
     <ContentPage.Content>
-        <StackLayout BackgroundColor="#000000">
+        <StackLayout>
             <StackLayout.Resources>
                 <ResourceDictionary>
                     <Style TargetType="Label">
-                        <Setter Property="TextColor" Value="#FFFFFF"/>
+                        <Setter Property="TextColor" Value="{Static styles:Colors.TextDarkPrimary}"/>
                         <Setter Property="FontSize" Value="18"/>
                         <Setter Property="HorizontalOptions" Value="Fill"/>
                         <Setter Property="HorizontalTextAlignment" Value="Center"/>
                     </Style>
                     <Style x:Key="Bold" TargetType="Label" BasedOn="{StaticResource FontBold}">
-                        <Setter Property="TextColor" Value="#FFFFFF"/>
+                        <Setter Property="TextColor" Value="{Static styles:Colors.TextDarkPrimary}"/>
                         <Setter Property="FontSize" Value="18"/>
                         <Setter Property="HorizontalOptions" Value="Fill"/>
                         <Setter Property="HorizontalTextAlignment" Value="Center"/>
@@ -34,12 +36,14 @@
                         Margin="10, 5, 5, 5"
                         HorizontalOptions="FillAndExpand"
                         BackgroundColor="Red"
+                        TextColor="{Static styles:Colors.TextLightPrimary}"
                         Clicked="CancelClick"/>
                 <Button Text="{Static resources:AppResources.Accept}"
                         Margin="5, 5, 10, 5"
                         HorizontalOptions="FillAndExpand"
                         Style="{StaticResource buttonStyle}"
                         BackgroundColor="{StaticResource MainColor}"
+                        TextColor="{Static styles:Colors.TextLightPrimary}"
                         Clicked="AcceptClick"/>
             </StackLayout>
         </StackLayout>

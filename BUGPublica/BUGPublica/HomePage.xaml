@@ -8,14 +8,16 @@
              xmlns:models="clr-namespace:BUGPublica.Models"
              xmlns:extensions="clr-namespace:BUGPublica.Extensions"
              xmlns:styles="clr-namespace:BUGPublica.Styles"
+             xmlns:controls="clr-namespace:BUGPublica.Controls"
              xmlns:ffimage="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
-             NavigationPage.HasNavigationBar="False">
+             NavigationPage.HasNavigationBar="False"
+             BackgroundColor="{Static styles:Colors.PrimaryLightBackground}">
     <!--RECURSOS-->
     <ContentPage.Resources>
         <ResourceDictionary>
             <Thickness x:Key="margin">5, 0</Thickness>
             <Style x:Key="label" TargetType="Label">
-                <Setter Property="TextColor" Value="#FFFFFF"/>
+                <Setter Property="TextColor" Value="{Static styles:Colors.TextDarkPrimary}"/>
                 <Setter Property="FontSize" Value="17"/>
             </Style>
         </ResourceDictionary>
@@ -24,7 +26,6 @@
     <ContentPage.Content>
         <ScrollView>
             <StackLayout Orientation="Vertical" 
-                         BackgroundColor="{StaticResource HomeBackgroundColor}"
                          Spacing="0">
                 <!--IMAGEN TOP SUPERIOR Y LOGO-->
                 <Grid HeightRequest="200">
@@ -71,7 +72,7 @@
                                 <Label HorizontalOptions="Start"
                                    Text="{Static resources:AppResources.News}"
                                    FontSize="18"
-                                   TextColor="#000000"/>
+                                   TextColor="{Static styles:Colors.TextDarkPrimary}"/>
                             </StackLayout>
                         </Frame>
                         <Frame Grid.Row="0" Grid.Column="1">
@@ -85,7 +86,7 @@
                                 <Label HorizontalOptions="Start"
                                    Text="{Static resources:AppResources.Events}"
                                    FontSize="18"
-                                   TextColor="#000000"/>
+                                   TextColor="{Static styles:Colors.TextDarkPrimary}"/>
                             </StackLayout>
                         </Frame>
                     </Grid>
@@ -95,77 +96,83 @@
                        Style="{StaticResource label}"
                        FontSize="18"/>
                     <!--GRID DE PARQUES-->
-                    <AbsoluteLayout>
-                        <!--BACKGROUND BOTTOM-->
-                        <Image Source="{local:ImageResource BUGPublica.Images.footer_bg.png}"
-                           Aspect="AspectFill"
-                           AbsoluteLayout.LayoutBounds="0, 1, 1, 0.2"
-                           AbsoluteLayout.LayoutFlags="All"/>
-                        <!--PARQUES-->
-                        <Grid Margin="{StaticResource margin}" Padding="0, 0, 0, 60">
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="*"/>
-                                <ColumnDefinition Width="*"/>
-                            </Grid.ColumnDefinitions>
-                            <Grid.RowDefinitions>
-                                <RowDefinition Height="130"/>
-                                <RowDefinition Height="130"/>
-                                <RowDefinition Height="130"/>
-                                <RowDefinition Height="130"/>
-                                <RowDefinition Height="130"/>
-                                <RowDefinition Height="130"/>
-                            </Grid.RowDefinitions>
-                            <views:BugCell Image="{local:ImageResource BUGPublica.Images.colomos.png}" 
+                    <Grid Margin="{StaticResource margin}" Padding="0, 0, 0, 60">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="130"/>
+                            <RowDefinition Height="130"/>
+                            <RowDefinition Height="130"/>
+                            <RowDefinition Height="130"/>
+                            <RowDefinition Height="130"/>
+                            <RowDefinition Height="130"/>
+                        </Grid.RowDefinitions>
+                        <views:BugCell Image="{local:ImageResource BUGPublica.Images.colomos.png}" 
                                    Bug="{x:Static models:BUG.BUG_COLOMOS}"        
                                    Grid.Row="0" Grid.Column="0"/>
-                            <views:BugCell Image="{local:ImageResource BUGPublica.Images.alcalde.png}" 
+                        <views:BugCell Image="{local:ImageResource BUGPublica.Images.alcalde.png}" 
                                    Bug="{x:Static models:BUG.BUG_ALCALDE}"
                                    Grid.Row="0" Grid.Column="1"/>
-                            <views:BugCell Image="{local:ImageResource BUGPublica.Images.avila_camacho.png}" 
+                        <views:BugCell Image="{local:ImageResource BUGPublica.Images.avila_camacho.png}" 
                                    Bug="{x:Static models:BUG.BUG_AVILA_CAMACHO}"
                                    Grid.Row="1" Grid.Column="0"/>
-                            <views:BugCell Image="{local:ImageResource BUGPublica.Images.el_dean.png}" 
+                        <views:BugCell Image="{local:ImageResource BUGPublica.Images.el_dean.png}" 
                                    Bug="{x:Static models:BUG.BUG_DEAN}"
                                    Grid.Row="1" Grid.Column="1"/>
-                            <views:BugCell Image="{local:ImageResource BUGPublica.Images.agua_azul.png}" 
+                        <views:BugCell Image="{local:ImageResource BUGPublica.Images.agua_azul.png}" 
                                    Bug="{x:Static models:BUG.BUG_AGUA_AZUL}"
                                    Grid.Row="2" Grid.Column="0"/>
-                            <views:BugCell Image="{local:ImageResource BUGPublica.Images.gonzalez_gallo.png}" 
+                        <views:BugCell Image="{local:ImageResource BUGPublica.Images.gonzalez_gallo.png}" 
                                    Bug="{x:Static models:BUG.BUG_GONZALEZ_GALLO}"
                                    Grid.Row="2" Grid.Column="1"/>
-                            <views:BugCell Image="{local:ImageResource BUGPublica.Images.natural_huentitan.png}" 
+                        <views:BugCell Image="{local:ImageResource BUGPublica.Images.natural_huentitan.png}" 
                                    Bug="{x:Static models:BUG.BUG_NATURAL_HUENTITAN}"
                                    Grid.Row="3" Grid.Column="0"/>
-                            <!--<views:BugCell Image="{local:ImageResource BUGPublica.Images.puerta_barranca.png}" 
+                        <!--<views:BugCell Image="{local:ImageResource BUGPublica.Images.puerta_barranca.png}" 
                                    Bug="{x:Static models:BUG.BUG_PUERTA_BARRANCA}"
                                    Grid.Row="3" Grid.Column="1"/>-->
-                            <!--<views:BugCell Image="{local:ImageResource BUGPublica.Images.arboledas_sur.png}" 
+                        <!--<views:BugCell Image="{local:ImageResource BUGPublica.Images.arboledas_sur.png}" 
                                    Bug="{x:Static models:BUG.BUG_ARBOLEDAS_SUR}"
                                    Grid.Row="4" Grid.Column="0"/>-->
-                            <!--<views:BugCell Image="{local:ImageResource BUGPublica.Images.miradorhuentitan.png}" 
+                        <!--<views:BugCell Image="{local:ImageResource BUGPublica.Images.miradorhuentitan.png}" 
                                    Bug="{x:Static models:BUG.BUG_MIRADOR_HUENTITAN}"
                                    Grid.Row="4" Grid.Column="1" IsVisible="False"/>-->
-                            <views:BugCell Image="{local:ImageResource BUGPublica.Images.morelos.png}" 
+                        <views:BugCell Image="{local:ImageResource BUGPublica.Images.morelos.png}" 
                                    Bug="{x:Static models:BUG.BUG_MORELOS}"
                                    Grid.Row="3" Grid.Column="1"/>
-                            <views:BugCell Image="{local:ImageResource BUGPublica.Images.solidaridad.png}" 
+                        <views:BugCell Image="{local:ImageResource BUGPublica.Images.solidaridad.png}" 
                                    Bug="{x:Static models:BUG.BUG_SOLIDARIDAD}"
                                    Grid.Row="4" Grid.Column="0"/>
-                            <views:BugCell Image="{local:ImageResource BUGPublica.Images.metropolitano.png}" 
+                        <views:BugCell Image="{local:ImageResource BUGPublica.Images.metropolitano.png}" 
                                    Bug="{x:Static models:BUG.BUG_METROPOLITANO}"
                                    Grid.Row="4" Grid.Column="1"/>
-                            <views:BugCell Image="{local:ImageResource BUGPublica.Images.montenegro.png}" 
+                        <views:BugCell Image="{local:ImageResource BUGPublica.Images.montenegro.png}" 
                                    Bug="{x:Static models:BUG.BUG_MONTENEGRO}"
                                    Grid.Row="5" Grid.Column="0"/>
-                            <!--<views:BugCell Image="{local:ImageResource BUGPublica.Images.tlaquepaque.png}" 
+                        <!--<views:BugCell Image="{local:ImageResource BUGPublica.Images.tlaquepaque.png}" 
                                    Bug="{x:Static models:BUG.BUG_TLAQUEPAQUE}"
                                    Grid.Row="5" Grid.Column="1"/>-->
-                        </Grid>
-                    </AbsoluteLayout>
+                    </Grid>
                 </StackLayout>
                 <!--OPCIONES DE APP-->
-                <StackLayout Orientation="Vertical" BackgroundColor="{StaticResource GrayColor}">
-                    <StackLayout.Resources>
+                <Grid Padding="10"
+                      ColumnSpacing="0"
+                      RowSpacing="8">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="30"/>
+                        <RowDefinition Height="1"/>
+                        <RowDefinition Height="30"/>
+                        <RowDefinition Height="1"/>
+                        <RowDefinition Height="30"/>
+                        <RowDefinition Height="1"/>
+                    </Grid.RowDefinitions>
+                    <!--<StackLayout.Resources>
                         <ResourceDictionary>
                             <Style TargetType="StackLayout">
                                 <Setter Property="Padding" Value="10, 0, 10, 15"/>
@@ -175,8 +182,58 @@
                                 <Setter Property="HeightRequest" Value="15"/>
                             </Style>
                         </ResourceDictionary>
-                    </StackLayout.Resources>
-                    <StackLayout Orientation="Horizontal">
+                    </StackLayout.Resources>-->
+                    <Label Text="{Static resources:AppResources.TermCondition}" 
+                           VerticalOptions="Center"
+                           Style="{StaticResource label}">
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="OnTermsTapped"/>
+                        </Label.GestureRecognizers>
+                    </Label>
+                    <Image Source="{local:ImageResource BUGPublica.Images.arrow_right_black.png}"
+                           HeightRequest="15"
+                           Grid.Column="1">
+                        <Image.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="OnTermsTapped"/>
+                        </Image.GestureRecognizers>
+                    </Image>
+                    <controls:Divider Grid.Row="1"
+                                      Grid.ColumnSpan="2"/>
+                    <Label Text="{Static resources:AppResources.SuggestionMail}" 
+                           VerticalOptions="Center"
+                           Style="{StaticResource label}"
+                           Grid.Row="2">
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="OnSuggestionMailboxTapped"/>
+                        </Label.GestureRecognizers>
+                    </Label>
+                    <Image Source="{local:ImageResource BUGPublica.Images.arrow_right_black.png}"
+                           HeightRequest="15"
+                           Grid.Row="2"
+                           Grid.Column="1">
+                        <Image.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="OnSuggestionMailboxTapped"/>
+                        </Image.GestureRecognizers>
+                    </Image>
+                    <controls:Divider Grid.Row="3"
+                                      Grid.ColumnSpan="2"/>
+                    <Label Text="{Static resources:AppResources.Profile}" 
+                           VerticalOptions="Center"
+                           Style="{StaticResource label}"
+                           Grid.Row="4">
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="OnProfileTapped"/>
+                        </Label.GestureRecognizers>
+                    </Label>
+                    <Image Source="{local:ImageResource BUGPublica.Images.arrow_right_black.png}"
+                           HeightRequest="15"
+                           Grid.Row="4"
+                           Grid.Column="1">
+                        <Image.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="OnProfileTapped"/>
+                        </Image.GestureRecognizers>
+                    </Image>
+                    <!--<StackLayout Orientation="Horizontal">
                         <StackLayout.GestureRecognizers>
                             <TapGestureRecognizer Tapped="OnTermsTapped"/>
                         </StackLayout.GestureRecognizers>
@@ -196,8 +253,8 @@
                         </StackLayout.GestureRecognizers>
                         <Label Text="{Static resources:AppResources.Profile}" HorizontalOptions="StartAndExpand" Style="{StaticResource label}"/>
                         <Image Source="{local:ImageResource BUGPublica.Images.arrow_right.png}"/>
-                    </StackLayout>
-                </StackLayout>
+                    </StackLayout>-->
+                </Grid>
             </StackLayout>
         </ScrollView>
         

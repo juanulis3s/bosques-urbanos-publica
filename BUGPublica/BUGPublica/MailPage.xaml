@@ -4,15 +4,17 @@
              xmlns:customrenderer="clr-namespace:BUGPublica.CustomRenders"
              xmlns:resources="clr-namespace:BUGPublica.Resources"
              xmlns:models="clr-namespace:BUGPublica.Models"
+             xmlns:styles="clr-namespace:BUGPublica.Styles"
              x:Class="BUGPublica.MailPage"
              Title="{Static resources:AppResources.SuggestionMail}"
-             NavigationPage.BackButtonTitle="">
+             NavigationPage.BackButtonTitle=""
+             BackgroundColor="{Static styles:Colors.PrimaryLightBackground}">
     <ContentPage.Content>
-        <StackLayout Padding="10, 30" BackgroundColor="#000000">
+        <StackLayout Padding="10, 30">
             <StackLayout.Resources>
                 <ResourceDictionary>
                     <Style TargetType="Label">
-                        <Setter Property="TextColor" Value="#FFFFFF"/>
+                        <Setter Property="TextColor" Value="{Static styles:Colors.TextDarkPrimary}"/>
                     </Style>
                 </ResourceDictionary>
             </StackLayout.Resources>
@@ -22,7 +24,7 @@
                     ItemsSource="{Binding Bugs}" ItemDisplayBinding="{Binding Shortname}"/>
             <Entry x:Name="txtName" Placeholder="{Static resources:AppResources.Name}" HorizontalOptions="FillAndExpand"/>
             <Entry x:Name="txtEmail" Placeholder="{Static resources:AppResources.Email}" HorizontalOptions="FillAndExpand" Keyboard="Email"/>
-            <Editor x:Name="txtContent" Text="{Static resources:AppResources.Comment}" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"/>
+            <Editor x:Name="txtContent" Placeholder="{Static resources:AppResources.Comment}" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"/>
             <Button x:Name="btnSend" VerticalOptions="End" Text="{Static resources:AppResources.Send}" Style="{DynamicResource buttonStyle}" 
                     Clicked="OnSendButtonPressed"/>
         </StackLayout>

@@ -4,12 +4,15 @@
             xmlns:local="clr-namespace:BUGPublica"
             xmlns:resources="clr-namespace:BUGPublica.Resources"
             xmlns:renderer="clr-namespace:BUGPublica.CustomRenders"
+            xmlns:styles="clr-namespace:BUGPublica.Styles"
+            xmlns:android="clr-namespace:Xamarin.Forms.PlatformConfiguration.AndroidSpecific;assembly=Xamarin.Forms.Core"
+            android:TabbedPage.ToolbarPlacement="Bottom"
             NavigationPage.HasNavigationBar="True"
             x:Class="BUGPublica.BugTabbedPage"
-            BarBackgroundColor="#000000"
+            BarBackgroundColor="{Static styles:Colors.NavBarColor}"
             SelectedTabColor="#40DD9B"
             UnselectedTabColor="#535353"
-            BarTextColor="#FFFFFF">
+            BarTextColor="{Static styles:Colors.TextDarkPrimary}">
   <!--Pages can be added as references or inline-->
     <local:BugInfoPage Icon="ic_info.png" Title="{Static resources:AppResources.Info}"/>
     <local:MapPage Icon="ic_map_normal.png" Title="{Static resources:AppResources.Map}"/>

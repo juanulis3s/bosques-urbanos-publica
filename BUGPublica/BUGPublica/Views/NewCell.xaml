@@ -1,14 +1,15 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <ViewCell xmlns="http://xamarin.com/schemas/2014/forms" 
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="BUGPublica.Views.NewCell">
+          xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+          xmlns:styles="clr-namespace:BUGPublica.Styles"
+          x:Class="BUGPublica.Views.NewCell">
     <ViewCell.View>
-        <AbsoluteLayout Margin="0, 5" Padding="0, 0, 5, 0" BackgroundColor="#000000">
+        <AbsoluteLayout Margin="0, 5" Padding="0, 0, 5, 0" BackgroundColor="{Static styles:Colors.SecondaryLightBackground}">
             <AbsoluteLayout.Resources>
                 <ResourceDictionary>
                     <Style TargetType="Label">
                         <Setter Property="FontSize" Value="14"/>
-                        <Setter Property="TextColor" Value="#FFFFFF"/>
+                        <Setter Property="TextColor" Value="{Static styles:Colors.TextDarkPrimary}"/>
                     </Style>
                 </ResourceDictionary>
             </AbsoluteLayout.Resources>

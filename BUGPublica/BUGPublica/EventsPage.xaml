@@ -3,9 +3,11 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:views="clr-namespace:BUGPublica.Views"
              xmlns:local="clr-namespace:BUGPublica.ViewModels"
-             x:Class="BUGPublica.EventsPage">
+             xmlns:styles="clr-namespace:BUGPublica.Styles"
+             x:Class="BUGPublica.EventsPage"
+             BackgroundColor="{Static styles:Colors.PrimaryLightBackground}">
     <ContentPage.Content>
-        <StackLayout BackgroundColor="{StaticResource HomeBackgroundColor}">
+        <StackLayout>
             <ListView x:Name="listEvents" 
                       SeparatorVisibility="None"
                       HasUnevenRows="False"

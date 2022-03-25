@@ -33,7 +33,7 @@ namespace BUGPublica.iOS.CustomRenders
 
                 // CAMBIA EL ICONO DEL BOTON
                 vc.NavigationItem.LeftBarButtonItem = new UIBarButtonItem(
-                    UIImage.FromFile("ic_back.png"), UIBarButtonItemStyle.Plain, (sender, e) =>
+                    UIImage.FromFile("ic_back_black.png"), UIBarButtonItemStyle.Plain, (sender, e) =>
                     {
                         ((NavigationPage)Element).PopAsync();
                     });

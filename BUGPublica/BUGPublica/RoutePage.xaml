@@ -2,9 +2,11 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:views="clr-namespace:BUGPublica.Views"
-             x:Class="BUGPublica.RoutePage">
+             xmlns:styles="clr-namespace:BUGPublica.Styles"
+             x:Class="BUGPublica.RoutePage"
+             BackgroundColor="{Static styles:Colors.PrimaryLightBackground}">
     <ContentPage.Content>
-        <AbsoluteLayout BackgroundColor="{StaticResource HomeBackgroundColor}">
+        <AbsoluteLayout>
             <!--LISTA DE RUTAS-->
             <ListView x:Name="listRoutes" SeparatorVisibility="None" HasUnevenRows="False"
                       RowHeight="120" IsVisible="False" ItemSelected="ItemSelectedRoute"

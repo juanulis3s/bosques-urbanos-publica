@@ -10,7 +10,7 @@ using BUGPublica.Styles;
 
 namespace BUGPublica.Droid
 {
-    [Activity(Label = "BUG", Icon = "@drawable/ic_launcher", RoundIcon = "@drawable/ic_launcher_round", 
+    [Activity(Label = "AMBU", Icon = "@drawable/ic_launcher", RoundIcon = "@drawable/ic_launcher_round", 
         Theme = "@style/MainTheme", ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation,
         ScreenOrientation = ScreenOrientation.Portrait)]
     public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsAppCompatActivity

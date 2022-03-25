@@ -6,8 +6,8 @@ namespace BUGPublica.CustomRenders
     {
         public CustomNavigationPage(Page root) : base(root)
         {
-            BarBackgroundColor = Color.Black;
-            BarTextColor = Color.White;
+            BarBackgroundColor = Styles.Colors.NavBarColor;
+            BarTextColor = Styles.Colors.TextDarkPrimary;
         }
     }
 }

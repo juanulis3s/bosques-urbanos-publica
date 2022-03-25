@@ -20,7 +20,7 @@
     <item name="colorAccent">#388E3C</item>
     <!-- You can also set colorControlNormal, colorControlActivated
          colorControlHighlight and colorSwitchThumbNormal. -->
-    <item name="colorControlNormal">#FFFFFF</item>
+    <item name="colorControlNormal">#B3B3B3</item>
     <item name="windowActionModeOverlay">true</item>
 
     <item name="android:datePickerDialogTheme">@style/AppCompatDialogStyle</item>

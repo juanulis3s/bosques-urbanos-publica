@@ -3,11 +3,20 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:resources="clr-namespace:BUGPublica.Resources"
              xmlns:local="clr-namespace:BUGPublica.ViewModels"
+             xmlns:styles="clr-namespace:BUGPublica.Styles"
              x:Class="BUGPublica.QRTutorialPage"
-             NavigationPage.HasNavigationBar="False">
+             NavigationPage.HasNavigationBar="False"
+             BackgroundColor="{Static styles:Colors.PrimaryLightBackground}">
     <ContentPage.Content>
         <!--INSTRUCCIONES-->
-        <Grid RowSpacing="15" BackgroundColor="#000000" Padding="20,40,20,20">
+        <Grid RowSpacing="15" Padding="20,40,20,20">
+            <Grid.Resources>
+                <ResourceDictionary>
+                    <Style TargetType="Label">
+                        <Setter Property="TextColor" Value="{Static styles:Colors.TextDarkPrimary}"/>
+                    </Style>
+                </ResourceDictionary>
+            </Grid.Resources>
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto"/>
                 <RowDefinition Height="Auto"/>
@@ -20,10 +29,10 @@
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
             <!--INSTRUCCIONES-->
-            <Label Text="1." Grid.Row="0" Grid.Column="0" TextColor="#FFFFFF" FontSize="17" Style="{StaticResource FontBold}"/>
-            <Label Text="2." Grid.Row="1" Grid.Column="0"  TextColor="#FFFFFF" FontSize="17" Style="{StaticResource FontBold}"/>
-            <Label Text="{Static resources:AppResources.QRTutorial1}" Grid.Row="0" Grid.Column="1"  TextColor="#FFFFFF" FontSize="17" Style="{StaticResource FontBold}"/>
-            <Label Text="{Static resources:AppResources.QRTutorial2}" Grid.Row="1" Grid.Column="1"  TextColor="#FFFFFF" FontSize="17" Style="{StaticResource FontBold}"/>
+            <Label Text="1." Grid.Row="0" Grid.Column="0" FontSize="17" Style="{StaticResource FontBold}"/>
+            <Label Text="2." Grid.Row="1" Grid.Column="0"  FontSize="17" Style="{StaticResource FontBold}"/>
+            <Label Text="{Static resources:AppResources.QRTutorial1}" Grid.Row="0" Grid.Column="1" FontSize="17" Style="{StaticResource FontBold}"/>
+            <Label Text="{Static resources:AppResources.QRTutorial2}" Grid.Row="1" Grid.Column="1" FontSize="17" Style="{StaticResource FontBold}"/>
              <!--IMAGEN DEL TUTORIAL-->
             <Image Source="{local:ImageResource BUGPublica.Images.qr_tuto.png}" HorizontalOptions="Center" 
                    Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2"/>
@@ -38,8 +47,8 @@
                 <StackLayout.GestureRecognizers>
                     <TapGestureRecognizer Tapped="OnDontShowAgainTapped"/>
                 </StackLayout.GestureRecognizers>
-                <Label Text="{Static resources:AppResources.DontShow}" TextColor="#FFFFFF"/>
-                <BoxView BackgroundColor="#FFFFFF" HeightRequest="1"/>
+                <Label Text="{Static resources:AppResources.DontShow}" />
+                <BoxView BackgroundColor="{Static styles:Colors.TextDarkPrimary}" HeightRequest="1"/>
             </StackLayout>
         </Grid>
     </ContentPage.Content>

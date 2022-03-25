@@ -19,7 +19,7 @@ namespace BUGPublica
             //SE MUESTRA EL CONTENIDO DE LA REGLA
             scroll.Content = new CustomHtmlLabel
             {
-                TextColor = Color.White,
+                TextColor = Styles.Colors.TextDarkPrimary,
                 Text = rule.Content
             };
 		}

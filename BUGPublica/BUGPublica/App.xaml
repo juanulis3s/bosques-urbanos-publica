@@ -2,6 +2,7 @@
 <Application xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:BUGPublica.CustomRenders"
+             xmlns:styles="clr-namespace:BUGPublica.Styles"
              x:Class="BUGPublica.App">
 	<Application.Resources>
 
@@ -13,7 +14,7 @@
             <Color x:Key="GreenColor">#86DC9D</Color>
             <Color x:Key="GrayColor">#232323</Color>
             <OnPlatform x:Key="EntryFontColor" x:TypeArguments="Color"
-                        iOS="#000000" Android="#FFFFFF"/>
+                        iOS="{Static styles:Colors.TextDarkPrimary}" Android="{Static styles:Colors.TextDarkPrimary}"/>
 
             <!--FUENTE DE LA APP-->
             <OnPlatform x:Key="FontApp" x:TypeArguments="x:String"
@@ -44,8 +45,10 @@
             <Style TargetType="Editor">
                 <Setter Property="FontFamily" Value="{StaticResource FontApp}"/>
                 <Setter Property="TextColor" Value="{StaticResource EntryFontColor}"/>
+                <Setter Property="PlaceholderColor" Value="#505050"/>
             </Style>
             <Style TargetType="Picker">
+                <Setter Property="FontFamily" Value="{StaticResource FontApp}"/>
                 <Setter Property="TextColor" Value="{StaticResource EntryFontColor}"/>
             </Style>
         </ResourceDictionary>
