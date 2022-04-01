@@ -22,7 +22,7 @@
 	<key>CFBundleIdentifier</key>
 	<string>com.bosquesgdlapp.publica</string>
 	<key>CFBundleVersion</key>
-	<string>3</string>
+	<string>4</string>
 	<key>CFBundleName</key>
 	<string>BUG</string>
 	<key>NSLocationAlwaysUsageDescription</key>
