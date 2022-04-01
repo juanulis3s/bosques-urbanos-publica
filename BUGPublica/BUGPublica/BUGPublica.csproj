@@ -40,10 +40,6 @@
     <None Remove="Images\qr_display.png" />
     <None Remove="Images\qr_tuto.png" />
     <None Remove="Images\solidaridad.png" />
-    <None Remove="Images\splash_1.png" />
-    <None Remove="Images\splash_2.png" />
-    <None Remove="Images\splash_3.png" />
-    <None Remove="Images\splash_4.png" />
     <None Remove="Images\IMG-20180925-WA0002.jpg" />
     <None Remove="Images\morelos.png" />
     <None Remove="Images\tlaquepaque.png" />
@@ -88,10 +84,6 @@
     <EmbeddedResource Include="Images\qr_display.png" />
     <EmbeddedResource Include="Images\qr_tuto.png" />
     <EmbeddedResource Include="Images\solidaridad.png" />
-    <EmbeddedResource Include="Images\splash_1.png" />
-    <EmbeddedResource Include="Images\splash_2.png" />
-    <EmbeddedResource Include="Images\splash_3.png" />
-    <EmbeddedResource Include="Images\splash_4.png" />
     <EmbeddedResource Include="Images\tlaquepaque.png" />
   </ItemGroup>
 

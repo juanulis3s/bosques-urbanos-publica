@@ -146,7 +146,10 @@ namespace BUGPublica
                 })
                 .Error((e) =>
                 {
-                    //TODO MOSTRAR MENSAJE DE ERROR
+                    _placesDownloaded++;
+                    //SI SE HAN CARGADO TODOS LOS PINES, SE MUESTRAN EN EL MAPA
+                    if (_placesDownloaded >= _placesCount)
+                        ShowPins();
                 });
 
             //SE EJECUTA LA TAREA

@@ -306,6 +306,15 @@ Guadalajara</value>
     <value>Its location could not be obtained. Try again</value>
   </data>
   <data name="Wrong" xml:space="preserve">
-    <value>Something went wrong</value>      
+    <value>Something went wrong</value>
+  </data>
+  <data name="EmptyEvents" xml:space="preserve">
+    <value>There are no events at the moment</value>
+  </data>
+  <data name="EmptyNews" xml:space="preserve">
+    <value>There are no news at the moment</value>
+  </data>
+  <data name="EmptyRoutes" xml:space="preserve">
+    <value>There are no routes at the moment</value>
   </data>
 </root>

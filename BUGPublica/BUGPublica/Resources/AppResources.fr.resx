@@ -306,6 +306,15 @@ de Guadalajara</value>
     <value>Son emplacement n'a pas pu être obtenu. Réessayer</value>
   </data>
   <data name="Wrong" xml:space="preserve">
-    <value>Quelque chose a mal tourné</value>      
+    <value>Quelque chose a mal tourné</value>
+  </data>
+  <data name="EmptyEvents" xml:space="preserve">
+    <value>Il n'y a aucun événement pour le moment</value>
+  </data>
+  <data name="EmptyNews" xml:space="preserve">
+    <value>Pas de nouvelles pour le moment</value>
+  </data>
+  <data name="EmptyRoutes" xml:space="preserve">
+    <value>Il n'y a pas d'itinéraires pour le moment</value>
   </data>
 </root>

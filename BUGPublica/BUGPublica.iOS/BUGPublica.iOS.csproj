@@ -307,9 +307,6 @@
     <BundleResource Include="Resources\splash_2.png" />
   </ItemGroup>
   <ItemGroup>
-    <BundleResource Include="Resources\splash_3.png" />
-  </ItemGroup>
-  <ItemGroup>
     <BundleResource Include="Resources\splash_4.png" />
   </ItemGroup>
   <ItemGroup>
@@ -464,5 +461,8 @@
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\ic_back_black%403x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\splash_3.png" />
   </ItemGroup>
 </Project>

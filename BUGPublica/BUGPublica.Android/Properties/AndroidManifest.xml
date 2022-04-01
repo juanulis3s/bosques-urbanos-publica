@@ -12,5 +12,5 @@
 	<uses-feature android:name="android.hardware.location" android:required="false" />
 	<uses-feature android:name="android.hardware.location.gps" android:required="false" />
 	<uses-feature android:name="android.hardware.location.network" android:required="false" />
-	<application android:label="AMBU" android:icon="@drawable/ic_launcher" android:roundIcon="@drawable/ic_launcher_round"></application>
+	<application android:label="Bosques AMG" android:icon="@drawable/ic_launcher" android:roundIcon="@drawable/ic_launcher_round"></application>
 </manifest>

@@ -4,10 +4,11 @@
              xmlns:views="clr-namespace:BUGPublica.Views"
              xmlns:local="clr-namespace:BUGPublica.ViewModels"
              xmlns:styles="clr-namespace:BUGPublica.Styles"
+             xmlns:resources="clr-namespace:BUGPublica.Resources"
              x:Class="BUGPublica.NewsPage"
              BackgroundColor="{Static styles:Colors.PrimaryLightBackground}">
     <ContentPage.Content>
-        <StackLayout>
+        <Grid>
             <ListView x:Name="listNews" 
                       SeparatorVisibility="None"
                       HasUnevenRows="False"
@@ -24,8 +25,16 @@
                     </DataTemplate>
                 </ListView.ItemTemplate>
             </ListView>
+            <!--LABEL DE LISTADO VACIO-->
+            <Label x:Name="emptyLabel" Text="{Static resources:AppResources.EmptyEvents}"
+                   TextColor="{Static styles:Colors.TextDarkPrimary}"
+                   IsVisible="False"
+                   VerticalOptions="Center"
+                   HorizontalOptions="Center"/>
             <ActivityIndicator x:Name="loader"
-                               IsRunning="False"/>
-        </StackLayout>
+                               IsRunning="False"
+                               HorizontalOptions="Center"
+                               VerticalOptions="Center"/>
+        </Grid>
     </ContentPage.Content>
 </ContentPage>

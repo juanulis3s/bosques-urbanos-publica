@@ -62,6 +62,8 @@ namespace BUGPublica
             catch (HttpRequestException e)
             {
                 Console.WriteLine(e.StackTrace);
+                emptyLabel.IsVisible = true;
+                ToggleIndicator(false);
                 return;
             }
 
@@ -86,6 +88,11 @@ namespace BUGPublica
                     AddToListView(items);
                 });
             }
+            else
+            {
+                emptyLabel.IsVisible = true;
+                ToggleIndicator(false);
+            }
         }
 
         /// <summary>
@@ -95,6 +102,7 @@ namespace BUGPublica
         {
             //SE ESCONDE EL ACTIVITY INDICATOR
             ToggleIndicator(false);
+            emptyLabel.IsVisible = items.Count == 0;
 
             //SE AGREGA A LA COLECCION
             foreach (RouteItem item in items)

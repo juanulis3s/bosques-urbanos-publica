@@ -307,6 +307,15 @@ Guadalajara</value>
     <value>No se pudo obtener su localización. Intente de nuevo</value>
   </data>
   <data name="Wrong" xml:space="preserve">
-    <value>Algo salió mal</value>      
+    <value>Algo salió mal</value>
+  </data>
+  <data name="EmptyEvents" xml:space="preserve">
+    <value>No hay eventos por el momento</value>
+  </data>
+  <data name="EmptyNews" xml:space="preserve">
+    <value>No hay noticias por el momento</value>
+  </data>
+  <data name="EmptyRoutes" xml:space="preserve">
+    <value>No hay rutas por el momento</value>
   </data>
 </root>

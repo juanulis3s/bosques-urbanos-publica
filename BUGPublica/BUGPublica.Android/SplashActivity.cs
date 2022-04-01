@@ -35,7 +35,7 @@ namespace BUGPublica.Droid
 
             // SE ESTABLECE ALEATORAMIENTE UNA IMAGEN DE FONDO
             if (Window != null)
-                Window.SetBackgroundDrawableResource(images[new Random().Next(0, images.Length)]);
+                Window.SetBackgroundDrawableResource(Resource.Drawable.splash);
 
             new Handler().PostDelayed(() =>
             {

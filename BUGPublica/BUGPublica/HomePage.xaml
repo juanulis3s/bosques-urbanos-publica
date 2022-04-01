@@ -38,7 +38,7 @@
                                        VerticalOptions="Fill"/>
                     <ffimage:CachedImage Source="{local:ImageResource BUGPublica.Images.logo-blanco.png}"
                                          HorizontalOptions="Center"
-                                         VerticalOptions="Start"
+                                         VerticalOptions="Center"
                                          WidthRequest="{extensions:ScreenMarckup FullValue={Static styles:Layouts.DisplayXSizePX}, RequiredPercentage=45}"
                                          HeightRequest="{extensions:ScreenMarckup FullValue={Static styles:Layouts.DisplayXSizePX}, RequiredPercentage=38}"
                                          Aspect="AspectFit"/>

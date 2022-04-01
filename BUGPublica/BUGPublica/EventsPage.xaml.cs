@@ -83,6 +83,9 @@ namespace BUGPublica
             {
                 _isLoading = false;
                 Console.WriteLine(e.StackTrace);
+                ToggleIndicator(false);
+                if (_events.Count == 0)
+                    emptyLabel.IsVisible = true;
                 return;
             }
 
@@ -111,6 +114,12 @@ namespace BUGPublica
                     AddToListView(items);
                 });
             }
+            else
+            {
+                ToggleIndicator(false);
+                if (_events.Count == 0)
+                    emptyLabel.IsVisible = true;
+            }
         }
 
         /// <summary>
@@ -120,6 +129,7 @@ namespace BUGPublica
         {
             //SE ESCONDE EL ACTIVITY INDICATOR
             ToggleIndicator(false);
+            emptyLabel.IsVisible = _events.Count == 0 && items.Count == 0; ;
 
             //SE AGREGA A LA COLECCION
             foreach (EventItem item in items)
