@@ -39,6 +39,6 @@ namespace BUGPublica.iOS.CustomRenders
             new UITextAttributes() { TextColor = UIColor.FromRGB(83, 83, 83), Font = UIFont.FromName("Montserrat-Light", 12) };
         
         private static UITextAttributes SelectedAttributes { get; } =
-            new UITextAttributes() { TextColor = UIColor.White, Font = UIFont.FromName("Montserrat-Light", 12) };
+            new UITextAttributes() { TextColor = UIColor.Black, Font = UIFont.FromName("Montserrat-Light", 12) };
     }
 }

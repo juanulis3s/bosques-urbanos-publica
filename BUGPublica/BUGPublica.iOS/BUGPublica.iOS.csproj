@@ -28,7 +28,6 @@
     <MtouchLink>None</MtouchLink>
     <MtouchDebug>true</MtouchDebug>
     <CodesignKey>iPhone Developer</CodesignKey>
-    <MtouchSdkVersion>14.4</MtouchSdkVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhoneSimulator' ">
     <DebugType>none</DebugType>
@@ -66,7 +65,7 @@
     <ConsolePause>false</ConsolePause>
     <CodesignKey>iPhone Distribution: Sector Web, S. de R.L. de C.V. (53F4W79T48)</CodesignKey>
     <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
-    <CodesignProvision>BUG Profile</CodesignProvision>
+    <CodesignProvision>BUG Dist</CodesignProvision>
     <MtouchUseLlvm>true</MtouchUseLlvm>
     <MtouchLink>SdkOnly</MtouchLink>
   </PropertyGroup>
@@ -127,6 +126,7 @@
     <BundleResource Include="Resources\Logo%403x.png" />
     <BundleResource Include="Resources\Logo%402x.png" />
     <BundleResource Include="Resources\Logo.png" />
+    <Compile Include="CustomRenders\CustomFrameRenderer.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />
