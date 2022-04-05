@@ -13,7 +13,6 @@
             <Color x:Key="HomeBackgroundColor">#181726</Color>
             <Color x:Key="GreenColor">#86DC9D</Color>
             <Color x:Key="GrayColor">#232323</Color>
-            <Color x:Key="TransparentColor">#0000</Color>
             <OnPlatform x:Key="EntryFontColor" x:TypeArguments="Color"
                         iOS="{Static styles:Colors.TextDarkPrimary}" Android="{Static styles:Colors.TextDarkPrimary}"/>
 
@@ -37,24 +36,20 @@
                 <Setter Property="FontFamily" Value="{StaticResource FontApp}"/>
                 <Setter Property="TextColor" Value="{StaticResource EntryFontColor}"/>
                 <Setter Property="PlaceholderColor" Value="#505050"/>
-                <Setter Property="BackgroundColor" Value="{OnPlatform iOS={StaticResource TransparentColor}}"/>
             </Style>
             <Style TargetType="local:CustomEntry">
                 <Setter Property="FontFamily" Value="{StaticResource FontApp}"/>
                 <Setter Property="TextColor" Value="{StaticResource EntryFontColor}"/>
                 <Setter Property="PlaceholderColor" Value="#505050"/>
-                <Setter Property="BackgroundColor" Value="{OnPlatform iOS={StaticResource TransparentColor}}"/>
             </Style>
             <Style TargetType="Editor">
                 <Setter Property="FontFamily" Value="{StaticResource FontApp}"/>
                 <Setter Property="TextColor" Value="{StaticResource EntryFontColor}"/>
                 <Setter Property="PlaceholderColor" Value="#505050"/>
-                <Setter Property="BackgroundColor" Value="{OnPlatform iOS={StaticResource TransparentColor}}"/>
             </Style>
             <Style TargetType="Picker">
                 <Setter Property="FontFamily" Value="{StaticResource FontApp}"/>
                 <Setter Property="TextColor" Value="{StaticResource EntryFontColor}"/>
-                <Setter Property="BackgroundColor" Value="{OnPlatform iOS={StaticResource TransparentColor}}"/>
             </Style>
         </ResourceDictionary>
 
