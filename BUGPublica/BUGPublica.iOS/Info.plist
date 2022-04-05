@@ -21,8 +21,6 @@
 	<string>11.1</string>
 	<key>CFBundleIdentifier</key>
 	<string>com.bosquesgdlapp.publica</string>
-	<key>CFBundleVersion</key>
-	<string>4</string>
 	<key>NSLocationAlwaysUsageDescription</key>
 	<string>Can we use your location</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
@@ -51,8 +49,6 @@
 	<string>Needs Calendar Permission</string>
 	<key>NSCameraUsageDescription</key>
 	<string>Camera is required to scan QR codes </string>
-	<key>CFBundleShortVersionString</key>
-	<string>1.2.0</string>
 	<key>NSAppTransportSecurity</key>
 	<dict>
 		<key>NSExceptionDomains</key>
@@ -70,5 +66,9 @@
 	<string>Bosques AMG</string>
 	<key>CFBundleDisplayName</key>
 	<string>BosquesAMG</string>
+	<key>CFBundleVersion</key>
+	<string>5</string>
+	<key>CFBundleShortVersionString</key>
+	<string>1.2.1</string>
 </dict>
 </plist>
