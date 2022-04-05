@@ -30,6 +30,7 @@ namespace BUGPublica.Helpers
                 case BUG.ID_BUG_SOLIDARIDAD: return GetSolidaridadBounds();
                 case BUG.ID_BUG_METROPOLITANO: return GetMetropolitanoBounds();
                 case BUG.ID_BUG_MONTENEGRO: return GetMontenegroBounds();
+                case BUG.ID_BUG_TLAQUEPAQUE: return GetTlaquepaqueBounds();
                 default: throw new Exception("Tipo de Bug inválido");
             }
         }
@@ -294,6 +295,19 @@ namespace BUGPublica.Helpers
             bounds.Add(new Position(20.57286, -103.31821));
             bounds.Add(new Position(20.57587, -103.31776));
             bounds.Add(new Position(20.57553, -103.31500));
+            return bounds;
+        }
+
+        private static List<Position> GetTlaquepaqueBounds()
+        {
+            List<Position> bounds = new List<Position>();
+            bounds.Add(new Position(20.621790, -103.321197));
+            bounds.Add(new Position(20.622423, -103.321090));
+            bounds.Add(new Position(20.622744, -103.320731));
+            bounds.Add(new Position(20.623577, -103.317915));
+            bounds.Add(new Position(20.623291, -103.314068));
+            bounds.Add(new Position(20.621047, -103.315334));
+            bounds.Add(new Position(20.621790, -103.321197));
             return bounds;
         }
     }

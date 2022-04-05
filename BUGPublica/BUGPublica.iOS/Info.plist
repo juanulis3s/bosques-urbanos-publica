@@ -23,8 +23,6 @@
 	<string>com.bosquesgdlapp.publica</string>
 	<key>CFBundleVersion</key>
 	<string>4</string>
-	<key>CFBundleName</key>
-	<string>BUG</string>
 	<key>NSLocationAlwaysUsageDescription</key>
 	<string>Can we use your location</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
@@ -68,7 +66,9 @@
 			</dict>
 		</dict>
 	</dict>
-	<key>CFBundleDisplayName</key>
+	<key>CFBundleName</key>
 	<string>Bosques AMG</string>
+	<key>CFBundleDisplayName</key>
+	<string>BosquesAMG</string>
 </dict>
 </plist>

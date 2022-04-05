@@ -21,7 +21,7 @@ namespace BUGPublica.Models
         public const int ID_BUG_SOLIDARIDAD = 12;
         public const int ID_BUG_METROPOLITANO = 13;
         public const int ID_BUG_MONTENEGRO = 14;
-        public const int ID_BUG_TLAQUEPAQUE = 1000000;
+        public const int ID_BUG_TLAQUEPAQUE = 15;
 
         //NOMBRES BOSQUES DE LA RED BUG
         private const string NAME_BUG_MORELOS = "Parque Morelos";
@@ -152,6 +152,7 @@ namespace BUGPublica.Models
                 bugs.Add(BUG_SOLIDARIDAD);
                 bugs.Add(BUG_METROPOLITANO);
                 bugs.Add(BUG_MONTENEGRO);
+                bugs.Add(BUG_TLAQUEPAQUE);
                 return bugs;
             }
         }

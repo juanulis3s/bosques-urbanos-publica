@@ -46,13 +46,13 @@ namespace BUGPublica
             string image;
             switch (BugTabbedPage.Bug.Id)
             {
-                case BUG.ID_BUG_COLOMOS: image = "BUGPublica.Images.colomos.png"; break;
-                case BUG.ID_BUG_AGUA_AZUL: image = "BUGPublica.Images.agua_azul.png"; break;
-                case BUG.ID_BUG_ALCALDE: image = "BUGPublica.Images.alcalde.png"; break;
+                case BUG.ID_BUG_COLOMOS: image = "BUGPublica.Images.colomos.jpg"; break;
+                case BUG.ID_BUG_AGUA_AZUL: image = "BUGPublica.Images.agua_azul.jpg"; break;
+                case BUG.ID_BUG_ALCALDE: image = "BUGPublica.Images.alcalde.jpg"; break;
                 case BUG.ID_BUG_ARBOLEDAS_SUR: image = "BUGPublica.Images.arboledas_sur.png"; break;
-                case BUG.ID_BUG_AVILA_CAMACHO: image = "BUGPublica.Images.avila_camacho.png"; break;
-                case BUG.ID_BUG_DEAN: image = "BUGPublica.Images.el_dean.png"; break;
-                case BUG.ID_BUG_GONZALEZ_GALLO: image = "BUGPublica.Images.gonzalez_gallo.png"; break;
+                case BUG.ID_BUG_AVILA_CAMACHO: image = "BUGPublica.Images.avila_camacho.jpg"; break;
+                case BUG.ID_BUG_DEAN: image = "BUGPublica.Images.liberacion_dean.jpg"; break;
+                case BUG.ID_BUG_GONZALEZ_GALLO: image = "BUGPublica.Images.gonzalez_gallo.jpg"; break;
                 case BUG.ID_BUG_MORELOS: image = "BUGPublica.Images.morelos.png"; break;
                 case BUG.ID_BUG_NATURAL_HUENTITAN: image = "BUGPublica.Images.natural_huentitan.png"; break;
                 case BUG.ID_BUG_MIRADOR_INDEPENDENCIA: image = "BUGPublica.Images.miradorhuentitan.png"; break;
@@ -60,7 +60,7 @@ namespace BUGPublica
                 case BUG.ID_BUG_SOLIDARIDAD: image = "BUGPublica.Images.solidaridad.png"; break;
                 case BUG.ID_BUG_METROPOLITANO: image = "BUGPublica.Images.metropolitano.png"; break;
                 case BUG.ID_BUG_MONTENEGRO: image = "BUGPublica.Images.montenegro.png"; break;
-                case BUG.ID_BUG_TLAQUEPAQUE: image = "BUGPublica.Images.tlaquepaque.png"; break;
+                case BUG.ID_BUG_TLAQUEPAQUE: image = "BUGPublica.Images.tlaquepaque.jpg"; break;
                 default: image = null; break;
             }
             if(image != null)

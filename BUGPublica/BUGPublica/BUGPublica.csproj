@@ -5,19 +5,22 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Images\agua_azul.jpg" />
     <None Remove="Images\agua_azul.png" />
+    <None Remove="Images\alcalde.jpg" />
     <None Remove="Images\alcalde.png" />
     <None Remove="Images\arboledas_sur.png" />
     <None Remove="Images\arrow_right.png" />
     <None Remove="Images\arrow_right_black.png" />
+    <None Remove="Images\avila_camacho.jpg" />
     <None Remove="Images\avila_camacho.png" />
-    <None Remove="Images\bug_logo.png" />
-    <None Remove="Images\bug_logo_blanco.png" />
     <None Remove="Images\close.png" />
+    <None Remove="Images\colomos.jpg" />
     <None Remove="Images\colomos.png" />
     <None Remove="Images\cover.png" />
     <None Remove="Images\el_dean.png" />
     <None Remove="Images\footer_bg.png" />
+    <None Remove="Images\gonzalez_gallo.jpg" />
     <None Remove="Images\gonzalez_gallo.png" />
     <None Remove="Images\gradient.png" />
     <None Remove="Images\gradient_blue.png" />
@@ -28,8 +31,9 @@
     <None Remove="Images\icon_eventos.png" />
     <None Remove="Images\icon_noticias.png" />
     <None Remove="Images\icon_search.png" />
-    <None Remove="Images\logo-blanco.png" />
+    <None Remove="Images\liberacion_dean.jpg" />
     <None Remove="Images\logo.png" />
+    <None Remove="Images\logo_blanco.png" />
     <None Remove="Images\logo_verde.png" />
     <None Remove="Images\metropolitano.png" />
     <None Remove="Images\miradorhuentitan.png" />
@@ -42,21 +46,24 @@
     <None Remove="Images\solidaridad.png" />
     <None Remove="Images\IMG-20180925-WA0002.jpg" />
     <None Remove="Images\morelos.png" />
+    <None Remove="Images\tlaquepaque.jpg" />
     <None Remove="Images\tlaquepaque.png" />
   </ItemGroup>
 
   <ItemGroup>
-    <EmbeddedResource Include="Images\agua_azul.png" />
-    <EmbeddedResource Include="Images\alcalde.png" />
+    <EmbeddedResource Include="Images\agua_azul.jpg" />
+    <EmbeddedResource Include="Images\alcalde.jpg" />
     <EmbeddedResource Include="Images\arboledas_sur.png" />
     <EmbeddedResource Include="Images\arrow_right.png" />
     <EmbeddedResource Include="Images\arrow_right_black.png" />
-    <EmbeddedResource Include="Images\avila_camacho.png" />
+    <EmbeddedResource Include="Images\avila_camacho.jpg" />
     <EmbeddedResource Include="Images\close.png" />
-    <EmbeddedResource Include="Images\colomos.png" />
+    <EmbeddedResource Include="Images\colomos.jpg" />
     <EmbeddedResource Include="Images\cover.png" />
+    <EmbeddedResource Include="Images\gonzalez_gallo.jpg" />
     <EmbeddedResource Include="Images\gradient_white.png" />
-    <EmbeddedResource Include="Images\logo-blanco.png" />
+    <EmbeddedResource Include="Images\liberacion_dean.jpg" />
+    <EmbeddedResource Include="Images\logo_blanco.png" />
     <EmbeddedResource Include="Images\logo_verde.png" />
     <EmbeddedResource Include="Images\metropolitano.png" />
     <EmbeddedResource Include="Images\montenegro.png" />
@@ -64,11 +71,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <EmbeddedResource Include="Images\bug_logo.png" />
-    <EmbeddedResource Include="Images\bug_logo_blanco.png" />
-    <EmbeddedResource Include="Images\el_dean.png" />
     <EmbeddedResource Include="Images\footer_bg.png" />
-    <EmbeddedResource Include="Images\gonzalez_gallo.png" />
     <EmbeddedResource Include="Images\gradient.png" />
     <EmbeddedResource Include="Images\gradient_blue.png" />
     <EmbeddedResource Include="Images\icon_back.png" />
@@ -84,7 +87,7 @@
     <EmbeddedResource Include="Images\qr_display.png" />
     <EmbeddedResource Include="Images\qr_tuto.png" />
     <EmbeddedResource Include="Images\solidaridad.png" />
-    <EmbeddedResource Include="Images\tlaquepaque.png" />
+    <EmbeddedResource Include="Images\tlaquepaque.jpg" />
   </ItemGroup>
 
   <ItemGroup>

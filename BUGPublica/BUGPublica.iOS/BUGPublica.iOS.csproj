@@ -123,9 +123,6 @@
     <BundleResource Include="Resources\Montserrat-Light.ttf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </BundleResource>
-    <BundleResource Include="Resources\Logo%403x.png" />
-    <BundleResource Include="Resources\Logo%402x.png" />
-    <BundleResource Include="Resources\Logo.png" />
     <Compile Include="CustomRenders\CustomFrameRenderer.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -12,7 +12,7 @@
         <Image x:Name="imgClose" Source="{local:ViewModels.ImageResource BUGPublica.Images.close.png}"
                WidthRequest="25" HeightRequest="25" HorizontalOptions="End"/>
         <Image Source="{local:ViewModels.ImageResource BUGPublica.Images.logo_verde.png}"
-               WidthRequest="160" Aspect="AspectFit" HorizontalOptions="Center" Margin="20, 30" />
+               WidthRequest="200" HeightRequest="57" Aspect="AspectFill" HorizontalOptions="Center" Margin="20, 30" />
         <StackLayout Orientation="Horizontal" HorizontalOptions="Fill" VerticalOptions="Center"
                      Margin="20,0" Spacing="0">
             <Label Text="+" TextColor="{Static styles:Colors.TextDarkPrimary}" HorizontalTextAlignment="Center" VerticalOptions="Center" FontSize="18"/>

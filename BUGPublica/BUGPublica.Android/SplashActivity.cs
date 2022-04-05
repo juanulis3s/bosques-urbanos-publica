@@ -12,7 +12,7 @@ using Android.Widget;
 
 namespace BUGPublica.Droid
 {
-    [Activity(MainLauncher = true, Theme = "@style/SplashTheme", NoHistory = true, ScreenOrientation = Android.Content.PM.ScreenOrientation.Portrait)]
+    [Activity(MainLauncher = true, Theme = "@style/SplashTheme", Label = "BosquesAMG", NoHistory = true, ScreenOrientation = Android.Content.PM.ScreenOrientation.Portrait)]
     public class SplashActivity : Activity
     {
         protected override void OnCreate(Bundle savedInstanceState)

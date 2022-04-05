@@ -36,12 +36,12 @@
                                        Filter="{local:ImageResource BUGPublica.Images.gradient_blue.png}"
                                        HorizontalOptions="Fill"
                                        VerticalOptions="Fill"/>
-                    <ffimage:CachedImage Source="{local:ImageResource BUGPublica.Images.logo-blanco.png}"
+                    <ffimage:CachedImage Source="{local:ImageResource BUGPublica.Images.logo_blanco.png}"
                                          HorizontalOptions="Center"
                                          VerticalOptions="Center"
-                                         WidthRequest="{extensions:ScreenMarckup FullValue={Static styles:Layouts.DisplayXSizePX}, RequiredPercentage=45}"
-                                         HeightRequest="{extensions:ScreenMarckup FullValue={Static styles:Layouts.DisplayXSizePX}, RequiredPercentage=38}"
-                                         Aspect="AspectFit"/>
+                                         WidthRequest="{extensions:ScreenMarckup FullValue={Static styles:Layouts.DisplayXSizePX}, RequiredPercentage=70}"
+                                         HeightRequest="{extensions:ScreenMarckup FullValue={Static styles:Layouts.DisplayXSizePX}, RequiredPercentage=20}"
+                                         Aspect="AspectFill"/>
                 </Grid>
                 <!--OPCIONES DE MENU-->
                 <StackLayout Orientation="Vertical" Margin="0, 5, 0, 0">
@@ -109,22 +109,22 @@
                             <RowDefinition Height="130"/>
                             <RowDefinition Height="130"/>
                         </Grid.RowDefinitions>
-                        <views:BugCell Image="{local:ImageResource BUGPublica.Images.colomos.png}" 
+                        <views:BugCell Image="{local:ImageResource BUGPublica.Images.colomos.jpg}" 
                                    Bug="{x:Static models:BUG.BUG_COLOMOS}"        
                                    Grid.Row="0" Grid.Column="0"/>
-                        <views:BugCell Image="{local:ImageResource BUGPublica.Images.alcalde.png}" 
+                        <views:BugCell Image="{local:ImageResource BUGPublica.Images.alcalde.jpg}" 
                                    Bug="{x:Static models:BUG.BUG_ALCALDE}"
                                    Grid.Row="0" Grid.Column="1"/>
-                        <views:BugCell Image="{local:ImageResource BUGPublica.Images.avila_camacho.png}" 
+                        <views:BugCell Image="{local:ImageResource BUGPublica.Images.avila_camacho.jpg}" 
                                    Bug="{x:Static models:BUG.BUG_AVILA_CAMACHO}"
                                    Grid.Row="1" Grid.Column="0"/>
-                        <views:BugCell Image="{local:ImageResource BUGPublica.Images.el_dean.png}" 
+                        <views:BugCell Image="{local:ImageResource BUGPublica.Images.liberacion_dean.jpg}" 
                                    Bug="{x:Static models:BUG.BUG_DEAN}"
                                    Grid.Row="1" Grid.Column="1"/>
-                        <views:BugCell Image="{local:ImageResource BUGPublica.Images.agua_azul.png}" 
+                        <views:BugCell Image="{local:ImageResource BUGPublica.Images.agua_azul.jpg}" 
                                    Bug="{x:Static models:BUG.BUG_AGUA_AZUL}"
                                    Grid.Row="2" Grid.Column="0"/>
-                        <views:BugCell Image="{local:ImageResource BUGPublica.Images.gonzalez_gallo.png}" 
+                        <views:BugCell Image="{local:ImageResource BUGPublica.Images.gonzalez_gallo.jpg}" 
                                    Bug="{x:Static models:BUG.BUG_GONZALEZ_GALLO}"
                                    Grid.Row="2" Grid.Column="1"/>
                         <views:BugCell Image="{local:ImageResource BUGPublica.Images.natural_huentitan.png}" 
@@ -151,9 +151,9 @@
                         <views:BugCell Image="{local:ImageResource BUGPublica.Images.montenegro.png}" 
                                    Bug="{x:Static models:BUG.BUG_MONTENEGRO}"
                                    Grid.Row="5" Grid.Column="0"/>
-                        <!--<views:BugCell Image="{local:ImageResource BUGPublica.Images.tlaquepaque.png}" 
+                        <views:BugCell Image="{local:ImageResource BUGPublica.Images.tlaquepaque.jpg}" 
                                    Bug="{x:Static models:BUG.BUG_TLAQUEPAQUE}"
-                                   Grid.Row="5" Grid.Column="1"/>-->
+                                   Grid.Row="5" Grid.Column="1"/>
                     </Grid>
                 </StackLayout>
                 <!--OPCIONES DE APP-->
