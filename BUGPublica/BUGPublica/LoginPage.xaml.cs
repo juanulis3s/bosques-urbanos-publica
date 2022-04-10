@@ -109,6 +109,9 @@ namespace BUGPublica
                             Application.Current.Properties.Remove(AppConfig.PHONE_KEY);
                         Application.Current.Properties.Add(AppConfig.PHONE_KEY, txtPhone.Text);
 
+                        //MUESTRA DIALOGO DE EXITO
+                        await DisplayAlert(AppResources.Success, AppResources.RegisterSuccess, AppResources.OK);
+
                         //SE CIERRA LA VENTANA
                         await Rg.Plugins.Popup.Services.PopupNavigation.Instance.PopAsync();
                     }

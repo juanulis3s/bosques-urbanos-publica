@@ -484,6 +484,15 @@ namespace BUGPublica.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Your phone number has been successfully registered.
+        /// </summary>
+        internal static string RegisterSuccess {
+            get {
+                return ResourceManager.GetString("RegisterSuccess", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to REGULATION.
         /// </summary>
         internal static string Regulation {

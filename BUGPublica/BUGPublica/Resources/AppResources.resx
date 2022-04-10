@@ -317,4 +317,7 @@ Guadalajara</value>
   <data name="EmptyRoutes" xml:space="preserve">
     <value>There are no routes at the moment</value>
   </data>
+  <data name="RegisterSuccess" xml:space="preserve">
+    <value>Your phone number has been successfully registered</value>
+  </data>
 </root>

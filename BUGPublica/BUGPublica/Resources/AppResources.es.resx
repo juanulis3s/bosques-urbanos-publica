@@ -318,4 +318,7 @@ Guadalajara</value>
   <data name="EmptyRoutes" xml:space="preserve">
     <value>No hay rutas por el momento</value>
   </data>
+  <data name="RegisterSuccess" xml:space="preserve">
+    <value>Tu teléfono se ha registrado con éxito</value>
+  </data>
 </root>

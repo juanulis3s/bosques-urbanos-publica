@@ -66,11 +66,11 @@
 	<string>Bosques AMG</string>
 	<key>CFBundleDisplayName</key>
 	<string>BosquesAMG</string>
-	<key>CFBundleVersion</key>
-	<string>5</string>
-	<key>CFBundleShortVersionString</key>
-	<string>1.2.1</string>
 	<key>UIUserInterfaceStyle</key>
 	<string>Light</string>
+	<key>CFBundleVersion</key>
+	<string>6</string>
+	<key>CFBundleShortVersionString</key>
+	<string>1.2.2</string>
 </dict>
 </plist>
